@@ -13,6 +13,9 @@ Sales Analytics Andmeanalüütiku kursus.
 
 Muuta UrbanStyle’i müügiandmed ühtseks ja usaldusväärseks allikaks ning pakkuda selgeid, andmepõhiseid teadmisi, mis aitavad optimeerida müügitulemusi, parandada kliendikäitumise mõistmist ja toetada strateegilisi ärilisi otsuseid.
 
+## Jälgi meie tegevusi
+📜 [Activity Log](./LOG.md)
+
 
 # Portfoolio Struktuur + Dokumentatsioon  
 
