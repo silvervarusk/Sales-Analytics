@@ -1,5 +1,4 @@
-# Sales-Analytics
-Sales Analytics Andmeanalüütiku kursus.
+## Andmeanalüütiku kursus.
 # 📈 [Sales Analytics] -- UrbanStyle.ltd Andmemeeskond
    ## 👥 Meeskonnaliikmed
    
