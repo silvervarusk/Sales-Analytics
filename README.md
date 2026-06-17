@@ -23,11 +23,6 @@ Muuta UrbanStyle’i müügiandmed ühtseks ja usaldusväärseks allikaks ning p
 - **Visualiseerimine:** Power BI, Streamlit
 - **Versioonihaldus:** Git, GitHub
 
-## Jälgi meie tegevusi - Dokumentatsioon  
-📜 [Activity Log](./LOG.md)
-
-# Portfoolio Struktuur 
-
 Supabase: Urbastyle ühine andmebaas  
 [![Supabase](https://img.shields.io/badge/Supabase-Dashboard-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/dashboard/project/zwougnxgntyidxyridhb)
 
@@ -38,5 +33,14 @@ Märkmete jaoks ja juhendite ühisvaatamiseks
 Andme presenteerimine, analüüs dokumentideks ja AI õppimiseks (Rag failid + AI vastused)  
 [![NotebookLM](https://img.shields.io/badge/NotebookLM-Open-4285F4?logo=google&logoColor=white)](https://notebooklm.google.com/notebook/d0fb17f6-bee5-4505-bf05-b1cfb96ac0f1)
 
+## Jälgi meie tegevusi - Dokumentatsioon  
+📜 [Activity Log](./LOG.md)
 
-
+# Portfoolio Struktuur 
+00_Infrastructure/          # Andmebaasi seadistus ja esmane avastamine (Week 0)    
+ 01_Sales_Performance/       # Populaarseimad tooted ja müügitrendid (Week 1)  
+ 02_Sustainability_Analysis/ # SQL JOIN-id ja jätkusuutlikud tooted (Week 3)  
+ 03_Customer_Segmentation/   # Kliendiprofiilid ja lojaalsus (Week 5)  
+ 04_Inventory_Optimization/  # Varude liikumine ja ootamatu lõppemine (Week 7)    
+ 05_Marketing_ROI/           # Kampaaniate efektiivsus ja konversioon (Week 9)  
+ 06_Final_Investor_Pitch/    # Koondaruanne ja strateegilised soovitused (Week 10)  
