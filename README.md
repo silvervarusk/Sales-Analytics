@@ -22,3 +22,4 @@ Sales Analytics Andmeanalüütiku kursus.
 ** Inna Gval        | Data Processing      | Data cleaning        | Win/Mac  | **
 ** Itiu Kumar       | Data Processing      | Data transformation  | Win/Mac  | **
 ** Katre Feldman    | Data Processing      | Data preparation     | Win/Mac  |
+  - **Andmebaasid:** PostgreSQL, Supabase
