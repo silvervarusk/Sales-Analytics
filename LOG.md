@@ -7,4 +7,8 @@ Luua ühine andmebaas (Supabase)
 Luua AI õppimise keskkond (NotebookLM)   
 Luua Team Charter 
 Grupi moodustamine ja iseseisev töö
-- Esialgne readme sissejuhatus. 
+
+17.06 Github muudatused:
+Readm.me loomine - Sissejuhatus, lingid,
+Log.md muudatuste jälgimiseks.
+Charter.md 
