@@ -15,9 +15,10 @@ Sales Analytics Andmeanalüütiku kursus.
 ## Muuta UrbanStyle’i müügiandmed ühtseks ja usaldusväärseks allikaks ning pakkuda selgeid, andmepõhiseid teadmisi, mis aitavad optimeerida müügitulemusi, parandada kliendikäitumise mõistmist ja toetada strateegilisi ärilisi otsuseid.
 
 
-👤 Nimi   	🧠 Roll 	⚙️ Fookus	💻 OS  
-Silver Varusk	Data Extraction	Data ingestion	Win/Mac
-Inna Gval	Data Processing	Data cleaning	Win/Mac
-Itiu Kumar	Data Processing	Data transformation	Win/Mac
-Katre Feldman	Data Processing	Data preparation	Win/Mac
-<img width="403" height="101" alt="image" src="https://github.com/user-attachments/assets/f0210e41-f736-4f8c-9dd7-5844034dc0d3" />
+
+  👤 Nimi             🧠 Roll                 ⚙️ Fookus            💻 OS    
+
+** Silver Varusk    | Data Extraction      | Data ingestion       | Win/Mac  | **
+** Inna Gval        | Data Processing      | Data cleaning        | Win/Mac  | **
+** Itiu Kumar       | Data Processing      | Data transformation  | Win/Mac  | **
+** Katre Feldman    | Data Processing      | Data preparation     | Win/Mac  |
