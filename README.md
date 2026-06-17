@@ -34,7 +34,8 @@ Andme presenteerimine, analüüs dokumentideks ja AI õppimiseks (Rag failid + A
 [![NotebookLM](https://img.shields.io/badge/NotebookLM-Open-4285F4?logo=google&logoColor=white)](https://notebooklm.google.com/notebook/d0fb17f6-bee5-4505-bf05-b1cfb96ac0f1)
 
 ## Jälgi meie tegevusi - Dokumentatsioon  
-[📜 Meie tegevused](./00_Infrastructure/Change%20log/LOG.md)
+[📜 Meie tegevused](./00_Infrastructure/Change%20log/)
+
 
 # Portfoolio Struktuur 
 00_Infrastructure/          # Andmebaasi seadistus ja esmane avastamine (Week 0)    
