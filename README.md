@@ -14,7 +14,7 @@ Sales Analytics Andmeanalüütiku kursus.
 Muuta UrbanStyle’i müügiandmed ühtseks ja usaldusväärseks allikaks ning pakkuda selgeid, andmepõhiseid teadmisi, mis aitavad optimeerida müügitulemusi, parandada kliendikäitumise mõistmist ja toetada strateegilisi ärilisi otsuseid.
 
 
-## 🛠️ Tehnoloogiad, mida kasutame
+## 🛠️ Kasutame
 ![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
