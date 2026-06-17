@@ -3,7 +3,7 @@ Sales Analytics Andmeanalüütiku kursus.
 # 📈 [Sales Analytics] -- UrbanStyle.ltd Andmemeeskond
    ## 👥 Meeskonnaliikmed
    
-  👤 Nimi             🧠 Roll                 ⚙️ Fookus            💻 OS    
+ # 👤 Nimi             🧠 Roll                 ⚙️ Fookus            💻 OS    
 
  Silver Varusk    | Data Extraction      | Data ingestion       | Win/Mac  |
  Inna Gval        | Data Processing      | Data cleaning        | Win/Mac  |
