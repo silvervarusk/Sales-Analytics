@@ -5,10 +5,11 @@ Sales Analytics Andmeanalüütiku kursus.
    
   👤 Nimi             🧠 Roll                 ⚙️ Fookus            💻 OS    
 
-| Silver Varusk    | Data Extraction      | Data ingestion       | Win/Mac  |
-| Inna Gval        | Data Processing      | Data cleaning        | Win/Mac  |
-| Itiu Kumar       | Data Processing      | Data transformation  | Win/Mac  |
-| Katre Feldman    | Data Processing      | Data preparation     | Win/Mac  |
+## Silver Varusk    | Data Extraction      | Data ingestion       | Win/Mac  |
+
+## Inna Gval        | Data Processing      | Data cleaning        | Win/Mac  |
+## Itiu Kumar       | Data Processing      | Data transformation  | Win/Mac  |
+## Katre Feldman    | Data Processing      | Data preparation     | Win/Mac  |
 
 ## 🎯 Meie eesmärk
 
