@@ -36,7 +36,8 @@ Andme presenteerimine, analüüs dokumentideks ja AI õppimiseks (Rag failid + A
 ## Jälgi meie tegevusi - Dokumentatsioon  
 [📜 Meie tegevused](https://github.com/silvervarusk/Sales-Analytics/blob/main/log)
 
-
+## Tiimi reeglid ja rotatsioon ( Team Charter)  
+[📄 Projekti põhimäärus](./charter.md)
 
 # Portfoolio Struktuur 
 00_Infrastructure/          # Andmebaasi seadistus ja esmane avastamine (Week 0)    
