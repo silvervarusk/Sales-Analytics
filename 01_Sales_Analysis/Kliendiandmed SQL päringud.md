@@ -83,12 +83,10 @@ ORDER BY klientide_arv DESC;
 |---------|-------|-------|-------|----------|---------|-------------|-------|----------|-------|------|-------|
 | 1238    | 658   | 346   | 177   | 112      | 107     | 98          | 94    | 90       | 83    | 81   | 66    |  
 
-# Uued Kliendid  
+# Uued Kliendid - Viimase 6 kuu registeerimised 
 SELECT  FROM customers   WHERE registration_date >= '2024-07-01'   ORDER BY registration_date DESC;   
 
-Eraldi fail:
-
-
+👉 [Uuemad Kliendid ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/uuemad_kliendid)  
 
 
 
