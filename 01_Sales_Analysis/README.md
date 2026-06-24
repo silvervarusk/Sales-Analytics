@@ -1,9 +1,13 @@
 
-# Olulised tähelepanekud kliendianmdetel
+
+# Üldine struktuur:   ![Customers Image](CUSTOMERS.jpg)  
+# Olulised tähelepanekud kliendiandmetel
 Anmdestikku tuleb puhastada  
 Erinevates formaatides: -City Linna nimeded algavad väikese või suurte tähtedega,  
 Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
 KAHLTUS Andmetes ESINEVAD duplikaat entrid  
+
+
 
 👉 [SQL Week 01 – Andmete import](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/SQL%20WEEK%2001%20CODE%20andmete%20import)
 
