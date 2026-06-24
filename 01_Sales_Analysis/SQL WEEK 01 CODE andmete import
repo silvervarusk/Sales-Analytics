@@ -1,0 +1,54 @@
+Week1:
+--Tabeli Products, Customers ja importimine ja Sales
+Tulemus ridades:
+--Prodcuts -362  , customers 3150  sales 15234
+
+
+-- Sales_import tabeli koostamine
+CREATE TABLE sales_import (
+  sale_id TEXT, invoice_id TEXT, sale_date TEXT, customer_id TEXT,
+  product_id TEXT, quantity TEXT, unit_price TEXT, total_price TEXT,
+  channel TEXT, store_location TEXT, payment_method TEXT
+);
+
+
+
+-- SALES TABLE IMPORT, Create table columns with type: 
+
+ALTER TABLE sales
+ADD COLUMN sale_id TEXT,
+ADD COLUMN invoice_id TEXT,
+ADD COLUMN sale_date DATE,
+ADD COLUMN customer_id INT,
+ADD COLUMN product_id INT,
+ADD COLUMN quantity INT,
+ADD COLUMN unit_price NUMERIC(10,2),
+ADD COLUMN total_price NUMERIC(10,2),
+ADD COLUMN channel VARCHAR(50),
+ADD COLUMN store_location VARCHAR(100),
+ADD COLUMN payment_method VARCHAR(50);
+-- SALES_IMPORT TO TABLE SALES WITH RIGHT DATE TYPES (Converting)
+INSERT INTO sales (
+  sale_id, invoice_id, sale_date, customer_id, product_id,
+  quantity, unit_price, total_price, channel, store_location, payment_method
+)
+SELECT
+  sale_id::INT, invoice_id,
+  CASE
+    WHEN sale_date ~ '^\d{4}-\d{2}-\d{2}' THEN sale_date::DATE
+    WHEN sale_date ~ '^\d{2}/\d{2}/\d{4}' THEN TO_DATE(sale_date, 'DD/MM/YYYY')
+    ELSE NULL
+  END,
+  customer_id::INT, product_id::INT, quantity::INT,
+  unit_price::NUMERIC, total_price::NUMERIC,
+  channel, NULLIF(store_location, ''), payment_method
+FROM sales_import;
+
+-- Sales_Import (Ajutine tabeli kustutamine)
+DROP TABLE sales_import;
+
+
+
+
+
+
