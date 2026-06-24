@@ -65,8 +65,8 @@ Tulemus 380 puuduvad e-maili
   
 SELECT COUNT() AS kokku_emaile,          COUNT(DISTINCT email) AS unikaalseid_emaile   FROM customers;   -- Vahe = duplikaadid!  
   
-Kokki emaile: 3150  
-Kokku emaile unikaalseid: 2640  
+Kokku e-maile: 3150  
+Kokku e-maile unikaalseid: 2640  
 Vahe 510
   
 # Klientide arv maakonniti:
