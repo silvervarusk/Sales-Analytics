@@ -20,7 +20,7 @@
 👉 [Uuemad Kliendid viimased 6 kuud ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/uuemad_kliendid)  
 
 # Suurim üllatus:  
-Anmded on vigased, esinvad duplikaate. Vajavad töötlemist!
+Andmed on vigased, esinvad duplikaate. Vajavad töötlemist!
 # Soovitus Toomasele  
   
 # Puuduvad andmestikud  
