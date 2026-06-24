@@ -54,13 +54,39 @@ SELECT COUNT(*) - COUNT(email) AS puuduvad_emailid    FROM customers;    `
 Tulemus 380 puuduvad e-maili  
 
 # Lühike kokkuvõte:
+! SQL Päringu tõõtavad ja on võimalik kasutada
  * Anmdestikku tuleb puhastada  
- *Erinevates formaatides:  -City  Linna nimeded  algavad väikese või suurte tähtedega,   
- *Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
- * Andmetes on duplikaat entrid  
+ * Erinevates formaatides:  -City  Linna nimeded  algavad väikese või suurte tähtedega,   
+ * Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
+ * KAHLTUS Andmetes ESINEVAD  duplikaat entrid
+ * 
+# Järgmised sammud
+* Duplikaatide tuvastamine  
+  
+SELECT COUNT() AS kokku_emaile,          COUNT(DISTINCT email) AS unikaalseid_emaile   FROM customers;   -- Vahe = duplikaadid!  
+  
+Kokki emaile: 3150  
+Kokku emaile unikaalseid: 2640  
+Vahe 510
+  
+# Klientide arv maakonniti:
+``  
+Puhastatud kujul:  
+SELECT
+    INITCAP(TRIM(city)) AS city,
+    COUNT(*) AS klientide_arv
+FROM customers
+GROUP BY INITCAP(TRIM(city))
+ORDER BY klientide_arv DESC;  
 
+| Tallinn | Tartu | Pärnu | Narva | Viljandi | Rakvere | Kuressaare | Valga | Haapsalu | Jõhvi | Võru | Paide |
+|---------|-------|-------|-------|----------|---------|-------------|-------|----------|-------|------|-------|
+| 1238    | 658   | 346   | 177   | 112      | 107     | 98          | 94    | 90       | 83    | 81   | 66    |  
 
+# Uued Kliendid  
+SELECT  FROM customers   WHERE registration_date >= '2024-07-01'   ORDER BY registration_date DESC;   
 
+Eraldi fail:
 
 
 
