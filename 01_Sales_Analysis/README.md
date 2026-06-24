@@ -1,5 +1,6 @@
 ## ROLL B WEEK 1
 
+
 # Üldine struktuur:   ![Customers Image](CUSTOMERS.jpg)  
 # Olulised tähelepanekud kliendiandmetel
 * Anmdestikku tuleb puhastada: Erinevates formaatides: -City Linna nimeded algavad väikese või suure tähega  
@@ -24,7 +25,10 @@ Andmed on vigased, esinvad duplikaate. Vajavad töötlemist!
 # Soovitus Toomasele  
   
 # Puuduvad andmestikud  
+## Kasutatud juhendid:
 
+N1_0_1_P_IT_SQL_pohi_v2.9  
+N1_2_1_P_GT_SQL_pohi_v2.9  
 
 
 
