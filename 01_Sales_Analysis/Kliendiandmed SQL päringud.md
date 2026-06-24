@@ -1,3 +1,4 @@
+## N1_2_1_P_GT_SQL_PÕHI
 # Klientide arv kokku 
 SELECT COUNT() AS klientide_arv FROM customers;  
   
