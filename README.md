@@ -24,7 +24,7 @@ Muuta UrbanStyle’i müügiandmed ühtseks ja usaldusväärseks allikaks ning p
 - **Versioonihaldus:** Git, GitHub
 
 Supabase: Urbastyle ühine andmebaas  
-[![Supabase](https://img.shields.io/badge/Supabase-Dashboard-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/dashboard/project/zwougnxgntyidxyridhb)
+[![Supabase](https://img.shields.io/badge/Supabase-Dashboard-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/dashboard/project/zwougnxgntyidxyridhb)  
 
 Märkmete jaoks ja juhendite ühisvaatamiseks  
 [![MIRO](https://img.shields.io/badge/-MIRO-FCBB00?logo=miro&logoColor=black)](https://miro.com/welcomeonboard/RXU4R3l0T2hIZFB0eitxL2R1dFV3L0FmeVFDbkF2aVd4WmFjUjVNM3hLdmI4SUlxMmxHcVQ3cm5ZcEVFaTZ2SkhEQmRoNjc2RGo2NDhoejZsUUJJYzZYUDh2Q0FrdHBlRmFHS1hiUkRwb0xIYjY0d0FKOEo5ZFBORDQxZDhrMGF3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=469922739694)  
@@ -41,7 +41,7 @@ Andme presenteerimine, analüüs dokumentideks ja AI õppimiseks (Rag failid + A
 
 # Portfoolio Struktuur 
 00_Infrastructure/          # Andmebaasi seadistus ja esmane avastamine (Week 0)    
- 01_Sales_Performance/       # Populaarseimad tooted ja müügitrendid (Week 1)  
+ 01_Sales_Performance/       # [Populaarseimad tooted ja müügitrendid (Week 1) ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/README.md)  
  02_Sustainability_Analysis/ # SQL JOIN-id ja jätkusuutlikud tooted (Week 3)  
  03_Customer_Segmentation/   # Kliendiprofiilid ja lojaalsus (Week 5)  
  04_Inventory_Optimization/  # Varude liikumine ja ootamatu lõppemine (Week 7)    
