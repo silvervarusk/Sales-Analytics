@@ -27,6 +27,16 @@ Nädal 2: A= Indrek B= Silver C= Irina D= Tiiu E= Katre
 Nädal 3: A= Katre B= Indrek C= Silver D= Irina E= Tiiu
 Nädal 4: A= Tiiu B= Katre C= Indrek D= Silver E= Irina
 
+## 🔄 ROLLIDE ROTATSIOON UUS - KATRE lahkus.
+
+| Nädal | A       | B       | C       | D       |
+|------|--------|--------|--------|--------|
+| 1    | Silver | Irina  | Tiiu   | Indrek |
+| 2    | Indrek | Silver | Irina  | Tiiu   |
+| 3    | Tiiu   | Indrek | Silver | Irina  |
+| 4    | Irina  | Tiiu   | Indrek | Silver |
+
+
 ALLKIRJAD:  1. Katre Feldman (ok)  2. Tiiu Kumar
             3. Silver Varusk 4. Irina Grigorjeva
             5.Indrek
