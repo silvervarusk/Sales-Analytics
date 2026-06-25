@@ -1,4 +1,6 @@
 # WEEK 1 Müügiosakond
+| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
+|------------|----------------|----------------|-----------------|-----------------| 
 
 ### Andme struktuurid:
 
