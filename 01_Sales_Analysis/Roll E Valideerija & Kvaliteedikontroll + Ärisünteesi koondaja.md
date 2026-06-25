@@ -1,0 +1,1 @@
+## Valideerija & Kvaliteedikontroll + Ärisünteesi koondaja
