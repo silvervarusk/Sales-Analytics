@@ -10,7 +10,9 @@
   Kokku e-maile: 3150  
   Kokku e-maile unikaalseid: 2640  
    **Vahe** 510
- 
+
+ # Kokkuvõte Müügikanalid ja asukohad
+ Müügikanaleid on 2 : online ja pood Poed asuvad kolmes linnas : Tallinn, Tartu, Pärnu. Poe asukoht ei ole alati määratud (NULL e. siis on tegemist e-poe ostuga) Makseviise on kasutusel 3 erinevad: järelmaks, kaart, sularaha Ilma asukohata tehinguid oli 5204 Leidsin vastuolu - e-poe ostul on makseviisiks märgitud sularaha
 
 # AUDIT LOG-ID.  
   
@@ -19,6 +21,9 @@
 👉 [Kliendiandmed SQL päringud](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Kliendiandmed%20SQL%20päringud.md)
 
 👉 [Uuemad Kliendid viimased 6 kuud ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/uuemad_kliendid)  
+  
+👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)  
+
 
 # Suurim üllatus:  
 Andmed on vigased, esinvad duplikaate. Vajavad töötlemist!
