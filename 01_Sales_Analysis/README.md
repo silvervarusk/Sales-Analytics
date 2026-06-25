@@ -50,7 +50,6 @@ kuid vajab **andmete puhastamist ja valideerimist*
 - Linnanimed ebajärjekindlad (väike/suur algustäht)
 - Puuduvad e-mailid osadel klientidel  !!!! **Targeting AD VIP klienditdele PUUDULIK**
 
-
 ⚠️ **Duplikaadid**
 - Kokku e-maile: **3150**
 - Unikaalseid: **2640**
@@ -75,19 +74,17 @@ kuid vajab **andmete puhastamist ja valideerimist*
 ---
 
 
-
+# Kokkuvõte
 ## 🚨 Suurimad üllatused
-
-- 🔴 **Customers**
+- 🔴 **Müük**
+- Ostud ei saa olla NEGATIIVSES summas kui tegemist ei ole tagastusega.
+- 🔴 **Kliendiandmed**
   - Duplikaadid e-mailides → vajab puhastamist  
 
-- 🔴 **Sales**
+- ✅ **Müügikanalid ja asukohad**
+  - Puuduvad NULL väärtused (hea kvaliteet)  
   - Channel vs payment mismatch  
   - e-poe maksed ≠ sularaha  
-
-- ✅ **Products**
-  - Puuduvad NULL väärtused (hea kvaliteet)  
-
 ---
 
 ## 💡 Soovitused
@@ -96,7 +93,8 @@ kuid vajab **andmete puhastamist ja valideerimist*
 - Eemaldada e-mail duplikaadid
 - Lisa validatsioon:
   - `online → ainult kaart/järelmaks`
-- Kontrollida NULL asukohad automaatselt - 
+- Kontrollida NULL asukohad 
+- Kontrollida üle negatiivsed maksed
 
 
 ## 🔗 SQL & Audit Logid 
