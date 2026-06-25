@@ -1,8 +1,11 @@
-# WEEK 1 Müügiosakond
-| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
-|------------|----------------|----------------|-----------------|-----------------| 
+# 📊 WEEK 1 — Müügiosakond
 
-### Andme struktuurid:
+## 🛍️ Kategooriad
+| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
+|------------|----------------|----------------|-----------------|-----------------|
+
+---
+## 🧱 Table view Andmestruktuuridest 
 
 
 <details>  
@@ -29,44 +32,105 @@
 <img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/70afaff2-e1b7-473e-8ae1-11d24bf98181" />
 </details>
 
+## 🔍 Olulised tähelepanekud (Customers)
+
+⚠️ **Andmete kvaliteet**
+- Linnanimed ebajärjekindlad (väike/suur algustäht)
+- Puuduvad e-mailid osadel klientidel
+
+⚠️ **Duplikaadid**
+- Kokku e-maile: **3150**
+- Unikaalseid: **2640**
+- ❗ Duplikaate: **510**
+
+
+## 🌍 Müügikanalid ja asukohad
+
+- 🛒 Müügikanalid: **online**, **pood**
+- 📍 Linnad: **Tallinn, Tartu, Pärnu**
+- ❗ NULL väärtus = e-poe tellimus
+
+💳 **Makseviisid:**
+- järelmaks  
+- kaart  
+- sularaha  
+
+⚠️ **Leitud probleem**
+- 5204 tehingut ilma asukohata  
+- ❗ E-poes on kasutatud *sularaha* → loogikaviga  
+
+---
 
 
 
+## 🚨 Suurimad üllatused
 
-# Olulised tähelepanekud kliendiandmetel
-* Anmdestikku tuleb puhastada: Erinevates formaatides: -City Linna nimeded algavad väikese või suure tähega  
-* Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
-* KAHLTUS andmetes esinevad duplikaat entrid  näide e-mail aadresid
+- 🔴 **Customers**
+  - Duplikaadid e-mailides → vajab puhastamist  
+
+- 🔴 **Sales**
+  - Channel vs payment mismatch  
+  - e-poe maksed ≠ sularaha  
+
+- ✅ **Products**
+  - Puuduvad NULL väärtused (hea kvaliteet)  
+
+---
+
+## 💡 Soovitused
+
+- Standardiseerida linnanimed (LOWER / UPPER)  Kasutadaes INITCAP (capitalizes)  ja TRIM (Tühikute eemaldamiseks) funktsioone.
+- Eemaldada e-mail duplikaadid
+- Lisa validatsioon:
+  - `online → ainult kaart/järelmaks`
+- Kontrollida NULL asukohad automaatselt - 
+
+
+## 🔗 SQL & Audit Logid 
   
-  Kokku e-maile: 3150  
-  Kokku e-maile unikaalseid: 2640  
-   **Vahe** 510
-
- # Kokkuvõte Müügikanalid ja asukohad
- Müügikanaleid on 2 : online ja pood Poed asuvad kolmes linnas : Tallinn, Tartu, Pärnu. Poe asukoht ei ole alati määratud (NULL e. siis on tegemist e-poe ostuga) Makseviise on kasutusel 3 erinevad: järelmaks, kaart, sularaha Ilma asukohata tehinguid oli 5204 Leidsin vastuolu - e-poe ostul on makseviisiks märgitud sularaha
-
-# AUDIT LOG-ID.  
   
-👉 [SQL Week 01 – Andmete import](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/SQL%20WEEK%2001%20CODE%20andmete%20import)
 
-👉 [Kliendiandmed SQL päringud](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Kliendiandmed%20SQL%20päringud.md)
+* Roll A Müügiandmed  
 
-👉 [Uuemad Kliendid viimased 6 kuud ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/uuemad_kliendid)  
+  👉[Müük](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Roll%20A%20m%C3%BC%C3%BCk.md)  
   
-👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)  
-
-
-# Suurim üllatus:  
-* Customers Andmed on vigased, esinevad duplikaate e-posti aadressidel. Vajavad töötlemist!  
-* Sales:Müügikanalid ja asukohad - Payment method ja channel nimed ei klappi. Veebipoe maksed ei saa ola sularahas.   
-* Products (üheskis lahtris polnud null väärtusi) 
-# Soovitus Toomasele  
+* Roll B Kliendiandmed (customers)  
   
-# Puuduvad andmestikud  
-## Kasutatud juhendid:
+  👉 [Kliendiandmed](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Kliendiandmed%20SQL%20päringud.md)  
 
-N1_0_1_P_IT_SQL_pohi_v2.9  
-N1_2_1_P_GT_SQL_pohi_v2.9  
+* Roll C  Tooteandmed (products)  
+
+* ROll D  Müügikanalid (sales: kanalid, asukohad  
+  
+  👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)  
+
+ * Lisa  
+   👉 [SQL Week 01 – Andmete import](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/SQL%20WEEK%2001%20CODE%20andmete%20import)
+   
+   👉 [Uuemad Kliendid viimased 6 kuud ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/uuemad_kliendid)
+   
+
+## 📚 Kasutatud materjalid
+
+- N1_0_1_P_IT_SQL_pohi_v2.9  
+- N1_2_1_P_GT_SQL_pohi_v2.9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
