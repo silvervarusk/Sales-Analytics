@@ -1,8 +1,8 @@
-<img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/0ac3dc8e-51ba-4258-bf6c-406856034697" /># WEEK 1 Müügiosakond
+# WEEK 1 Müügiosakond
 
-# Andme struktuurid:
+### Andme struktuurid:
 
-### Customers:  
+#### Customers:  
 <details>  
 <summary>📊 Click to view Sales Image</summary>
   
@@ -10,7 +10,7 @@
   
 </details>  
 
-### Sales:
+#### Sales:
 <details>
   
 <summary>📊 Click to view Sales Image</summary>
@@ -19,7 +19,7 @@
 </details>
 
 
-# Products
+#### Products
 <details>
   
 <summary>📊 Click to view Sales Image</summary>
