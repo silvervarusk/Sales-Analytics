@@ -27,7 +27,9 @@ Viide: Customers
 
 
 # Suurim üllatus:  
-Andmed on vigased, esinvad duplikaate. Vajavad töötlemist!
+* Customers Andmed on vigased, esinevad duplikaate e-posti aadressidel. Vajavad töötlemist!  
+* Sales:Müügikanalid ja asukohad - Payment method ja channel nimed ei klappi. Veebipoe maksed ei saa ola sularahas.   
+* Products (üheskis lahtris polnud null väärtusi) 
 # Soovitus Toomasele  
   
 # Puuduvad andmestikud  
