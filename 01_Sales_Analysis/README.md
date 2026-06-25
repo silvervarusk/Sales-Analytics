@@ -2,27 +2,27 @@
 
 ### Andme struktuurid:
 
-#### Customers:  
+
 <details>  
-<summary>📊 Click to view Sales Image</summary>
+<summary>📊  Customers</summary>
   
 ![Customers Image](CUSTOMERS.jpg)  
   
 </details>  
 
-#### Sales:
+
 <details>
   
-<summary>📊 Click to view Sales Image</summary>
+<summary>📊 Sales  </summary>
   
 ![Sales Image](sales.png)
 </details>
 
 
-#### Products
+
 <details>
   
-<summary>📊 Click to view Sales Image</summary>
+<summary>📊 Products</summary>
   
 <img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/70afaff2-e1b7-473e-8ae1-11d24bf98181" />
 </details>
