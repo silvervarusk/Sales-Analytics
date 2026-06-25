@@ -1,0 +1,3 @@
+-- Mitu rida on sales tabelis?   
+SELECT COUNT() AS ridade_arv FROM sales;    `
+* 15234
