@@ -33,17 +33,39 @@
 </details>
 
 ## 🔍 Müük (A)
-On olemas NULL väärtused (nt customer_id)  
-- 
+- Puuduvad kliendiandmed: **1487 rida on null** (Poe ostud)
+
 <details>
   
-<summary> Esineb loogikavigu (nt kanal vs makse)</summary>
+<summary>  NULL väärtused ka = Epoe tehingud </summary>
+  
+<img width="199" height="182" alt="image" src="https://github.com/user-attachments/assets/124adcc6-bb85-4d13-84e8-18109853b912" />
+</details>
+
+
+<details>
+  
+<summary> Esineb loogikavigu (nt channel vs payment_method)</summary>
   
 <img width="1132" height="56" alt="image" src="https://github.com/user-attachments/assets/d0a9a698-c444-4554-b30d-37c0516998b6" />
 </details>
 
-- Leidub nii väga suuri kui väga väikseid tehinguid  
-- Puuduvad kliendiandmed: **1487 rida**
+#### **Leidub nii väga suuri kui väga väikseid tehinguid (Negatiivse summaga)**
+
+<details>
+  
+<summary> Suuremad tehingud</summary>
+  
+<img width="1138" height="389" alt="image" src="https://github.com/user-attachments/assets/1241ea44-8971-4592-a9c0-45c7f97e24b7" />
+</details>
+
+<details>
+  
+<summary> Negatiivsed tehingud</summary>
+  
+<img width="1134" height="394" alt="image" src="https://github.com/user-attachments/assets/676bea47-2b21-4958-bc58-f3d4f605376e" />
+</details>
+
 
   **Järeldus**  
 Sales tabel sisaldab piisavalt andmeid analüüsiks,  
@@ -116,8 +138,10 @@ kuid vajab **andmete puhastamist ja valideerimist*
   
   👉 [Kliendiandmed](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Kliendiandmed%20SQL%20päringud.md)  
 
-* Roll C  Tooteandmed (products)  
+* Roll C  Tooteandmed (products)
 
+  👉 [Tooteandmed](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Roll%20C%20Tooteandmed.md)  
+ 
 * ROll D  Müügikanalid (sales: kanalid, asukohad  
   
   👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)  
