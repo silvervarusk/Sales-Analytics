@@ -1,8 +1,36 @@
-## ROLL B WEEK 1
+<img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/0ac3dc8e-51ba-4258-bf6c-406856034697" /># WEEK 1 Müügiosakond
+
+# Andme struktuurid:
+
+### Customers:  
+<details>  
+<summary>📊 Click to view Sales Image</summary>
+  
+![Customers Image](CUSTOMERS.jpg)  
+  
+</details>  
+
+### Sales:
+<details>
+  
+<summary>📊 Click to view Sales Image</summary>
+  
+![Sales Image](sales.png)
+</details>
 
 
-# Praegne andme struktuur:   ![Customers Image](CUSTOMERS.jpg)  
-Viide: Customers.csv
+# Products
+<details>
+  
+<summary>📊 Click to view Sales Image</summary>
+  
+<img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/70afaff2-e1b7-473e-8ae1-11d24bf98181" />
+</details>
+
+
+
+
+
 # Olulised tähelepanekud kliendiandmetel
 * Anmdestikku tuleb puhastada: Erinevates formaatides: -City Linna nimeded algavad väikese või suure tähega  
 * Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
