@@ -33,7 +33,7 @@
 </details>
 
 ## 🔍 Müük (A)
-- Puuduvad kliendiandmed: **1487 rida on null** (Poe ostud)
+- Puuduvad kliendiandmed (Customer_ID): **1487 rida on null** - Poe ostud
 
 <details>
   
@@ -50,13 +50,14 @@
 <img width="1132" height="56" alt="image" src="https://github.com/user-attachments/assets/d0a9a698-c444-4554-b30d-37c0516998b6" />
 </details>
 
-#### **Leidub nii väga suuri kui väga väikseid tehinguid (Negatiivse summaga)**
+#### **Leidub nii väga suuri kui väga väikseid tehinguid (Negatiivse summaga)** + Duplikaadid
 
 <details>
   
 <summary> Suuremad tehingud</summary>
-  
-<img width="1138" height="389" alt="image" src="https://github.com/user-attachments/assets/1241ea44-8971-4592-a9c0-45c7f97e24b7" />
+
+
+<img width="1138" height="389" alt="image" src="https://github.com/user-attachments/assets/e5b3447c-4b78-4317-9af8-bb61a5500476" />
 </details>
 
 <details>
@@ -100,6 +101,9 @@ kuid vajab **andmete puhastamist ja valideerimist*
 - 5204 tehingut ilma asukohata  
 - ❗ E-poes on kasutatud *sularaha* → loogikaviga  
 
+## Roll C Tooteandmed
+
+
 ---
 
 
@@ -107,6 +111,8 @@ kuid vajab **andmete puhastamist ja valideerimist*
 ## 🚨 Suurimad üllatused
 - 🔴 **Müük**
 - Ostud ei saa olla NEGATIIVSES summas kui tegemist ei ole tagastusega.
+- Topelt maksed
+- Esinevad null andmed
 - 🔴 **Kliendiandmed**
   - Duplikaadid e-mailides → vajab puhastamist  
 
@@ -116,13 +122,13 @@ kuid vajab **andmete puhastamist ja valideerimist*
   - e-poe maksed ≠ sularaha  
 ---
 
-## 💡 Soovitused
+## 💡 Soovitused Toomasele
 
 - Standardiseerida linnanimed (LOWER / UPPER)  Kasutadaes INITCAP (capitalizes)  ja TRIM (Tühikute eemaldamiseks) funktsioone.
-- Eemaldada e-mail duplikaadid
+- Eemaldada e-mail duplikaadid ja topelt maksed
 - Lisa validatsioon:
   - `online → ainult kaart/järelmaks`
-- Kontrollida NULL asukohad 
+- Kontrollida NULL asukohad ja võimalused korrigeerida
 - Kontrollida üle negatiivsed maksed
 
 
