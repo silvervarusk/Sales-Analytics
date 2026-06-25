@@ -2,7 +2,7 @@
 
 
 # Praegne andme struktuur:   ![Customers Image](CUSTOMERS.jpg)  
-Viide: Customers
+Viide: Customers.csv
 # Olulised tähelepanekud kliendiandmetel
 * Anmdestikku tuleb puhastada: Erinevates formaatides: -City Linna nimeded algavad väikese või suure tähega  
 * Mõned andmestikud on puudulikud: Kõikidel klientidel pole e-mail aadressi registeeritud.  
