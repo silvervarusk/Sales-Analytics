@@ -32,11 +32,24 @@
 <img width="1209" height="323" alt="image" src="https://github.com/user-attachments/assets/70afaff2-e1b7-473e-8ae1-11d24bf98181" />
 </details>
 
-## 🔍 Olulised tähelepanekud (Customers)
+## 🔍 Müük (A)
+On olemas NULL väärtused (nt customer_id)  
+- Esineb loogikavigu (nt kanal vs makse)  
+- Leidub nii väga suuri kui väga väikseid tehinguid  
+- Puuduvad kliendiandmed: **1487 rida**
+
+  **Järeldus**  
+Sales tabel sisaldab piisavalt andmeid analüüsiks,  
+kuid vajab **andmete puhastamist ja valideerimist*  
+
+
+
+## 🔍 Kliendiandmed (B)
 
 ⚠️ **Andmete kvaliteet**
 - Linnanimed ebajärjekindlad (väike/suur algustäht)
-- Puuduvad e-mailid osadel klientidel
+- Puuduvad e-mailid osadel klientidel  !!!! **Targeting AD VIP klienditdele PUUDULIK**
+
 
 ⚠️ **Duplikaadid**
 - Kokku e-maile: **3150**
@@ -44,7 +57,7 @@
 - ❗ Duplikaate: **510**
 
 
-## 🌍 Müügikanalid ja asukohad
+## 🌍 Müügikanalid ja asukohad (D)
 
 - 🛒 Müügikanalid: **online**, **pood**
 - 📍 Linnad: **Tallinn, Tartu, Pärnu**
