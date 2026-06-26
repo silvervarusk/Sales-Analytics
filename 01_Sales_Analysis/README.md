@@ -187,7 +187,8 @@
 - Lisa validatsioon:
   - `online → ainult kaart/järelmaks`
 - Kontrollida NULL asukohad ja võimalused korrigeerida
-- Kontrollida üle negatiivsed maksed  
+- Kontrollida üle negatiivsed maksed
+
    
 **Järeldus**
 Tabelid sisaldavad piisavalt andmeid analüüsiks,  
