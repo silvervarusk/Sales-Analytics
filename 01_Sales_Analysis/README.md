@@ -168,6 +168,8 @@ NB! Sõnas „Kleidid“ pidin vahetama suure K tähe väikse „k“ vastu, mui
 
 <img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby3.png" /> </details>
 
+Toodete arv kategooria järgi:
+
 <img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby4.png" /> </details>
 
 
