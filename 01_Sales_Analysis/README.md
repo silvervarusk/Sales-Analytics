@@ -164,15 +164,17 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 
 Keskmised hinnad kategooria järgi:
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby2.png" /> </details>
+<img width="800" alt="Keskmised hinnad" src="images/roll_c_groupby2.png" />
 
 NB! Sõnas „Kleidid“ pidin vahetama suure K tähe väikse „k“ vastu, muidu viskas errori.
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby3.png" /> </details>
+<img width="800" alt="Parandatud päring" src="images/roll_c_groupby3.png" />
 
 Toodete arv kategooria järgi:
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby4.png" /> </details>
+<img width="800" alt="Toodete arv" src="images/roll_c_groupby4.png" />
+
+</details>
 
 
 Kokkuvõte: Tabelis products on kõik vajalikud andmed olemas ja puuduvad väärtused puuduvad. Peamised erinevused juhendiga on veeru price puudumine (cost_price asemel) ning category ja subcategory tasemete eristamine.
