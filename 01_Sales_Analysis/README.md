@@ -252,6 +252,8 @@ kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale ed
   
 <summary>📋 2. Tabeli sisu ja veerud (esimesed 10 rida) </summary>
 
+Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
+
 <img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details>
 
 <details> 
