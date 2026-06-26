@@ -106,9 +106,9 @@
 
 </details>
 
-## 🔍 Product Data Explorer (C)
-
-### Product Data Explorer (C)
+## 🛍️ Tooteandmed (C)
+| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
+|------------|----------------|----------------|-----------------|-----------------|
 
 - **Toodete koguarv:** 362
 - **Kategooriate arv:** 5 (jalanõud, laste_riided, aksessuaarid, naiste_riided, meeste_riided)
@@ -226,9 +226,7 @@ Kokkuvõte: Tabelis products on kõik vajalikud andmed olemas ja puuduvad väär
 </details>
 
 
-## 🛍️ Tooteandmed (C)
-| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
-|------------|----------------|----------------|-----------------|-----------------|
+
 
 
 
