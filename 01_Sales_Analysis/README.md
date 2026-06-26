@@ -122,7 +122,7 @@
 
 <details> 
   
-<summary>📋 2. Tabeli sisu ja veerud (esimesed 10 rida) </summary>
+<summary>📋 2. Tabeli sisu ja veerud (esimest 10 rida) </summary>
 
 Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
 
@@ -136,7 +136,7 @@ Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (ja
 
 <details> 
   
-<summary>💰 4. Kallimad ja odavaimad tooted</summary>
+<summary>💰 4. Kallimad ja odavamad tooted</summary>
   
 Märkus: Kasutasin veergu retail_price, kuna price puudub.
 
