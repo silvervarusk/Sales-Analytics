@@ -108,20 +108,6 @@
 
 
 
-## 🛍️ Tooteandmed (C)
-| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
-|------------|----------------|----------------|-----------------|-----------------|
-
-- **Toodete koguarv:** 362
-- **Kategooriate arv:** 5 (jalanõud, laste_riided, aksessuaarid, naiste_riided, meeste_riided)
-- **Hinnavahemik (retail_price):** 10.15 € – 346.70 €
-- **Puuduvad väärtused (NULL):** 0 rida (veergudes `retail_price` ja `category`)
-
-<details>
-<summary>📊 1. Toodete koguarv</summary>
-
-
-
 ## 🌍 Müügikanalid ja asukohad (D)
 
 
@@ -247,6 +233,18 @@ kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale ed
 
 
 
+
+## 🛍️ Tooteandmed (C)
+| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
+|------------|----------------|----------------|-----------------|-----------------|
+
+- **Toodete koguarv:** 362
+- **Kategooriate arv:** 5 (jalanõud, laste_riided, aksessuaarid, naiste_riided, meeste_riided)
+- **Hinnavahemik (retail_price):** 10.15 € – 346.70 €
+- **Puuduvad väärtused (NULL):** 0 rida (veergudes `retail_price` ja `category`)
+
+<details>
+<summary>📊 1. Toodete koguarv</summary>
 
 
 
