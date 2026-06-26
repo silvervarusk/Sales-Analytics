@@ -129,11 +129,16 @@ SELECT COUNT(*) FROM products; -- 362
 Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
 
 <details>
+
 <summary>📊 2. Millised veerud ja andmed tabelis on? </summary>
 
 SELECT * FROM products LIMIT 10;
 
 <img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details><details> <summary>🏷️ 3. Unikaalsed kategooriad</summary>
+
+<details>
+  
+<summary> - 👗 3. Milliseid kategooriaid UrbanStyle müüb?  </summary>
 
 
 **Päring:**
@@ -144,6 +149,10 @@ SELECT DISTINCT category FROM products;
 
 Märkus: Kasutasin veergu cost_price, kuna price puudub.
 
+<details>
+  
+<summary> - 👗 4.  Leia kalleimad ja odavaimad tooted  </summary>
+
 **Päring:**
 ```sql
 -- 10 kallimat
@@ -151,7 +160,11 @@ SELECT product_name, retail_price FROM products ORDER BY retail_price DESC LIMIT
 -- 10 odavamat
 SELECT product_name, retail_price FROM products ORDER BY retail_price ASC LIMIT 10;
 
-<img width="800" alt="Kalleimad tooted" src="images/roll_c_expensive.png" /> <img width="800" alt="Odavaimad tooted" src="images/roll_c_cheap.png" /> </details><details> <summary>👗 5. Kategooria "Kleidid" filtreerimine</summary>
+<img width="800" alt="Kalleimad tooted" src="images/roll_c_expensive.png" /> <img width="800" alt="Odavaimad tooted" src="images/roll_c_cheap.png" /> 
+
+</details>
+
+<details> <summary>👗 5. Kategooria "Kleidid" filtreerimine </summary>
 
 Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 
@@ -160,6 +173,10 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 SELECT * FROM products WHERE subcategory = 'Kleidid';
 
 <img width="800" alt="Kleidid tooted" src="images/roll_c_kleidid.png" /> </details><details> <summary>✅ 6. Puuduvate väärtuste kontroll (NULL)</summary>
+
+</details>
+
+<details> <summary>📊 6. Kontrolli puuduvaid väärtusi </summary>
 
 **Päring:**
 ```sql
