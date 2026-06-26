@@ -156,11 +156,13 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 
 <img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null.png" /> </details>
 
+<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+
 <details>
   
 <summary>📈 7. Edasijõudnute tase: Statistika </summary>
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+
 
 Kokkuvõte: Tabelis products on kõik vajalikud andmed olemas ja puuduvad väärtused puuduvad. Peamised erinevused juhendiga on veeru price puudumine (cost_price asemel) ning category ja subcategory tasemete eristamine.
 
