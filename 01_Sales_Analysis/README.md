@@ -108,7 +108,14 @@
 
 ## 🌍 Müügikanalid ja asukohad (D)
 
-🛒 Müügikanalid: **online**, **pood**
+
+<details>
+  
+<summary> - 🛒 Müügikanalid: **online**, **pood**</summary>
+  
+<img width="108" height="106" alt="image" src="https://github.com/user-attachments/assets/34d7a065-e74f-46ff-840f-194f2b5f41a8" />
+
+</details>
 
 💳 **Makseviisid:**
 - järelmaks  
