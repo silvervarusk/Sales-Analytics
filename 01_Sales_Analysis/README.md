@@ -1,8 +1,5 @@
 # 📊 WEEK 1 — Müügiosakond
 
-
-
----
 ## 🧱 Table view Andmestruktuuridest 
 
 
