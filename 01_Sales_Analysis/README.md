@@ -150,22 +150,24 @@
 
 # Kokkuvõte
 ## 🚨 Suurimad üllatused
-- 🔴 **Müük**
+🔴 **Müük**
 - Ostud ei saa olla NEGATIIVSES summas kui tegemist ei ole tagastusega.
 - Topelt maksed
-- Esinevad null andmed
-- 🔴 **Kliendiandmed**
+- Esinevad null andmed  
+ 
+🔴**Kliendiandmed**
   - Duplikaadid e-mailides → vajab puhastamist  
 
-- ✅ **Müügikanalid ja asukohad**
+🔴**Müügikanalid ja asukohad**
   - Puuduvad NULL väärtused (hea kvaliteet)  
   - Channel vs payment mismatch  
-  - e-poe maksed ≠ sularaha  
+  - e-poe maksed ≠ sularaha
+   
 ---
 
 ## 💡 Soovitused Toomasele
 
-- Standardiseerida linnanimed (LOWER / UPPER)  Kasutadaes INITCAP (capitalizes)  ja TRIM (Tühikute eemaldamiseks) funktsioone.
+- ✅ Standardiseerida linnanimed (LOWER / UPPER)  Kasutadaes INITCAP (capitalizes)  ja TRIM (Tühikute eemaldamiseks) funktsioone.
 - Eemaldada e-mail duplikaadid ja topelt maksed
 - Lisa validatsioon:
   - `online → ainult kaart/järelmaks`
