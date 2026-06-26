@@ -115,9 +115,25 @@ kuid vajab **andmete puhastamist ja valideerimist*
 - sularaha  
 
 ⚠️ **Leitud probleem**
-- 5204 tehingut ilma asukohata  
-- ❗ E-poes on kasutatud *sularaha* → loogikaviga
+- 5204 tehingut ilma asukohata  (E-pood)
 
+
+<details>
+<summary>
+📍 ❗ E-poes on kasutatud *sularaha* → loogikaviga</strong>
+</summary>
+
+<br>
+
+<img width="311" height="170" alt="image" src="https://github.com/user-attachments/assets/677e966b-42ce-49dd-a5b1-02c94c759675" />
+
+</details>
+
+
+
+
+
+ 
 <details>
 <summary>
 📍 Linnad: <strong>Tallinn, Tartu, Pärnu, NULL</strong> — ❗ <strong>NULL väärtus = e-poe tellimus</strong>
