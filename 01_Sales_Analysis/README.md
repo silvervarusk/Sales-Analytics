@@ -162,6 +162,8 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
   
 <summary>📈 7. Edasijõudnute tase: Statistika </summary>
 
+Keskmised hinnad kategooria järgi:
+
 <img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby2.png" /> </details>
 
 NB! Sõnas „Kleidid“ pidin vahetama suure K tähe väikse „k“ vastu, muidu viskas errori.
