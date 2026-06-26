@@ -106,6 +106,8 @@
 
 </details>
 
+
+
 ## 🛍️ Tooteandmed (C)
 | 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
 |------------|----------------|----------------|-----------------|-----------------|
@@ -126,9 +128,13 @@ SELECT COUNT(*) FROM products; -- 362
 
 Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
 
+<details>
+<summary>📊 2. Millised veerud ja andmed tabelis on? </summary>
+
 SELECT * FROM products LIMIT 10;
 
 <img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details><details> <summary>🏷️ 3. Unikaalsed kategooriad</summary>
+
 
 **Päring:**
 ```sql
