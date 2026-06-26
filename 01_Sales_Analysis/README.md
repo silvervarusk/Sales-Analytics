@@ -156,7 +156,7 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 
 <img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null.png" /> </details>
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+<img width="800" alt="NULL väärtuste tulemus" src="images/roll_c_groupby.png" /> </details>
 
 <details>
   
