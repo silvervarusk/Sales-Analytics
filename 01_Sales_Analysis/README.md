@@ -154,7 +154,7 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
   
 <summary>✅ 6. Puuduvate väärtuste kontroll (NULL) </summary>
 
-<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null.png" /> </details>
+<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null3.png" /> </details>
 
 <img width="800" alt="NULL väärtuste tulemus" src="images/roll_c_null2.png" /> </details>
 
@@ -162,7 +162,7 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
   
 <summary>📈 7. Edasijõudnute tase: Statistika </summary>
 
-<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby4.png" /> </details>
 
 <img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby2.png" /> </details>
 
