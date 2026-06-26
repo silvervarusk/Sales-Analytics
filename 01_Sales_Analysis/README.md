@@ -68,9 +68,7 @@
 </details>
 
 
-  **Järeldus**  
-Sales tabel sisaldab piisavalt andmeid analüüsiks,  
-kuid vajab **andmete puhastamist ja valideerimist*  
+
 
 
 
@@ -175,7 +173,10 @@ kuid vajab **andmete puhastamist ja valideerimist*
   - `online → ainult kaart/järelmaks`
 - Kontrollida NULL asukohad ja võimalused korrigeerida
 - Kontrollida üle negatiivsed maksed
-
+- 
+  **Järeldus**  
+Tabelid sisaldavad piisavalt andmeid analüüsiks,  
+kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale edasi anda.
 
 ## 🔗 SQL & Audit Logid 
   
