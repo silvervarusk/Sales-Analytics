@@ -204,7 +204,11 @@ kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale ed
  
 * ROll D  Müügikanalid (sales: kanalid, asukohad  
   
-  👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)  
+  👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)
+
+
+  👉[Validatsioon Roll E (Lisa) ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Roll%20E%20Valideerija%20%26%20Kvaliteedikontroll%20%2B%20%C3%84ris%C3%BCnteesi%20koondaja.md)  
+
 
  * Lisa  
    👉 [SQL Week 01 – Andmete import](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/SQL%20WEEK%2001%20CODE%20andmete%20import)
