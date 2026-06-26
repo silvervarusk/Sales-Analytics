@@ -1,8 +1,6 @@
 # 📊 WEEK 1 — Müügiosakond
 
-## 🛍️ Kategooriad
-| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
-|------------|----------------|----------------|-----------------|-----------------|
+
 
 ---
 ## 🧱 Table view Andmestruktuuridest 
@@ -152,7 +150,9 @@
 </details>
 
 
-## 🏷️ Tooteandmed (C)
+## 🛍️ Tooteandmed (C)
+| 👟 Jalanõud | 👶 Laste riided | 🎒 Aksessuaarid | 👗 Naiste riided | 👔 Meeste riided |
+|------------|----------------|----------------|-----------------|-----------------|
 
 
 
