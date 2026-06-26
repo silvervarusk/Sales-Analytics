@@ -75,7 +75,16 @@
 ## 🔍 Kliendiandmed (B)
 
 ⚠️ **Andmete kvaliteet**
-- Linnanimed ebajärjekindlad (väike/suur algustäht)
+
+<details>
+  
+<summary> - Linnanimed ebajärjekindlad (väike/suur algustäht)</summary>
+  
+<img width="98" height="349" alt="image" src="https://github.com/user-attachments/assets/1c262a53-b03f-44c5-83db-636b1793f40e" />
+
+</details>
+
+
 
 <details>
   
@@ -90,6 +99,7 @@
 - Kokku e-maile: **3150**
 - Unikaalseid: **2640**
 - ❗ Vahemik **510**  Vajab täpsustamist mitu NUll Väärtust ja duplikaati.
+  
   
 
 <details>
