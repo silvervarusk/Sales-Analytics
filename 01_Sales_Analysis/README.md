@@ -154,7 +154,7 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
   
 <summary>✅ 6. Puuduvate väärtuste kontroll (NULL) </summary>
 
-<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null2.png" /> </details>
+<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null2.png" />
 
 <img width="800" alt="NULL väärtuste tulemus" src="images/roll_c_null3.png" /> </details>
 
