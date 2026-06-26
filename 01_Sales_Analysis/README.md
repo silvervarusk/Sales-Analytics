@@ -106,6 +106,78 @@
 
 </details>
 
+## 🔍 Product Data Explorer (C)
+
+### Product Data Explorer (C)
+
+- **Toodete koguarv:** 362
+- **Kategooriate arv:** 5 (jalanõud, laste_riided, aksessuaarid, naiste_riided, meeste_riided)
+- **Hinnavahemik (retail_price):** 10.15 € – 346.70 €
+- **Puuduvad väärtused (NULL):** 0 rida (veergudes `retail_price` ja `category`)
+
+<details>
+<summary>📊 1. Toodete koguarv</summary>
+
+**Päring:**
+```sql
+SELECT COUNT(*) FROM products; -- 362
+
+<img width="800" alt="Toodete arv" src="images/roll_c_count.png" /> </details><details> <summary>📋 2. Tabeli sisu ja veerud (esimesed 10 rida)</summary>
+
+Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
+
+SELECT * FROM products LIMIT 10;
+
+<img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details><details> <summary>🏷️ 3. Unikaalsed kategooriad</summary>
+
+**Päring:**
+```sql
+SELECT DISTINCT category FROM products;
+
+<img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details><details> <summary>🏷️ 3. Unikaalsed kategooriad</summary>
+
+Märkus: Kasutasin veergu cost_price, kuna price puudub.
+
+**Päring:**
+```sql
+-- 10 kallimat
+SELECT product_name, retail_price FROM products ORDER BY retail_price DESC LIMIT 10;
+-- 10 odavamat
+SELECT product_name, retail_price FROM products ORDER BY retail_price ASC LIMIT 10;
+
+<img width="800" alt="Kalleimad tooted" src="images/roll_c_expensive.png" /> <img width="800" alt="Odavaimad tooted" src="images/roll_c_cheap.png" /> </details><details> <summary>👗 5. Kategooria "Kleidid" filtreerimine</summary>
+
+Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
+
+**Päring:**
+```sql
+SELECT * FROM products WHERE subcategory = 'Kleidid';
+
+<img width="800" alt="Kleidid tooted" src="images/roll_c_kleidid.png" /> </details><details> <summary>✅ 6. Puuduvate väärtuste kontroll (NULL)</summary>
+
+**Päring:**
+```sql
+SELECT COUNT(*) - COUNT(retail_price) AS puuduvad_hinnad FROM products; -- 0
+SELECT COUNT(*) - COUNT(category) AS puuduvad_kategooriad FROM products; -- 0
+
+<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null.png" /> </details><details> <summary>📈 7. Edasijõudnute tase: Statistika kategooriati</summary>
+
+**Päring:**
+```sql
+SELECT category, 
+       COUNT(*) AS tooteid, 
+       MIN(retail_price) AS min_hind, 
+       MAX(retail_price) AS max_hind, 
+       ROUND(AVG(retail_price), 2) AS keskmine_hind
+FROM products 
+GROUP BY category 
+ORDER BY tooteid DESC;
+
+<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+
+Kokkuvõte: Tabelis products on kõik vajalikud andmed olemas ja puuduvad väärtused puuduvad. Peamised erinevused juhendiga on veeru price puudumine (cost_price asemel) ning category ja subcategory tasemete eristamine.
+
+
 ## 🌍 Müügikanalid ja asukohad (D)
 
 
