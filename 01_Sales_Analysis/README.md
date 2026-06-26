@@ -206,8 +206,9 @@ kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale ed
   
   👉[Müügikanalid ja asukohad](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/myygikanalid%20ja%20asukohad.md)
 
-
-  👉[Validatsioon Roll E (Lisa) ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Roll%20E%20Valideerija%20%26%20Kvaliteedikontroll%20%2B%20%C3%84ris%C3%BCnteesi%20koondaja.md)  
+* Roll E (Lisa) Validatsioon ja Kvalideedikontroll
+  
+  👉[Validatsioon  ](https://github.com/silvervarusk/Sales-Analytics/blob/main/01_Sales_Analysis/Roll%20E%20Valideerija%20%26%20Kvaliteedikontroll%20%2B%20%C3%84ris%C3%BCnteesi%20koondaja.md)  
 
 
  * Lisa  
