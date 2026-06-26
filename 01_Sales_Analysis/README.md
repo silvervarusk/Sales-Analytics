@@ -103,9 +103,7 @@
 
 ## 🌍 Müügikanalid ja asukohad (D)
 
-- 🛒 Müügikanalid: **online**, **pood**
-
-
+🛒 Müügikanalid: **online**, **pood**
 
 💳 **Makseviisid:**
 - järelmaks  
