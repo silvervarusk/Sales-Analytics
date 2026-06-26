@@ -50,7 +50,7 @@
 <img width="1132" height="56" alt="image" src="https://github.com/user-attachments/assets/d0a9a698-c444-4554-b30d-37c0516998b6" />
 </details>
 
-#### **Leidub nii väga suuri kui väga väikseid tehinguid (Negatiivse summaga)** + Duplikaadid
+#### **❗Leidub nii väga suuri kui väga väikseid tehinguid (Negatiivse summaga)** + Duplikaadid
 
 <details>
   
