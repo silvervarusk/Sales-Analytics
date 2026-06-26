@@ -158,7 +158,7 @@ Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
 
 <details>
   
-<summary>📈 7. Edasijõudnute tase: Statistika kategooriati</summary>
+<summary>📈 7. Edasijõudnute tase: Statistika </summary>
 
 <img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
 
