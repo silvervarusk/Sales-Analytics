@@ -138,7 +138,7 @@ Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (ja
   
 <summary>💰 4. Kallimad ja odavamad tooted</summary>
   
-Märkus: Kasutasin veergu retail_price, kuna price puudub.
+Märkus: Kasutasin veergu cost_price, kuna price puudub.
 
 <img width="800" alt="Kalleimad tooted" src="images/roll_c_expensive.png" /> <img width="800" alt="Odavaimad tooted" src="images/roll_c_cheap.png" /> </details>
 
