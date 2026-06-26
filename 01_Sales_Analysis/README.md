@@ -78,19 +78,36 @@ kuid vajab **andmete puhastamist ja valideerimist*
 
 ⚠️ **Andmete kvaliteet**
 - Linnanimed ebajärjekindlad (väike/suur algustäht)
-- Puuduvad e-mailid osadel klientidel  !!!! **Targeting AD VIP klienditdele PUUDULIK**
 
-⚠️ **Duplikaadid**
+<details>
+  
+<summary> - Puuduvad e-mailid osadel klientidel  !!!! **Targeting AD VIP klienditdele PUUDULIK**</summary>
+  
+<img width="1044" height="395" alt="image" src="https://github.com/user-attachments/assets/2fc26f9d-6238-4837-9480-363911c43941" />
+
+</details>
+
+
+⚠️ **Duplikaadid ja null väärtused**
 - Kokku e-maile: **3150**
 - Unikaalseid: **2640**
-- ❗ Duplikaate: **510**
+- ❗ Vahemik **510**  Vajab täpsustamist mitu NUll Väärtust ja duplikaati.
+  
 
+<details>
+  
+<summary> Duplikaat e-mailid </summary>
+  
+<img width="1106" height="229" alt="image" src="https://github.com/user-attachments/assets/01eedb78-65bf-4819-bcec-db2bd6db5415" />
+
+
+</details>
 
 ## 🌍 Müügikanalid ja asukohad (D)
 
 - 🛒 Müügikanalid: **online**, **pood**
-- 📍 Linnad: **Tallinn, Tartu, Pärnu**
-- ❗ NULL väärtus = e-poe tellimus
+
+
 
 💳 **Makseviisid:**
 - järelmaks  
@@ -99,7 +116,19 @@ kuid vajab **andmete puhastamist ja valideerimist*
 
 ⚠️ **Leitud probleem**
 - 5204 tehingut ilma asukohata  
-- ❗ E-poes on kasutatud *sularaha* → loogikaviga  
+- ❗ E-poes on kasutatud *sularaha* → loogikaviga
+
+<details>
+<summary>
+📍 Linnad: <strong>Tallinn, Tartu, Pärnu, NULL</strong> — ❗ <strong>NULL väärtus = e-poe tellimus</strong>
+</summary>
+
+<br>
+
+<img width="226" height="162" src="https://github.com/user-attachments/assets/79a7cce9-f0d2-498c-8817-e03c900cf659" />
+
+</details>
+
 
 ## Roll C Tooteandmed
 
