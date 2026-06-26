@@ -244,15 +244,55 @@ kuid vajab **andmete puhastamist ja valideerimist*. enne kui saab juhtkonnale ed
 - **Puuduvad väärtused (NULL):** 0 rida (veergudes `retail_price` ja `category`)
 
 <details>
-<summary>📊 1. Toodete koguarv</summary>
+<summary>📊 1. Toodete koguarv </summary>
 
 <img width="800" alt="Toodete arv" src="images/roll_c_count.png" /> </details>
 
 <details> 
   
-<summary>📋 2. Tabeli sisu ja veerud (esimesed 10 rida)</summary>
+<summary>📋 2. Tabeli sisu ja veerud (esimesed 10 rida) </summary>
 
 Märkus: Juhendis mainitud veergu price ei ole. Selle asemel on retail_price (jaehind) ja cost_price (soetushind).
+
+<img width="800" alt="Esimesed 10 rida" src="images/roll_c_first10.png" /> </details>
+
+<details> 
+  
+<summary>🏷️ 3. Unikaalsed kategooriad </summary>
+
+<img width="400" alt="Kategooriate nimekiri" src="images/roll_c_categories.png" /> </details>
+
+<details> 
+  
+<summary>💰 4. Kallimad ja odavaimad tooted</summary>
+  
+Märkus: Kasutasin veergu retail_price, kuna price puudub.
+
+<img width="800" alt="Kalleimad tooted" src="images/roll_c_expensive.png" /> <img width="800" alt="Odavaimad tooted" src="images/roll_c_cheap.png" /> </details>
+
+<details> 
+  
+<summary>👗 5. Kategooria "Kleidid" filtreerimine </summary>
+
+Märkus: Väärtus "Kleidid" ei asu veerus category, vaid veerus subcategory.
+
+<img width="800" alt="Kleidid tooted" src="images/roll_c_kleidid.png" /> </details>
+
+<details> 
+  
+<summary>✅ 6. Puuduvate väärtuste kontroll (NULL) </summary>
+
+<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_null.png" /> </details>
+
+<details>
+  
+<summary>📈 7. Edasijõudnute tase: Statistika kategooriati</summary>
+
+<img width="800" alt="Grupeeritud statistika" src="images/roll_c_groupby.png" /> </details>
+
+Kokkuvõte: Tabelis products on kõik vajalikud andmed olemas ja puuduvad väärtused puuduvad. Peamised erinevused juhendiga on veeru price puudumine (cost_price asemel) ning category ja subcategory tasemete eristamine.
+
+
 
 
 
