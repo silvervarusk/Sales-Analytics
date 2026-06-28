@@ -27,7 +27,7 @@ Nädal 2: A= Indrek B= Silver C= Irina D= Tiiu E= Katre
 Nädal 3: A= Katre B= Indrek C= Silver D= Irina E= Tiiu
 Nädal 4: A= Tiiu B= Katre C= Indrek D= Silver E= Irina
 
-## 🔄 ROLLIDE ROTATSIOON UUS - KATRE lahkus / Indrek - Rohkem vaatleja rollis
+## 🔄 ROLLIDE ROTATSIOON UUS - Katre lahkus / Indrek - Rohkem vaatleja rollis
 * Liigume edasi 3-ses tiimis, kui Indrek soovib teha siis saab jooksvalt vastava rolli võtta.
   
 | Nädal | A       | B       | C       | D       |
