@@ -28,7 +28,7 @@ Nädal 3: A= Katre B= Indrek C= Silver D= Irina E= Tiiu
 Nädal 4: A= Tiiu B= Katre C= Indrek D= Silver E= Irina
 
 ## 🔄 ROLLIDE ROTATSIOON UUS - KATRE lahkus / Indrek asendab
-* Kui Indrek ei saa teha siis liigume edasi 3-ses tiimis.
+* Kui Indrek ei saa osaleda siis liigume edasi 3-ses tiimis.
   
 | Nädal | A       | B       | C       | D       |
 |------|--------|--------|--------|--------|
