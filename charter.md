@@ -31,7 +31,7 @@ Nädal 4: A= Tiiu B= Katre C= Indrek D= Silver E= Irina
 
 | Nädal | A       | B       | C       | D       |
 |------|--------|--------|--------|--------|
-| 1    | Silver | Irina  | Tiiu   | Indrek |
+| 1    | Silver | Irina  | Tiiu   | Tiiu   |
 | 2    | Indrek | Silver | Irina  | Tiiu   |
 | 3    | Tiiu   | Indrek | Silver | Irina  |
 | 4    | Irina  | Tiiu   | Indrek | Silver |
