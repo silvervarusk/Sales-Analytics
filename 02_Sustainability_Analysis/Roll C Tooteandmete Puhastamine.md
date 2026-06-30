@@ -1,6 +1,30 @@
-<img width="135" height="48" alt="image" src="https://github.com/user-attachments/assets/5d4fd798-cd95-4137-a223-0e21131755bb" />
+
 # Roll C Tooteandmete Puhastamine
 #####  Koostas: Silver Varusk
+
+## 📌 Kiire ülevaade tehtud tegevus  :
+
+✔ Test koopia on loodud (products_test)  
+
+#### Andmekvalideedi kontroll:
+Duplikaatsed tootenimed (12 rida)  tuvastatud 
+Null read puuduvad - Vähendab puhastamise vajadust  
+✔Hinnainfo kvaliteet on korralik → analüüsile suur mõju ei tekita.  
+
+#### Tehtud tegevus:  
+✔Ebajärjekindlad kategooriad puhastatud  - eemdaldatud potetsiaalne mõju Kategooriapõhiseid raportitele (Filteerimine, grupeerimine)
+
+
+#### Soovitus juhtkonnale
+Kõige suurem mõju tooteanalüüsile:
+👉 Duplikaatsed tootenimed vajavad eemaldamist:
+- Müügiandmed võivad kahekordselt arvestuda
+- Toote tasemel analüüs (TOP tooted, kasumlikkus) muutub ebausaldusväärseks
+- BI tööriistades (Power BI jms) tekivad valed aggregatsioonid
+
+
+
+
 
 ## Test koopia ja ridade arvu kontroll:
 
