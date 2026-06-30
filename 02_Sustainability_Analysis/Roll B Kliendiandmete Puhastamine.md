@@ -79,15 +79,13 @@ Tulemus: Esineb 380 e-maili null väärtusega.
 
 ## Puhastamisraport:Andmekvaliteedi probleemid
 
-| Kategooria                  | Leitud probleeme | Kirjeldus                                   |
-|---------------------------|------------------|---------------------------------------------|
-| Duplikaatsed e-mailid     | ?                | Sama e-mail mitmel kliendil                 |
-| NULL eesnimi              | ?                | Puuduv kliendi eesnimi                      |
-| NULL perenimi             | ?                | Puuduv kliendi perenimi                     |
-| Ebajärjekindlad linnanimed| ?                | Erinevad nimekujud (nt tallinn vs Tallinn)  |
-| NULL telefon/e-mail       | ?                | Puuduvad kontaktandmed                      |
-| **KOKKU probleeme**       | ?                |                                             |
-
+| Kategooria                  | Leitud probleeme |
+|---------------------------|------------------|
+| Duplikaatsed e-mailid     | 129              |
+| NULL eesnimi              | 0                |
+| NULL perenimi             | 0                |
+| Ebajärjekindlad linnanimed| 54 (unikaalsed)  |
+| NULL telefon/e-mail       | 380              |
 ---
 
 ## Soovitus
