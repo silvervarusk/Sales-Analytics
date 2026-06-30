@@ -15,16 +15,24 @@ Null read puuduvad - Vähendab puhastamise vajadust
 ✔Ebajärjekindlad kategooriad puhastatud  - eemdaldatud potetsiaalne mõju Kategooriapõhiseid raportitele (Filteerimine, grupeerimine)
 
 
-#### Soovitus juhtkonnale
-Kõige suurem mõju tooteanalüüsile:
-👉 Duplikaatsed tootenimed vajavad eemaldamist:
-- Müügiandmed võivad kahekordselt arvestuda
-- Toote tasemel analüüs (TOP tooted, kasumlikkus) muutub ebausaldusväärseks
-- BI tööriistades (Power BI jms) tekivad valed aggregatsioonid
 
+## Soovitus juhtkonnale
 
+Kõige suurema mõjuga probleem:
 
+👉 Duplikaatsed tootenimed
 
+Riskid:
+- Müügitulu võib olla üle hinnatud (double counting)
+- TOP toodete analüüs on ebausaldusväärne
+- Kasumlikkuse raportid moonutatud
+
+Soovitus:  
+✅ Rakendada unikaalsuse piirang (UNIQUE constraint) tootenimele või ID-le  
+✅ Lisada andmesisestuse valideerimine  
+✅ Kontrollprotsess enne BI raportite loomist
+
+# Supabase SQL LOG
 
 ## Test koopia ja ridade arvu kontroll:
 
@@ -140,14 +148,14 @@ KVALITEEDIKONTROLL:
 ☐ Raport sisaldab konkreetseid numbreid
 Hetkeseiguga: probleem mõjutab tooteanalüüsi kõige rohkem  
 
-| Kategooria                     | Leitud probleeme | Kirjeldus                                   |
-|--------------------------------|------------------|---------------------------------------------|
-| Duplikaatsed nimed             | ?                | Sama tootenimi mitu korda                   |
-| NULL nimi/hind                 | ?                | Puuduvad kriitilised väljad                 |
-| Loogilised vead                | ?                | Negatiivne või äärmuslik jaehind            |
-| Ebajärjekindlad kategooriad    | ?                | Erinevad nimekujud (Shoes vs shoes)         |
-| NULL omahind/kategooria        | ?                | Puuduv klassifitseerimine                  |
-| KOKKU probleeme               | ?                |                                             |
+| Kategooria                  | Leitud probleeme | Kirjeldus                                   |
+|-----------------------------|------------------|---------------------------------------------|
+| Duplikaatsed nimed          | 12               | Sama tootenimi mitu korda                   |
+| NULL nimi/hind              | 0                | Puuduvad kriitilised väljad                 |
+| Loogilised vead            | 0                | Negatiivne või äärmuslik jaehind            |
+| Ebajärjekindlad kategooriad | Jah              | Erinevad nimekujud (Shoes vs shoes)         |
+| NULL omahind/kategooria     | 0                | Puuduv klassifitseerimine                  |
+| KOKKU probleeme             | 12+              | Suurim mõju: duplikaadid                   |
 
 
 
