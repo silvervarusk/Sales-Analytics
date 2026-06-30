@@ -1,11 +1,9 @@
 TEAM CHARTER — UrbanStyle
 
 LIIKMED:
-1. Katre Feldman (OS: Mac)  Roll nädal 1: Team Charter Koostaja
-2. Tiiu Kumar (OS: Win)  Roll nädal 1: NotebookLM Seadistaja
-3. Silver Varusk (OS: Win / Mac)  Roll nädal 1: GitHub Repo Seadistaja
-4. Irina Grigorjeva (OS: Win)  Roll nädal 1: Supabase Seadistaja
-5. Indrek (OS: Win) Roll nädal 1: Portfoolio Struktuur + Dokumentatsioon
+1. Tiiu Kumar (OS: Win)  
+2. Silver Varusk (OS: Win / Mac)     
+3. Irina Grigorjeva (OS: Win)   
 
 ÜHISED TÖÖRIISTAD:
 Suhtluskanal: Google Workspace Chat, eraldi grupp
