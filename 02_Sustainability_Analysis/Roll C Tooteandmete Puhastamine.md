@@ -2,35 +2,6 @@
 # Roll C Tooteandmete Puhastamine
 #####  Koostas: Silver Varusk
 
-## 📌 Kiire ülevaade tehtud tegevus  :
-
-✔ Test koopia loomine (products_test)  
-
-#### Andmekvalideedi kontroll:
-Duplikaatsed tootenimed (12 rida)  tuvastatud 
-Null read puuduvad - Vähendab puhastamise vajadust  
-✔Hinnainfo kvaliteet on korralik → analüüsile suur mõju ei tekita.  
-
-#### Tehtud tegevus:  
-✔Ebajärjekindlad kategooriad puhastatud  - eemdaldatud potetsiaalne mõju Kategooriapõhiseid raportitele (Filteerimine, grupeerimine)
-
-
-
-## Soovitus juhtkonnale
-
-Kõige suurema mõjuga probleem:
-
-👉 Duplikaatsed tootenimed
-
-Riskid:
-- Müügitulu võib olla üle hinnatud (double counting)
-- TOP toodete analüüs on ebausaldusväärne
-- Kasumlikkuse raportid moonutatud
-
-Soovitus:  
-✅ Rakendada unikaalsuse piirang (UNIQUE constraint) tootenimele või ID-le  
-✅ Lisada andmesisestuse valideerimine  
-✅ Kontrollprotsess enne BI raportite loomist
 
 # Supabase SQL LOG
 
@@ -146,7 +117,7 @@ KVALITEEDIKONTROLL:
 ☐ Test koopia on loodud (mitte production tabelil!)
 ☐ Duplikaadid ja NULL-id on tuvastatud
 ☐ Raport sisaldab konkreetseid numbreid
-Hetkeseiguga: probleem mõjutab tooteanalüüsi kõige rohkem  
+Hetkeseiguga: Duplikaat väärtused mõjutavad tooteanalüüsi kõige rohkem  
 
 | Kategooria                  | Leitud probleeme | Kirjeldus                                   |
 |-----------------------------|------------------|---------------------------------------------|
