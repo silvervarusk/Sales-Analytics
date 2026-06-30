@@ -4,7 +4,7 @@
 
 ## 📌 Kiire ülevaade tehtud tegevus  :
 
-✔ Test koopia on loodud (products_test)  
+✔ Test koopia loomine (products_test)  
 
 #### Andmekvalideedi kontroll:
 Duplikaatsed tootenimed (12 rida)  tuvastatud 
