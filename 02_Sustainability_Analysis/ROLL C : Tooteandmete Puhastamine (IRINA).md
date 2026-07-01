@@ -3,7 +3,7 @@
 > "Leia duplikaadid, NULL väärtused ja ebajärjekindlused products tabelis."  
 > "Loo test koopia ja dokumenteeri probleemid."
 
-See dokument annab juhatuse‑tasemel ülevaate tooteandmete puhastamise tulemustest, tuvastatud probleemidest ja soovitustest andmekvaliteedi tõstmiseks.
+See dokument annab ülevaate tooteandmete puhastamise tulemustest, tuvastatud probleemidest ja soovitustest andmekvaliteedi tõstmiseks.
 
 ---
 
