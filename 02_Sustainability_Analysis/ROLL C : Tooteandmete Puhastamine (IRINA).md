@@ -1,120 +1,122 @@
-# Product Data Cleaner (C)
-##### Koostas: Irina Grigorjeva
+# Tooteandmete Puhastamine (Supabase / SQL)
 
-- **Tabel:** `products` (testkoopia `products_test`)
-- **Algne ridade arv:** 362
-- **Tuvastatud probleeme kokku:** 12 (kõik duplikaadid) 
-- **NULL väärtused kriitilistes veergudes:** 0
-- **Loogilised vead (negatiivne/äärmuslik hind):** 0
-- **Kategooriate ühtlus:** 5 unikaalset, ühtlased nimed
+## Ülevaade
 
----
+See projekt demonstreerib tooteandmete kvaliteedikontrolli ja puhastamise protsessi Supabase'i tabelis `products`.  
+Fookus on duplikaatide leidmisel, NULL‑väärtuste kontrollimisel, loogiliste vigade tuvastamisel ja kategooriate ühtlustamisel.
 
-<details>
-<summary>📌 1. Testkoopia loomine</summary>
+> "Leia duplikaadid, NULL väärtused ja ebajärjekindlused products tabelis."  
+> "Loo test koopia ja dokumenteeri probleemid."
 
-**Eesmärk:** Töötada koopiaga, mitte päris tabeliga.
+## Andmeallikas
 
-**Päring:**
+- **Sisendtabel:** `products`
+- **Testtabel:** `products_test` (turvaline koopia puhastamiseks)
+
 ```sql
-CREATE TABLE products_test AS SELECT * FROM products;
-SELECT COUNT(*) AS ridade_arv FROM products_test; -- 362
+CREATE TABLE products_test AS
+SELECT * FROM products;
 
-<img width="600" alt="Testkoopia ridade arv" src="images/roll_c_clean_step1.png" /> </details>
+SELECT COUNT(*) AS ridade_arv
+FROM products_test;
+-- 362 rida
 
+1. Duplikaatsete tootenimede leidmine
 
-<details>
-<summary>🔁 2. Duplikaatsed tootenimed</summary>
-
-SELECT product_name, COUNT(*) AS koopiate_arv
+SELECT
+    product_name,
+    COUNT(*) AS koopiate_arv
 FROM products_test
 GROUP BY product_name
 HAVING COUNT(*) > 1
 ORDER BY koopiate_arv DESC;
+-- Leitud: 12 duplikaatset tootenime
 
-Tulemus: 12 tootenime esinevad rohkem kui üks kord.
+Mõju analüütikale:  
+Duplikaadid moonutavad müügi-, marginaali- ja SKU‑analüüsi ning tekitavad segadust aruandluses.
 
-<img width="800" alt="Duplikaatsed tootenimed" src="images/roll_c_clean_step2.png" /> </details>
-
-<details> 
-
-<summary>🚫 3. NULL väärtuste kontroll</summary>
+2. NULL‑väärtuste kontroll kriitilistes väljadest
 
 SELECT
-  COUNT(*) FILTER (WHERE product_name IS NULL OR product_name = '') AS null_nimi,
-  COUNT(*) FILTER (WHERE category IS NULL OR category = '') AS null_kategooria,
-  COUNT(*) FILTER (WHERE retail_price IS NULL) AS null_jaehind,
-  COUNT(*) FILTER (WHERE cost_price IS NULL) AS null_omahind
+    COUNT(*) FILTER (WHERE product_name IS NULL OR product_name = '') AS null_nimi,
+    COUNT(*) FILTER (WHERE category IS NULL OR category = '') AS null_kategooria,
+    COUNT(*) FILTER (WHERE retail_price IS NULL) AS null_jaehind,
+    COUNT(*) FILTER (WHERE cost_price IS NULL) AS null_omahind
 FROM products_test;
+-- Kõik väärtused olemas (0 NULL)
 
-Tulemus: kõikides veergudes 0 NULL või tühja väärtust.
+3. Loogiliste hinnavigade kontroll
 
-<img width="600" alt="NULL väärtuste tulemus" src="images/roll_c_clean_step3.png" /> </details>
-
-<details> 
-<summary>⚠️ 4. Loogilised vead hindades</summary>
-Kontrollitud: negatiivsed hinnad ja üle 1000 € hinnad.
-
--- Negatiivsed jaehinnad
+-- Negatiivsed hinnad
 SELECT COUNT(*) AS negatiivne_hind
 FROM products_test
-WHERE retail_price < 0; -- 0
+WHERE retail_price < 0;
 
--- Äärmuslikud hinnad (>1000)
+-- Äärmuslikud hinnad (> 1000 EUR)
 SELECT product_name, retail_price
 FROM products_test
 WHERE retail_price > 1000
-ORDER BY retail_price DESC; -- 0 rida
+ORDER BY retail_price DESC;
+-- Leitud: 0 negatiivset ja 0 äärmuslikku hinda
 
-<img width="600" alt="Hindade vead" src="images/roll_c_clean_step4.png" /> </details>
-
-<details> 
-
-<summary>🏷️ 5. Kategooriate ühtlus</summary>
+4. Kategooriate järjekindlus
 
 SELECT category, COUNT(*) AS arv
 FROM products_test
 GROUP BY category
 ORDER BY category;
 
-Tulemus: 5 kategooriat, kõik ühtlases vormis (ei esine shoes vs SHOES).
+Leitud 5 kategooriat:
 
-<img width="400" alt="Kategooriate jaotus" src="images/roll_c_clean_step5.png" /> </details>
-<details> 
-<summary>📊 6. Puhastamisraport</summary>
+aksessuaarid
+jalanõusid
+laste_riided
+meeste_riided
+naiste_riided
 
-Kategooria	Leitud probleeme	Kirjeldus
-Duplikaatsed nimed	12	Sama tootenimi mitu korda
-NULL nimi / hind / kategooria	0	Puuduvad kriitilised väljad
-Loogilised vead (hind)	0	Negatiivne või äärmuslik jaehind
-Ebajärjekindlad kategooriad	0	Erinevad nimekujud (nt Shoes vs shoes)
-NULL omahind	0	Puuduv soetushind
-KOKKU	12	
-Soovitus: Kõige suurem mõju tooteanalüüsile on duplikaatidel – need moonutavad keskmisi hindu, koguste lugemist ja kategooriate jaotust. Soovitan enne edasist analüüsi duplikaadid käsitsi üle vaadata ja ühendada (nt jätta alles üks kirje, millel on kõige täielikum info).
+5. Puhastamisraport
 
-</details>
+| Kategooria | Probleeme | Kirjeldus |
+| --- | --- | --- |
+| Duplikaatsed nimed | 12 | Sama tootenimi esineb mitu korda |
+| NULL nimi/hind | 0 | Kõik kriitilised väljad olemas |
+| Loogilised vead | 0 | Pole negatiivseid ega äärmuslikke hindu |
+| Ebajärjekindlad kategooriad | 0 | Pole juhtumeid stiilis Shoes vs shoes |
+| NULL omahind/kategooria | 0 | Klassifitseerimine olemas |
+| **Kokku probleeme** | **12** |  |
 
-<details> <summary>⚡ 7. Edasijõudnute tase (vabatahtlik) – kategooriate ühtlustamine</summary>
-Kui soovid kategoorianimed standardiseerida (nt Shoes → jalanõud), kasuta seda skripti:
+Kõige olulisem probleem
+Duplikaatsed tootenimed mõjutavad analüüsi kõige rohkem, sest moonutavad müügi- ja marginaaliarvutusi ning tekitavad segadust SKU tasemel.
 
--- Ühtlusta kategooriate nimed (trim + esitäht suur)
+6. Edasijõudnud puhastamine (valikuline)
+
+6.1. Kategooriate vormingu ühtlustamine
+
 UPDATE products_test
 SET category = INITCAP(TRIM(category))
 WHERE category != INITCAP(TRIM(category));
 
--- Või kasuta CASE WHEN mitme variandi ühendamiseks
+6.2. Kategooriate standardiseerimine CASE‑lausete abil
+
 UPDATE products_test
 SET category = CASE
-  WHEN LOWER(TRIM(category)) IN ('shoes', 'jalanõud', 'footwear') THEN 'Shoes'
-  WHEN LOWER(TRIM(category)) IN ('shirts', 'särgid', 'tops') THEN 'Shirts'
-  WHEN LOWER(TRIM(category)) IN ('pants', 'püksid', 'trousers') THEN 'Pants'
-  ELSE INITCAP(TRIM(category))
+    WHEN LOWER(TRIM(category)) IN ('shoes', 'jalanõud', 'footwear') THEN 'Shoes'
+    WHEN LOWER(TRIM(category)) IN ('shirts', 'särgid', 'tops')      THEN 'Shirts'
+    WHEN LOWER(TRIM(category)) IN ('pants', 'püksid', 'trousers')   THEN 'Pants'
+    ELSE INITCAP(TRIM(category))
 END;
 
--- Kontrolli tulemust
-SELECT category, COUNT(*) AS arv
-FROM products_test
-GROUP BY category ORDER BY category;
+7. Kvaliteedikontroll
 
-</details>
-Kokkuvõte: Andmed on üldiselt puhtad – ainsad probleemid on 12 dubleerivat tootenime. NULL väärtused puuduvad, hinnad on loogilised ja kategooriad ühtlased. Soovitan duplikaadid enne analüüsi kõrvaldada.
+[x] Testtabel loodud
+[x] Duplikaadid tuvastatud
+[x] NULL‑väärtused kontrollitud
+[x] Loogilised hinnavead kontrollitud
+[x] Kategooriad analüüsitud
+[x] Raport sisaldab konkreetseid numbreid
+
+
+
+
+
+
