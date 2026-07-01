@@ -1,6 +1,7 @@
 # Kliendiandmete Puhastamine
 ##### Koostas: Silver Varusk
 
+## Test tabeli loomine
 ```sql
 CREATE TABLE customers_test AS SELECT * FROM customers;
 SELECT COUNT(*) AS ridade_arv FROM customers_test;
