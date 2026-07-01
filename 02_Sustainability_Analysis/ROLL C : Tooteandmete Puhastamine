@@ -2,7 +2,7 @@
 
 - **Tabel:** `products` (testkoopia `products_test`)
 - **Algne ridade arv:** 362
-- **Tuvastatud probleeme kokku:** 12 (kõik duplikaadid)
+- **Tuvastatud probleeme kokku:** 12 (kõik duplikaadid) 
 - **NULL väärtused kriitilistes veergudes:** 0
 - **Loogilised vead (negatiivne/äärmuslik hind):** 0
 - **Kategooriate ühtlus:** 5 unikaalset, ühtlased nimed
