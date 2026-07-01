@@ -22,7 +22,7 @@ SELECT COUNT(*) AS ridade_arv FROM products_test; -- 362
 
 <img width="600" alt="Testkoopia ridade arv" src="images/roll_c_clean_step1.png" /> </details>
 
-<details> 
+
 
 <summary>🔁 2. Duplikaatsed tootenimed</summary>
 
