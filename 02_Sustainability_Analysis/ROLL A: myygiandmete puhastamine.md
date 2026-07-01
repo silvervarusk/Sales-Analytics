@@ -35,6 +35,7 @@ HAVING COUNT(*) > 1
 ORDER BY koopiate_arv DESC;
 
 duplikaatseid invoice_id on 4013 tk
+
 <img width="239" height="454" alt="duplikaadid_nimekiri" src="https://github.com/user-attachments/assets/a3d93e75-f98b-447a-a0a8-1d5052445ab3" />
 
 
@@ -50,6 +51,10 @@ WHERE id NOT IN (
 
 
 Tulemus: 5116 rida on duplikaadid
+
+![Uploading invoice283.png…]()
+
+
 
 ## Kui customer_id IS NULL siis pole mitte andmeviga vaid nö külalisost - kehtiv äriloogika
 selliseid oste on :
