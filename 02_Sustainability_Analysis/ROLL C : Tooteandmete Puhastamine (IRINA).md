@@ -1,4 +1,4 @@
-# Tooteandmete Puhastamise Kokkuvõte (Supabase / SQL)
+# C: Tooteandmete Puhastamine (IRINA)
 
 > "Leia duplikaadid, NULL väärtused ja ebajärjekindlused products tabelis."  
 > "Loo test koopia ja dokumenteeri probleemid."
