@@ -35,6 +35,8 @@ HAVING COUNT(*) > 1
 ORDER BY koopiate_arv DESC;
 
 duplikaatseid invoice_id on 4013 tk
+<img width="239" height="454" alt="duplikaadid_nimekiri" src="https://github.com/user-attachments/assets/a3d93e75-f98b-447a-a0a8-1d5052445ab3" />
+
 
 ## Loe kokku duplikaatsete ridade arv:
 
