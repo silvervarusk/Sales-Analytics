@@ -186,7 +186,7 @@ Tulemus:
 
 </details>  
 
-## Muudatuse kontroll, kas midagi muutus:
+## Muudatuse kontroll, kas midagi muutus: Telefoni numbrite standardiseerimises
 ```sql
 SELECT 
     phone AS vana,
