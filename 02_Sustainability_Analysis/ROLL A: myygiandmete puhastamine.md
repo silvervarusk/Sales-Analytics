@@ -7,7 +7,7 @@ Koostas: Tiiu Kumar
 CREATE TABLE sales_test AS SELECT * FROM sales;
 
 
-Leia NULL väärtused kriitilistes väljades:
+## Leia NULL väärtused kriitilistes väljades:
 SELECT
     COUNT(*) FILTER (WHERE customer_id IS NULL) AS null_customer_id,
     COUNT(*) FILTER (WHERE sale_date IS NULL) AS null_sale_date,
