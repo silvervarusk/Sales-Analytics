@@ -51,8 +51,8 @@ WHERE id NOT IN (
 
 
 Tulemus: 5116 rida on duplikaadid
+<img width="767" height="301" alt="invoice283" src="https://github.com/user-attachments/assets/660f65e7-d1de-4d20-8b33-f45aca8a0690" />
 
-![Uploading invoice283.png…]()
 
 
 
@@ -86,5 +86,7 @@ WHERE id NOT IN (
 | **Kokku probleeme**       |           |       
 
 Soovitus
-Eemaldada duplikaat tellimusread (5116 tk)
+Leidsin duplikaadid - s.t. millised tellimused korduvad:
+Duplikaatseid tellimusi (tellimuse id ) järgi on 4013 tükki ja duplikaatseid ridu on kokku 5116 tükki.
+Duplikaatsed read võiks eemaldada.
 Kui kliendi id on puudu võib raportitesse lisada selle asemel ajutise sildi 'külalisost'
