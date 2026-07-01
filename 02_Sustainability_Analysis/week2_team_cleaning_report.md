@@ -21,7 +21,7 @@
 
 ---
 
-### 🛠 Tehtud parendused
+### 🛠 Tehtud parandused
 - Linnanimed ühtlustatud  
 - E-mailid viidud standardkujule (lowercase)  
 - Alustatud telefoninumbrite standardiseerimist  
