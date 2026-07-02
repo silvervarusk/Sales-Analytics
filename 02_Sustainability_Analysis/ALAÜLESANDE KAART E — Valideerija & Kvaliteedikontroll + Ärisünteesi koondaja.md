@@ -1,21 +1,22 @@
-# Valideerimine & Kvaliteedikontroll
+# Valideerimis & Kvaliteedikontroll
 ##### Koostas: Silver Varusk
 
 ## Valideerimisraport
 Praeguses raporti eesmärk on, kontrollida müügi-, kliendi- ja tooteandmete puhastamise tulemuste kvaliteeti ning hinnata, kas andmed on analüüsiks piisavalt usaldusväärsed.
-Suurimaks kvaliteediriskiks on duplikaatsed kirjed müügi-, kliendi- ja tooteandmetes, mis võivad mõjutada aruandlust ja KPI-sid. Täiendava kontrolli käigus ilmnesid ka müügisummade arvutusvead ning lojaalsusprogrammi loogikavead, mis vajavad enne lõppanalüüsi parandamist
+Analüüsi käigus selgus, et suurimaks kvaliteediriskiks on duplikaatsed kirjed müügi-, kliendi- ja tooteandmetes, mis võivad mõjutada aruandlust ja KPI-sid. Täiendava kontrolli käigus ilmnesid ka müügisummade arvutusvead ning lojaalsusprogrammi loogikavead, mis vajavad enne lõppanalüüsi parandamist
 
 ## Kvaliteedikontrolli tulemused  
 
-| Kontroll | Tulemus |
-|-----------|----------|
-| Testtabelid loodud Sales, Customers, Products | ✅ OK |
-| NULL väärtuste kontroll | ✅ OK |
-| Duplikaatide kontroll | ⚠️ Leitud |
-| Kuupäevade kontroll | ✅ OK |
-| Hinnaloogika kontroll | 🔴 Vajab parandust |
-| Loyalty Tier kontroll | 🔴 Vajab parandust |
-| Kategooriate kontroll | ✅ OK |
+| Kontroll | Tulemus | Järgmine tegevus |
+|-----------|----------|------------------|
+| Testtabelid loodud (Sales, Customers, Products) | ✅ OK | Dokumenteerida muudatused ja üleviimine live versiooni. |
+| NULL väärtuste kontroll |⚠️ Sales tabel vajab parandust NULL customer_id = E-Poe ost | Säilitada regulaarne kontroll, et uued puuduvad väärtused tuvastataks automaatselt.
+| Duplikaatide kontroll | ⚠️ Duplikaadid Sales, Customers, Products andmetes | Eemaldada duplikaadid ning rakendada automaatne kontroll andmete sisestamisel. |
+| Kuupäevade kontroll | ✅ OK | Jätkata tuleviku kuupäevade valideerimist andmete laadimise protsessis. |
+| Hinnaloogika kontroll | 🔴 Vajab parandust | Uurida kirjeid, kus `quantity × unit_price ≠ total_price`, ning määratleda negatiivsete summade ärireeglid. |
+| Loyalty Tier kontroll | 🔴 Vajab parandust | Täpsustada lojaalsusprogrammi loogika ning siduda kliendistaatus tegeliku ostuajalooga. |
+|Kategooriate kontroll | ✅ OK | Ebapärasusi ei tuvastatud products_test-is|
+
 
 ## Ühised tähelepanekud
 ### Duplikaadid on peamine kvaliteediprobleem
