@@ -88,6 +88,7 @@ Tähelepanek: Laoseisus on negatiivsed numbrid - Pole loogiline
 
 ### Ühenda kolm tabelit: leia tooted, mis on laos, aga pole kunagi müüdud — topelt kahju (laoseis + müümata):
 
+```sql
 SELECT
     p.product_name,
     p.category,
@@ -102,7 +103,7 @@ LEFT JOIN inventory i
 WHERE s.sale_id IS NULL
   AND i.quantity_available > 0
 ORDER BY kinni_olev_raha DESC;
-
+```
 Järeldus: Selliseid tooteid praegu puudub
 
 
