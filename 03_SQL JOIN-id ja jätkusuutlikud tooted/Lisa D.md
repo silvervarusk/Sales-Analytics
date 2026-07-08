@@ -1,4 +1,26 @@
 ###  Alaülesanne D
+
+### Millistest linnadest kliendid milliseid kanaleid kasutavad
+
+```sql
+SELECT
+    s.channel AS müügikanal,
+    c.city AS linn,
+    COUNT(DISTINCT c.customer_id) AS kliente,
+    SUM(s.total_price) AS kogumüük
+FROM sales s
+INNER JOIN customers c
+    ON s.customer_id = c.customer_id
+GROUP BY s.channel, c.city
+ORDER BY müügikanal, kogumüük DESC;
+```
+
+<details>
+<summary> Tulemus (click to expand)</summary>
+  
+<img width="287" height="444" alt="image" src="https://github.com/user-attachments/assets/b6d79427-3430-41bf-899e-47dc1516367d" />
+</details> 
+
  
 Ühenda 3 tabelit: `sales` + `customers` + `products
 
