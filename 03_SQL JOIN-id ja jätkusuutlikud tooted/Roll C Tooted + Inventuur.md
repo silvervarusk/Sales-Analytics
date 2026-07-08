@@ -1,6 +1,33 @@
 # Roll C Tooted + Inventuur 
 ##### Koostas Silver Varusk
 
+
+## Kokkuvõte ja äriline järeldus
+
+Analüüsi käigus leiti 12 toodet, mida pole kunagi müüdud. Samal ajal kontrolliti, kas mõni neist toodetest on endiselt laos olemas, et hinnata võimalikku kinni olevat kapitali.
+
+Tulemused näitasid, et ühelgi müümata tootel ei olnud positiivset laoseisu (`quantity_available > 0`). Seetõttu ei ole UrbanStyle'il hetkel raha kinni toodetes, mis seisavad laos ja pole kordagi müüdud.
+
+Lisaks ilmnes inventuuri andmetes mitu negatiivset laoseisu kirjet, mis viitab võimalikule andme- või protsessiveale ning vajab edasist kontrolli.
+
+### Peamised tähelepanekud
+
+- Leiti 12 toodet, mida pole kunagi müüdud.
+- Müümata toodete hulgas ei olnud ühtegi positiivse laoseisuga toodet.
+- Raha ei ole kinni täielikult müümata laovarudes.
+- Inventuuri andmetes esineb negatiivseid laoseise, mis vajavad korrastamist.
+- Enim müüdud toodete hulgas domineerivad jalanõud ja naisteriiete tooted.
+
+### Soovitus UrbanStyle'ile
+
+Praegu ei ole vaja rakendada laiaulatuslikke allahindlus- ega likvideerimiskampaaniaid müümata toodete jaoks. Olulisem on parandada laoandmete kvaliteeti ning jätkata enim müüdud toodete varude optimeerimist, et vältida võimalikke laoseisu probleeme tulevikus.
+
+
+
+
+
+
+
 ### LEFT JOIN: kõik tooted, ka need mis pole müüdud 
 
 ```sql
