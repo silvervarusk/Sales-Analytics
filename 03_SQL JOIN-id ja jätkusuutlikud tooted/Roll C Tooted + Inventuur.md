@@ -86,10 +86,35 @@ ORDER BY i.quantity_available ASC;
 </details> 
 Tähelepanek: Laoseisus on negatiivsed numbrid - Pole loogiline
 
+### Ühenda kolm tabelit: leia tooted, mis on laos, aga pole kunagi müüdud — topelt kahju (laoseis + müümata):
+
+SELECT
+    p.product_name,
+    p.category,
+    p.retail_price,
+    i.quantity_available,
+    (p.retail_price * i.quantity_available) AS kinni_olev_raha
+FROM products p
+LEFT JOIN sales s
+    ON p.product_id = s.product_id
+LEFT JOIN inventory i
+    ON p.product_id = i.product_id
+WHERE s.sale_id IS NULL
+  AND i.quantity_available > 0
+ORDER BY kinni_olev_raha DESC;
+
+Järeldus: Selliseid tooteid praegu puudub
 
 
 
 
+<details>
+<summary> Tulemus (click to expand)</summary>
+  
+<img width="552" height="388" alt="image" src="https://github.com/user-attachments/assets/96c93c4f-13d0-4b77-82f7-a9b2f3cdcd4a" />
+
+
+</details> 
 
 
 
