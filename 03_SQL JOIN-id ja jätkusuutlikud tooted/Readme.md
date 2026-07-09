@@ -44,7 +44,7 @@ Kasutasime SQL JOIN-lauseid UrbanStyle andmebaasi tabelite ühendamiseks, et ana
 - Tootekategooriate müük kanalite kaupa
 - Tulemuste valideerimine ja ristkontroll
 - Andmepõhiste järelduste ning soovituste koostamine UrbanStyle juhtkonnale
-
+- Presentatsioon
 
 ## 💡 Äriline fookus
 
