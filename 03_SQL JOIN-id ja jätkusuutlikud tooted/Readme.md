@@ -17,7 +17,7 @@ Kasutasime SQL JOIN-lauseid UrbanStyle andmebaasi tabelite ühendamiseks, et ana
 
 ## 📌 Analüüsi valdkonnad
 
-### 👥 Kliendid (Roll A)
+### 👥 Kliendid (Roll B)
 - TOP kliendid kogumüügi järgi
 - Ostukäitumise analüüs
 - Kliendid, kes pole kunagi ostu sooritanud
@@ -29,7 +29,7 @@ Kasutasime SQL JOIN-lauseid UrbanStyle andmebaasi tabelite ühendamiseks, et ana
 - Tootekategooriate võrdlus
 - Laoseisu ja inventuuri ülevaade
 
-### 📈 Müük ja müügikanalid (Roll B)
+### 📈 Müük ja müügikanalid (Roll A)
 - Müügitulemused linnade lõikes
 - Müügikanalite võrdlus
 - Kanalite efektiivsuse analüüs
