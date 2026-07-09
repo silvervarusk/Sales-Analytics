@@ -176,5 +176,25 @@ Soovitatavad tegevused:
 ✅ Esitatud on konkreetne ja põhjendatud soovitus  
 ✅ Analüüs vastab ülesande nõudele võrrelda müügikanaleid ning klientide käitumist
 
+### Iga kaupluse müügikanalite jaotus:
+```sql
+SELECT
+    s.store_location AS kauplus,
+    s.channel AS müügikanal,
+    COUNT(s.sale_id) AS oste,
+    SUM(s.total_price) AS kogumüük,
+    ROUND(SUM(s.total_price) / COUNT(s.sale_id), 2) AS keskmine_ost
+FROM sales s
+GROUP BY s.store_location, s.channel
+ORDER BY kauplus, kogumüük DESC;
+
+```
+<details>
+<summary>Tulemus (click to expand)</summary>
+
+<img width="342" height="198" alt="image" src="https://github.com/user-attachments/assets/2ebe6286-e870-4c29-b181-8afa5670dca1" />
+
+</details>
+
 
 
