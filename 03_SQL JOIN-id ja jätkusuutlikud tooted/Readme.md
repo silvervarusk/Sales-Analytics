@@ -17,23 +17,34 @@ Kasutasime SQL JOIN-lauseid UrbanStyle andmebaasi tabelite ühendamiseks, et ana
 
 ## 📌 Analüüsi valdkonnad
 
-### 👥 Kliendid (Roll B)
+## 📌 Analüüsi valdkonnad
+
+### 👤 Roll A – Kliendianalüüs
 - TOP kliendid kogumüügi järgi
-- Ostukäitumise analüüs
-- Kliendid, kes pole kunagi ostu sooritanud
+- Klientide ostukäitumise analüüs
+- Müügitulemused linnade lõikes
 - Lojaalsustasemete mõju müügitulemustele
 
-### 📦 Tooted ja inventuur (Roll C)
-- Müüdud ja müümata toodete tuvastamine
-- Enim müüdud toodete analüüs
-- Tootekategooriate võrdlus
-- Laoseisu ja inventuuri ülevaade
+### 👤 Roll B – Klientide aktiveerimine
+- Kliendid, kes pole kunagi ostu sooritanud
+- Aktiivsete ja mitteaktiivsete klientide võrdlus
+- Klientide jaotus linnade ja registreerimisperioodide kaupa
+- Soovitused klientide taasaktiveerimiseks
 
-### 📈 Müük ja müügikanalid (Roll A)
+### 👤 Roll C – Tooted ja inventuur
+- Müüdud ja müümata toodete analüüs
+- Enim müüdud toodete tuvastamine
+- Tootekategooriate võrdlus
+- Inventuuri ja laoseisu analüüs
+- Juurde tellimise vajaduse hindamine
+
+### 📈 Müük, müügikanalid ja ärisüntees
+- Müügikanalite võrdlus ja efektiivsuse analüüs
 - Müügitulemused linnade lõikes
-- Müügikanalite võrdlus
-- Kanalite efektiivsuse analüüs
 - Tootekategooriate müük kanalite kaupa
+- Tulemuste valideerimine ja ristkontroll
+- Andmepõhiste järelduste ning soovituste koostamine UrbanStyle juhtkonnale
+
 
 ## 💡 Äriline fookus
 
