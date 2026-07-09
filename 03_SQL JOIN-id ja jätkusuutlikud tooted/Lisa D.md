@@ -69,3 +69,29 @@ ORDER BY müük_per_klient DESC;
   
 <img width="307" height="447" alt="image" src="https://github.com/user-attachments/assets/5435cc93-42b1-4a77-b583-77a862134ba8" />
 </details
+
+Analüüs:
+
+- 1.Milline kanal toob enim müüke?  
+Pood toob ligikaudu 89% rohkem käivet kui online kanal.  
+- 2. Milline kanal toob enim kliente?  
+     
+Pood: 2 278 klienti  
+Online: 1 706 klienti  
+Poodi tuleb umbes 572 klienti rohkem ehk ~34% rohkem kliente.  
+Poe klient kulutab keskmiselt 41,5% rohkem kui online klient  
+- Järeldus:
+Peamine erinevus on, et pood:
+Toob rohkem kliente.  
+Toob rohkem kogumüüki.  
+Teenib iga kliendi pealt rohkem.
+
+
+### KVALITEEDIKONTROLL:
+✅ 3 tabeli JOIN töötab ilma veata
+✅Müügikanalid on võrreldud nii klientide arvu kui müügi järgi
+✅ Soovitus on konkreetne ja äriliselt põhjendatud
+
+
+
+
