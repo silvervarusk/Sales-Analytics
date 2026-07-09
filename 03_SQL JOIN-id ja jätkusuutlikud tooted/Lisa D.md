@@ -86,6 +86,31 @@ ORDER BY müük_per_klient DESC;
 
 ---
 
+### 4. Iga kaupluse müügikanalite jaotus
+
+Selles analüüsis võrdlen Tallinna, Tartu ja Pärnu kaupluste müügitulemusi ning online-kanalit.
+
+```sql
+SELECT
+    s.store_location AS kauplus,
+    s.channel AS müügikanal,
+    COUNT(s.sale_id) AS oste,
+    SUM(s.total_price) AS kogumüük,
+    ROUND(SUM(s.total_price) / COUNT(s.sale_id), 2) AS keskmine_ost
+FROM sales s
+GROUP BY s.store_location, s.channel
+ORDER BY kauplus, kogumüük DESC;
+```
+
+<details>
+<summary>Tulemus (click to expand)</summary>
+
+<img width="307" height="447" alt="image" src="https:://github.com/user-attachments/assets/2ebe6286-e870-4c29-b181-8afa5670dca1" />
+
+</details>
+
+---
+
 ## Tulemuste analüüs
 
 ### Milline kanal toob enim müüke?
@@ -140,30 +165,109 @@ Linnade detailsem analüüs võimaldab tuvastada piirkonnad, kus online müüki 
 
 ---
 
-## Järeldused
+## Kaupluste müügikanalite võrdlus
 
-Analüüsi põhjal on **füüsiline pood kõige tugevam müügikanal**, sest:
+| Kauplus | Müügikanal | Oste | Kogumüük (€) | Keskmine ost (€) |
+|----------|------------|------:|-------------:|-----------------:|
+| Tallinn | Pood | 3801 | 1 092 003,15 | 287,31 |
+| Tartu | Pood | 1797 | 521 603,11 | 290,26 |
+| Pärnu | Pood | 1058 | 298 744,04 | 272,91 |
+| Online | Online | 3462 | 1 006 747,68 | 290,80 |
 
-- toob rohkem kliente;
-- teenib suurema kogukäibe;
-- saavutab kõrgema müügi kliendi kohta;
-- on efektiivsem nii müügitulemuste kui ka kliendiväärtuse poolest.
+### Tähelepanekud
 
-Poe kliendid ostavad keskmiselt kallimaid või suurema väärtusega tooteid kui online kliendid.
+✅ **Tallinn on ettevõtte tugevaim müügipiirkond**
+
+- üle 1 miljoni euro kogukäivet;
+- rohkem kui pool kogu poe käibest;
+- suurim klientide ja ostude arv.
+
+✅ **Tartu näitab tugevat tulemust**
+
+- üle 520 000 € käivet;
+- kõrge keskmine ostusumma (290,26 €);
+- väga lähedal online-kanali tulemustele.
+
+✅ **Pärnu jääb teistest maha**
+
+- ainult 298 744 € käivet;
+- madalaim keskmine ostusumma (272,91 €);
+- väikseim ostude arv.
+
+✅ **Online-kanal on väga konkurentsivõimeline**
+
+- üle 1 miljoni euro müüki;
+- keskmine ostusumma 290,80 €;
+- kõrgeim keskmine ost kõigi kanalite seas.
 
 ---
 
-## Soovitus
+## Ärilised järeldused
 
-🎯 **Suurendada investeeringuid füüsilise poe arendamisse**, sest selle tasuvus on praeguste andmete põhjal kõige kõrgem.
+### Kas Tallinna, Tartu ja Pärnu kauplused kasutavad kanaleid erinevalt?
 
-Soovitatavad tegevused:
+Jah.
 
-- suurendada poe külastatavust kampaaniate abil;
-- tugevdada lojaalsusprogrammi;
-- tõsta enim müüdud toodete nähtavust kaupluses;
-- kasutada online kanalit uute klientide leidmiseks;
-- suunata online kliendid soodustuste ja pakkumiste abil suurema ostukorvi väärtuseni.
+Tallinn on ettevõtte peamine müügikeskus ning füüsilise poe tähtsus on seal väga suur. Tartu saavutab samuti häid tulemusi, kuid väiksemas mahus. Pärnu müügitulemused jäävad oluliselt tagasihoidlikumaks.
+
+See viitab sellele, et piirkondade ostukäitumine erineb ning turunduseelarvet ei ole mõistlik jagada kõigi linnade vahel võrdselt.
+
+### Kas mõni kauplus peaks rohkem online-müügile panustama?
+
+✅ **Pärnu**
+
+Pärnu keskmine ost (272,91 €) jääb alla online-kanali keskmisele ostule (290,80 €).
+
+Seetõttu võiks Pärnus rohkem investeerida:
+
+- veebireklaami;
+- sotsiaalmeedia kampaaniatesse;
+- e-poe eripakkumistesse;
+- click-and-collect lahenduste turundamisse.
+
+---
+
+## Kuhu peaks Anna turunduseelarvet suunama?
+
+🎯 Soovituslik prioriteet:
+
+### 1. Tallinn
+
+- suurim müügimaht;
+- suurim kliendibaas;
+- kõrgeim potentsiaal täiendava käibe kasvatamiseks.
+
+### 2. Online-kanal
+
+- üle 1 miljoni euro käivet;
+- kõrgeim keskmine ost;
+- võimaldab jõuda klientideni üle kogu Eesti.
+
+### 3. Pärnu
+
+- suurim kasvupotentsiaal;
+- online-müügi osakaalu saab suurendada.
+
+### 4. Tartu
+
+- stabiilne ja tugev tulemus;
+- keskenduda olemasolevate klientide hoidmisele ja lojaalsuse kasvatamisele.
+
+---
+
+## Lõplik soovitus
+
+Analüüsi põhjal on ettevõtte kõige tugevamad müügikanalid **Tallinna füüsiline kauplus ja online-müük**.
+
+Kõige suurema arengupotentsiaaliga piirkond on **Pärnu**, kus turundusinvesteeringud võiksid keskenduda online-müügi kasvatamisele.
+
+Anna võiks suunata suurema osa turunduseelarvest:
+
+- Tallinna poe nähtavuse suurendamisse;
+- online-kanali arendamisse;
+- Pärnu digiturunduse tugevdamisse.
+
+See aitaks maksimeerida müügitulu ning kasvatada klientide arvu kõige suurema potentsiaaliga kanalites.
 
 ---
 
@@ -172,29 +276,9 @@ Soovitatavad tegevused:
 ✅ Kasutatud on 3 tabeli JOIN-i (`sales`, `customers`, `products`)  
 ✅ Võrreldud on klientide arvu, kogumüüki ja kanali efektiivsust  
 ✅ Arvutatud on müük kliendi kohta  
-✅ Tulemused on tõlgendatud ärilisest vaatenurgast  
-✅ Esitatud on konkreetne ja põhjendatud soovitus  
-✅ Analüüs vastab ülesande nõudele võrrelda müügikanaleid ning klientide käitumist
-
-### Iga kaupluse müügikanalite jaotus:
-```sql
-SELECT
-    s.store_location AS kauplus,
-    s.channel AS müügikanal,
-    COUNT(s.sale_id) AS oste,
-    SUM(s.total_price) AS kogumüük,
-    ROUND(SUM(s.total_price) / COUNT(s.sale_id), 2) AS keskmine_ost
-FROM sales s
-GROUP BY s.store_location, s.channel
-ORDER BY kauplus, kogumüük DESC;
-
-```
-<details>
-<summary>Tulemus (click to expand)</summary>
-
-<img width="342" height="198" alt="image" src="https://github.com/user-attachments/assets/2ebe6286-e870-4c29-b181-8afa5670dca1" />
-
-</details>
-
+✅ Analüüsitud on kaupluste ja online-kanali erinevusi  
+✅ Esitatud on ärilised järeldused ning turundussoovitused  
+✅ Vastatud on küsimustele müügikanalite efektiivsuse ja piirkondlike erinevuste kohta  
+✅ Esitatud on konkreetsed ning andmetel põhinevad soovitused
 
 
