@@ -45,42 +45,39 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda andmepõhiste otsuste teg
 - Andmepõhiste soovituste koostamine UrbanStyle juhtkonnale
 - Presentatsioon
 
-## 📊 Tulemused
 
-### 👥 Kliendid
-- Leiti TOP 10 klienti kogumüügi põhjal.
+## 📊Tulemused
+
+### 👥 Kliendid ja ostukäitumine
+- Analüüsiti 3150 klienti, kellest 2551 (81%) olid aktiivsed ning 599 (19%) polnud kunagi ostu sooritanud.
+- Leiti TOP 10 klienti kogumüügi põhjal ning tuvastati, et TOP 30% klientidest genereeris ligikaudu 65% kogu ettevõtte müügitulust.
 - Tallinn oli suurima käibega linn, ületades 1 miljoni euro müügitulu.
-- Silver-taseme kliendid genereerisid suuremat kogukäivet kui Gold-taseme kliendid.
+- Silver-taseme kliendid genereerisid suurema kogukäibe kui Gold-taseme kliendid.
 
-### 🔍 Kliendid ilma ostudeta
-- Tuvastati 599 klienti, kes pole kunagi ostu sooritanud.
-- Suurim osa mitteaktiivsetest klientidest asus Tallinnas ja Tartus.
-- Leiti võimalus aktiveerida need kliendid sihitud kampaaniate abil.
+### 🎯 Mitteaktiivsed kliendid
+- Tuvastati 599 klienti, kes polnud kunagi ostu teinud.
+- Suurim osa mitteaktiivsetest klientidest paiknes Tallinnas ja Tartus.
+- Analüüs näitas võimalust suurendada müüki sihitud taasaktiveerimiskampaaniate abil.
 
 ### 📦 Tooted ja inventuur
-- Leiti 12 toodet, mida pole kunagi müüdud.
-- Müümata toodete hulgas puudus positiivne laoseis.
-- Inventuuriandmetes esines negatiivseid laoseise, mis vajavad täiendavat kontrolli.
+- Leiti 12 toodet, mida polnud kunagi müüdud.
+- Müümata toodetel puudus inventuuri kirje või positiivne laoseis.
+- Inventuuriandmetes tuvastati negatiivseid laoseise, mis viitavad andmekvaliteedi probleemidele ja vajavad täiendavat kontrolli.
+- Jalanõud olid suurima käibega tootekategooria, aksessuaarid kõige nõrgema müügitulemusega kategooria.
 
 ### 🏪 Müügikanalid
-- Füüsilised kauplused genereerisid suurima käibe.
-- Online-kanal ületas 1 miljoni euro müügitulu.
+- Füüsilised kauplused genereerisid ligikaudu 65% kogumüügist (€1,90M).
+- Online-kanal moodustas umbes 35% kogumüügist (€1,01M).
 - Poe kliendid kulutasid keskmiselt rohkem kui online-kanali kliendid.
 
+### ✅ Analüüsi kokkuvõte
+- Ristkontroll kinnitas klientide, toodete ja müügikanalite analüüside omavahelist kooskõla.
+- Analüüsid andsid aluse andmepõhiste soovituste koostamiseks UrbanStyle juhtkonnale.
 
-### 🚀 Soovitused
+## 🚀 Soovitused
 
-- Keskenduda Tallinna piirkonna ja online-kanali arendamisele.
-- Käivitada kampaaniad mitteaktiivsete klientide aktiveerimiseks.
-- Tugevdada lojaalsusprogrammi ja VIP-klientide hoidmist.
-- Parandada inventuuriandmete kvaliteeti.  
-  
-- ## 📊 Peamised tulemused
-
-- 3150 kliendist oli aktiivseid 2551 ning 599 klienti polnud kunagi ostu sooritanud.
-- TOP 30% klientidest genereeris ligikaudu 65% kogu ettevõtte tulust.
-- Tallinn oli suurima käibega piirkond, andes üle 1 miljoni euro müügitulu.
-- Füüsilised kauplused genereerisid 65% kogumüügist (€1,90M), online-kanal 35% (€1,01M).
-- Leiti 12 toodet, mida pole kunagi müüdud, kuid neil puudus ka inventuuri kirje.
-- Jalanõud olid suurima käibega tootekategooria, aksessuaarid kõige nõrgemalt toimiv kategooria.
-- Ristkontroll kinnitas klientide ja müügitulemuste kooskõla kõikide analüüside vahel.
+- Keskenduda Tallinna piirkonna ja online-kanali edasisele arendamisele.
+- Käivitada sihitud kampaaniad mitteaktiivsete klientide aktiveerimiseks.
+- Tugevdada lojaalsusprogrammi ning keskenduda väärtuslike klientide hoidmisele.
+- Parandada inventuuriandmete kvaliteeti ja lahendada negatiivsete laoseisude probleemid.
+- Optimeerida nõrgemalt toimivate tootekategooriate sortimenti ja turundust.
