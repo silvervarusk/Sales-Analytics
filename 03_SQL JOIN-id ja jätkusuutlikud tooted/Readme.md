@@ -47,6 +47,7 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda andmepõhiste otsuste teg
 
 
 ## 📊Tulemused
+ 
 
 ### 👥 Kliendid ja ostukäitumine
 - Analüüsiti 3150 klienti, kellest 2551 (81%) olid aktiivsed ning 599 (19%) polnud kunagi ostu sooritanud.
@@ -70,9 +71,7 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda andmepõhiste otsuste teg
 - Online-kanal moodustas umbes 35% kogumüügist (€1,01M).
 - Poe kliendid kulutasid keskmiselt rohkem kui online-kanali kliendid.
 
-### ✅ Analüüsi kokkuvõte
-- Ristkontroll kinnitas klientide, toodete ja müügikanalite analüüside omavahelist kooskõla.
-- Analüüsid andsid aluse andmepõhiste soovituste koostamiseks UrbanStyle juhtkonnale.
+
 
 ## 🚀 Soovitused
 
