@@ -17,8 +17,6 @@ Kasutasime SQL JOIN-lauseid UrbanStyle andmebaasi tabelite ühendamiseks, et ana
 
 ## 📌 Analüüsi valdkonnad
 
-## 📌 Analüüsi valdkonnad
-
 ### 👤 Roll A – Kliendianalüüs
 - TOP kliendid kogumüügi järgi
 - Klientide ostukäitumise analüüs
