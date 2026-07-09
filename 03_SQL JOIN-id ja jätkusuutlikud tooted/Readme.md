@@ -74,3 +74,13 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda andmepõhiste otsuste teg
 - Käivitada kampaaniad mitteaktiivsete klientide aktiveerimiseks.
 - Tugevdada lojaalsusprogrammi ja VIP-klientide hoidmist.
 - Parandada inventuuriandmete kvaliteeti.
+
+- ## 📊 Peamised tulemused
+
+- 3150 kliendist oli aktiivseid 2551 ning 599 klienti polnud kunagi ostu sooritanud.
+- TOP 30% klientidest genereeris ligikaudu 65% kogu ettevõtte tulust.
+- Tallinn oli suurima käibega piirkond, andes üle 1 miljoni euro müügitulu.
+- Füüsilised kauplused genereerisid 65% kogumüügist (€1,90M), online-kanal 35% (€1,01M).
+- Leiti 12 toodet, mida pole kunagi müüdud, kuid neil puudus ka inventuuri kirje.
+- Jalanõud olid suurima käibega tootekategooria, aksessuaarid kõige nõrgemalt toimiv kategooria.
+- Ristkontroll kinnitas klientide ja müügitulemuste kooskõla kõikide analüüside vahel.
