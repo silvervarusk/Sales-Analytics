@@ -73,8 +73,8 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda andmepõhiste otsuste teg
 - Keskenduda Tallinna piirkonna ja online-kanali arendamisele.
 - Käivitada kampaaniad mitteaktiivsete klientide aktiveerimiseks.
 - Tugevdada lojaalsusprogrammi ja VIP-klientide hoidmist.
-- Parandada inventuuriandmete kvaliteeti.
-
+- Parandada inventuuriandmete kvaliteeti.  
+  
 - ## 📊 Peamised tulemused
 
 - 3150 kliendist oli aktiivseid 2551 ning 599 klienti polnud kunagi ostu sooritanud.
