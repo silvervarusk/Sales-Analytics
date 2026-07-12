@@ -6,7 +6,7 @@
 
 Analüüs hõlmab kuist müüki, tootekategooriate võrdlust ning müügitrendide uurimist kasutades CTE-sid ja aknafunktsioone.
 
-### Kasutatud SQL tehnikad
+### Kasutatud SQL päringud
 
 - GROUP BY
 - HAVING
