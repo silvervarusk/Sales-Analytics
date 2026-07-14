@@ -40,7 +40,7 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda koondnäitajate loomisel,
 - Hindade statistika
 - Toodete järjestamine kategooriate sees
 
-### 📈 Turundus, kvaliteedikontroll ja ärisüntees
+### 📈 Turundus, kvaliteedikontroll ja ärisüntees (Rollid D,E,F)
 - Turunduskanalite efektiivsuse analüüs (ROI)
 - Klientide ja käibe võrdlus kanalite kaupa
 - Tulemuste valideerimine ja ristkontroll
