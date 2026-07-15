@@ -58,8 +58,6 @@ Analüüside eesmärk oli toetada UrbanStyle juhtkonda:
 
 ## 📊 Peamised tulemused
 
-## 📊 Peamised tulemused
-
 ### 📈 Müük
 
 - Müügitulu kasvas aasta jooksul järjepidevalt.
