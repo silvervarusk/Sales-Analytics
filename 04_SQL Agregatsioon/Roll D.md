@@ -1,21 +1,19 @@
-# ROLL C: TURUNDUSKANALITE ANALÜÜS
+# ROLL D: TURUNDUSKANALITE ANALÜÜS
 
-# Metoodika
+## Metoodika
 
 Analüüs põhines:
 
-turunduskanalite koondnäitajatel (GROUP BY)
-kanalite efektiivsusel (CTE)
-kuistel trendidel (DATE_TRUNC)
-kuust-kuusse kasvuanalüüsil (LAG() window function)
-#####  Tulemus annab hea ülevaate sellest, millised turunduskanalid toovad kõige rohkem käivet, kliente ja tellimusi ning kuidas nende tulemuslikkus ajas muutub.
+- turunduskanalite koondnäitajatel (GROUP BY)
+- kanalite efektiivsusel (CTE)
+- kuistel trendidel (DATE_TRUNC)
+- kuust-kuusse kasvuanalüüsil (LAG() window function)
+
+##### Tulemus annab hea ülevaate sellest, millised turunduskanalid toovad kõige rohkem käivet, kliente ja tellimusi ning kuidas nende tulemuslikkus ajas muutub.
 
 ---
 
-<details>
-<summary>📊 Turunduskanalite koondandmed</summary>
-
-<br>
+## 📊 Turunduskanalite koondandmed
 
 ```sql
 SELECT
@@ -32,18 +30,14 @@ LEFT JOIN web_logs w
 GROUP BY w.source
 ORDER BY kogukäive DESC;
 ```
+
 <img width="362" height="415" alt="image" src="https://github.com/user-attachments/assets/a061681e-4aef-4e2a-a9e9-92100de80940" />
 
 **Eesmärk:** võrrelda erinevate turunduskanalite klientide arvu, tellimusi ja käivet.
 
-</details>
-
 ---
 
-<details>
-<summary>🎯 Kanali efektiivsus CTE-ga</summary>
-
-<br>
+## 🎯 Kanali efektiivsus CTE-ga
 
 ```sql
 WITH kanali_muuk AS (
@@ -82,18 +76,14 @@ JOIN kanali_kliendid k
 WHERE m.tellimusi > 100
 ORDER BY muuk_kliendi_kohta DESC;
 ```
+
 <img width="353" height="412" alt="image" src="https://github.com/user-attachments/assets/7a8f6f81-99ff-40fb-9348-4c8e763652cb" />
 
 **Eesmärk:** leida kõige efektiivsem turunduskanal müügi kohta kliendi lõikes.
 
-</details>
-
 ---
 
-<details>
-<summary>📈 Kampaaniate kuised trendid</summary>
-
-<br>
+## 📈 Kampaaniate kuised trendid
 
 ```sql
 SELECT
@@ -115,18 +105,14 @@ ORDER BY
     kuu,
     kogukaive DESC;
 ```
+
 <img width="399" height="411" alt="image" src="https://github.com/user-attachments/assets/f9289853-2d07-4453-8a78-07af6e6309da" />
 
 **Eesmärk:** jälgida kanalite tulemuslikkust kuude lõikes.
 
-</details>
-
 ---
 
-<details>
-<summary>🏆 Window Function kuust-kuusse kasvu leidmiseks</summary>
-
-<br>
+## 🏆 Window Function kuust-kuusse kasvu leidmiseks
 
 ```sql
 SELECT
@@ -151,51 +137,54 @@ ORDER BY
     w.source,
     kuu;
 ```
+
 <img width="337" height="412" alt="image" src="https://github.com/user-attachments/assets/58259a40-730a-49fe-aca0-8b758c723a6f" />
 
 **Eesmärk:** võrrelda iga kanali käivet eelmise kuuga.
-
-</details>
 
 ---
 
 # Kokkuvõte
 
-### Turunduskanalite tulemuslikkus 2023-2024
+## Turunduskanalite tulemuslikkus 2023–2024
 
-#### 1. Google Organic on suurima käibega turunduskanal
+### 1. Google Organic on suurima käibega turunduskanal
 
-Käive: 863 240 €
-Kliendid: 1 580
-Tellimused: 3 378
-Keskmine tellimus: 286 €
+- Käive: **863 240 €**
+- Kliendid: **1 580**
+- Tellimused: **3 378**
+- Keskmine tellimus: **286 €**
 
-#### 2. Direct-liiklus toob stabiilselt tugevat müüki
+### 2. Direct-liiklus toob stabiilselt tugevat müüki
 
-Käive: 599 438 €
-Kliendid: 1 173
-Tellimused: 3 864
-Keskmine tellimus: 280 €
+- Käive: **599 438 €**
+- Kliendid: **1 173**
+- Tellimused: **3 864**
+- Keskmine tellimus: **280 €**
 
-#### 3. Facebook Ads on üks olulisemaid tasulisi kanaleid
+### 3. Facebook Ads on üks olulisemaid tasulisi kanaleid
 
-Käive: 504 811 €
-Kliendid: 1 016
-Tellimused: 3 864
-Keskmine tellimus: 284 €
+- Käive: **504 811 €**
+- Kliendid: **1 016**
+- Tellimused: **3 864**
+- Keskmine tellimus: **284 €**
 
-#### 4. E-maili kampaaniad paistavad silma kliendi väärtuse poolest
+### 4. E-maili kampaaniad paistavad silma kliendi väärtuse poolest
 
-Käive kliendi kohta: 4 542 €
-Kliendid: 878
-Tellimused: 2 787
+- Käive kliendi kohta: **4 542 €**
+- Kliendid: **878**
+- Tellimused: **2 787**
 
-#### 5. Kuine trendianalüüs näitab, et Google Organic ja Direct on kõige järjepidevamad käivet loovad kanalid
+### 5. Kuine trendianalüüs näitab, et Google Organic ja Direct on kõige järjepidevamad käivet loovad kanalid
 
-Google Organic oli vaadeldud perioodil enamasti suurima kuise käibega kanal.
-Direct säilitas stabiilse müügitaseme ning näitas mitmel kuul märkimisväärset kasvu võrreldes eelneva kuuga.
-Juhtkonna peamised järeldused
-Mis töötab hästi?
+- Google Organic oli vaadeldud perioodil enamasti suurima kuise käibega kanal.
+- Direct säilitas stabiilse müügitaseme ning näitas mitmel kuul märkimisväärset kasvu võrreldes eelneva kuuga.
+
+---
+
+# Juhtkonna peamised järeldused
+
+## Mis töötab hästi?
 
 ✅ Google'i orgaaniline liiklus on peamine käibeallikas.
 
@@ -203,10 +192,10 @@ Mis töötab hästi?
 
 ✅ Facebook Ads ja e-maili kampaaniad annavad tugeva panuse müüki ning on efektiivsed kliendikanalid.
 
-Millele tähelepanu pöörata?
+## Millele tähelepanu pöörata?
 
 ⚠ Turunduskanalite nimetused ei ole andmetes ühtlustatud (näiteks Google, google, Google Organic, google_organic). See võib moonutada kanalite tegelikku võrdlust.
 
-⚠ Mõnel kliendil võib olla mitu kirjet tabelis web_logs, mis võib põhjustada käibe topeltarvestust. Enne lõplike strateegiliste otsuste tegemist tuleks kontrollida atribuutsiooniloogikat.
+⚠ Mõnel kliendil võib olla mitu kirjet tabelis `web_logs`, mis võib põhjustada käibe topeltarvestust. Enne lõplike strateegiliste otsuste tegemist tuleks kontrollida atribuutsiooniloogikat.
 
-⚠ Osa müügist võib olla seotud kanaliga NULL, mis tähendab, et tellimust ei saanud ühegi turundusallikaga seostada. See viitab võimalikule puudulikule jälgimisele.
+⚠ Osa müügist võib olla seotud kanaliga `NULL`, mis tähendab, et tellimust ei saanud ühegi turundusallikaga seostada. See viitab võimalikule puudulikule jälgimisele.
