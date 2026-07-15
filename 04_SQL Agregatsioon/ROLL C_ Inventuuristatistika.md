@@ -4,15 +4,13 @@ Koostas : Tiiu Kumar
 > "Ülesanne :Analüüsi tootekategooriaid, laoseisu ja müüdud vs laos suhteid."  
 
 Sisend:
-Tabelid: products, sales, inventory_movements
-Väljund:
-3 SQL päringut + kokkuvõtlik tabel (kategooriate raport + soovitused)
+Tabelid: products, sales,inventory_movements
+
 ---
 
 ## 📌 1. Ülevaade tehtud tegevustest
 
 - Tootekategooriate koondandmed .Koosta ülevaade kategooriate kaupa:
-- 
 - müüdud vs laos: päring mis leiab kategooriad mis on müünud üle 100 ühiku
 - Kõige suurem kogus tooteid on müüdud meesteriiete katefoorias: 4121 toodet
 - Toodete järjestus kategooria sees 
@@ -23,7 +21,8 @@ Väljund:
 
 ### **2.1. Kõige rohkem tooteid on meesteriiete kategoorias (erinevaid tooteid 82), toote keskmine hind on kõige kallim jalanõude kategoorias.**
 - näide
-  
+ <img width="516" height="233" alt="image" src="https://github.com/user-attachments/assets/0d5c2b31-7f49-4592-a1a9-b3b45c6b7e5c" />
+ 
   
 
 
@@ -32,13 +31,20 @@ Väljund:
 Kõige suurem kogus tooteid on müüdud meesteriiete katefoorias: 4121 toodet
 
 -  näide
+
+<img width="524" height="309" alt="image" src="https://github.com/user-attachments/assets/be22a78b-1412-42c5-9e14-f3a3b3d2694d" />
+
   
 
 
 ### **2.3. Toodete järjestus kategooria sees**
 -  näide
   
+<img width="699" height="342" alt="image" src="https://github.com/user-attachments/assets/a97b001f-e25a-48d5-9929-e804f932d162" />
 
+iga kategooria top 3 tooted:
+
+<img width="670" height="381" alt="image" src="https://github.com/user-attachments/assets/72b1877a-4dd3-4ff7-a5fa-ed4f1243f9de" />
 
 ### **2.4. Kvaliteedikontroll: kas toodete fail (products) ei sisalda tuplikaatkirjeid**
 - tooteid kokku : **362**  
