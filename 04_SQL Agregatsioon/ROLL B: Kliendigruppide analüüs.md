@@ -59,6 +59,7 @@ SELECT
     END AS segment
 FROM kliendi_kokkuvote
 ORDER BY kogukäive DESC;
+```sql
 
 ##🥇 3. TOP kliendid (VIP)
 VIP‑kliendid on need, kelle kogukäive ületab 20 000 €.
