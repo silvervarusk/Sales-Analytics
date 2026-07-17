@@ -1,14 +1,41 @@
-/* ---------------------------------------------------------
-   ROLL B — KLIENDIGRUPPIDE ANALÜÜS (KOONDSKRIPT)
-   Autor: Irina
-   Kirjeldus: Ühtne skript, mis arvutab kliendi kogukäibe,
-   määrab segmendi, tagastab segmentide jaotuse, TOP kliendid
-   ja üle keskmise kulutajad.
---------------------------------------------------------- */
+##ROLL B — KLIENDIGRUPPIDE ANALÜÜS (IRINA)
 
------------------------------------------------------------
--- 1. Loo CTE: kliendi kogukäive + tellimuste arv + segment
------------------------------------------------------------
+# Kliendigruppide Analüüs (Customer Segmentation)  
+### Supabase — customers + sales
+
+> "Segmenteeri kliendid kulutuse järgi (VIP / Regular / Uus), leia TOP kliendid ja koosta kliendiprofiili kokkuvõte Annale."
+
+See projekt demonstreerib kliendigruppide analüüsi, kus kliendid segmenteeritakse kogukulutuse alusel.  
+Töö sisaldab:  
+- kliendi kogukäibe arvutamist  
+- segmentide määramist (VIP / Regular / Uus)  
+- TOP klientide leidmist  
+- kliendiprofiili kokkuvõtet  
+- SQL‑põhist analüüsi, mis sobib andmeanalüütiku portfooliosse
+
+---
+
+## 📌 1. Projekti eesmärk
+
+Eesmärk oli luua selge kliendisegmenteerimise mudel, mis toetab:
+
+- müügi- ja turundusotsuseid  
+- VIP‑klientide tuvastamist  
+- kliendikäitumise mõistmist  
+- personaalse kommunikatsiooni loomist  
+- kliendihalduse prioriseerimist
+
+Segmentide loogika:
+
+- **VIP** — kogukäive > 20 000 €  
+- **Regular** — kogukäive > 5 000 €  
+- **Uus** — kogukäive ≤ 5 000 €
+
+---
+
+## 📊 2. Kasutatud SQL‑loogika (CTE)
+
+```sql
 WITH kliendi_kokkuvote AS (
     SELECT
         c.customer_id,
@@ -19,68 +46,16 @@ WITH kliendi_kokkuvote AS (
     FROM customers c
     JOIN sales o ON c.customer_id = o.customer_id
     GROUP BY c.customer_id, c.first_name, c.last_name, c.city
-),
-
-segmenteeritud AS (
-    SELECT
-        customer_id,
-        nimi,
-        city,
-        tellimuste_arv,
-        kogukäive,
-        CASE
-            WHEN kogukäive > 20000 THEN 'VIP'
-            WHEN kogukäive > 5000 THEN 'Regular'
-            ELSE 'Uus'
-        END AS segment
-    FROM kliendi_kokkuvote
 )
-
------------------------------------------------------------
--- 2. Tagasta segmenteeritud kliendid (põhitulemus)
------------------------------------------------------------
-SELECT *
-FROM segmenteeritud
-ORDER BY kogukäive DESC;
-
-
------------------------------------------------------------
--- 3. Segmentide jaotus (VIP / Regular / Uus)
------------------------------------------------------------
-SELECT
-    segment,
-    COUNT(*) AS kliendiarv
-FROM segmenteeritud
-GROUP BY segment
-ORDER BY kliendiarv DESC;
-
-
------------------------------------------------------------
--- 4. TOP 10 klienti kogukäibe järgi
------------------------------------------------------------
 SELECT
     nimi,
     city,
     tellimuste_arv,
     kogukäive,
-    segment
-FROM segmenteeritud
-ORDER BY kogukäive DESC
-LIMIT 10;
-
-
------------------------------------------------------------
--- 5. Üle keskmise kulutajad (subquery)
------------------------------------------------------------
-SELECT
-    s.nimi,
-    s.city,
-    s.kogukäive,
-    s.segment
-FROM segmenteeritud s
-WHERE s.kogukäive > (
-    SELECT AVG(kogukäive)
-    FROM segmenteeritud
-)
-ORDER BY s.kogukäive DESC;
-
+    CASE
+        WHEN kogukäive > 20000 THEN 'VIP'
+        WHEN kogukäive > 5000 THEN 'Regular'
+        ELSE 'Uus'
+    END AS segment
+FROM kliendi_kokkuvote
+ORDER BY kogukäive DESC;
