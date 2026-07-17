@@ -24,7 +24,7 @@ Segmentide loogika:
 - **Regular** — kogukäive > 5 000 €  
 - **Uus** — kogukäive ≤ 5 000 €
 
-Kõik tulemused dokumenteeriti ning koostati juhatuse‑tasemel kokkuvõte.
+Kõik tulemused dokumenteeriti ning koostati kokkuvõte.
 
 ---
 
@@ -48,7 +48,7 @@ VIP‑kliendid moodustavad väikese, kuid äärmiselt väärtusliku segmendi.
 | Annika Saar | Viljandi | 66 | 20 726.79 | VIP |
 | Ago Kull | Pärnu | 64 | 20 124.61 | VIP |
 
-VIP‑kliendid ostavad tihti, suure summaga ja näitavad tugevat lojaalsust.
+VIP‑kliendid ostavad tihti, suure summa eest ja on lojaalsed.
 
 ---
 
@@ -70,7 +70,7 @@ Uus segment on kõige suurem, kuid madala kogukäibega.
 - Varajane kliendisuhe  
 - Vajavad aktiveerimist  
 
-Uus segment vajab turunduslikku toetust ja onboarding‑strateegiat.
+Uus segment vajab turunduslikku toetust ja "onboarding" strateegiat.
 
 ---
 
@@ -88,21 +88,19 @@ Lisaks oli üllatav, et **Regular segment on väga lai**, mis tähendab suurt po
 
 ---
 
-### **3.2. Meie soovitus Toomasele**
-
-Toomasele soovitame:
+### **3.2. Meie soovitus Kristile**
 
 #### **1. Luua VIP‑programm**
 - personaalne kliendihaldur  
 - eksklusiivsed pakkumised  
 - varajane ligipääs uutele toodetele  
 
-#### **2. Regular segmenti aktiveerida**
+#### **2. Aktiveerida Regular segmenti**
 - kordusostu kampaaniad  
 - ostusageduse tõstmise programmid  
 - punktisüsteem  
 
-#### **3. Uus segmenti kasvatada**
+#### **3. Kasvatada Uut segmenti**
 - esmaostu soodustused  
 - automaatne onboarding  
 - personaalsed soovitused  
@@ -128,7 +126,6 @@ Need andmed võimaldaksid luua:
 - täpsemaid segmente  
 - personaalseid pakkumisi  
 - kliendi elutsükli analüüsi  
-- churn‑prognoose  
 
 ---
 
@@ -168,3 +165,7 @@ SELECT
     END AS segment
 FROM kliendi_kokkuvote
 ORDER BY kogukäive DESC;
+
+##🧩 6. Lühike juhatuse kokkuvõte
+
+Kliendigruppide analüüs näitas, et VIP‑kliendid moodustavad väikese, kuid äärmiselt väärtusliku segmendi, mis toob kõige suurema tulu. Regular segment on lai ja pakub suurt kasvupotentsiaali, samas kui Uus segment vajab aktiivset kaasamist. Soovitame Toomasele luua VIP‑programmi, tugevdada Regular segmenti kordusostu kampaaniatega ning arendada Uus segmenti onboarding‑pakkumistega. Täiendavad demograafilised ja käitumuslikud andmed võimaldaksid segmente veelgi täpsemaks muuta.
