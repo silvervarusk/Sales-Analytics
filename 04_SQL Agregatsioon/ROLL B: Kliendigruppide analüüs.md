@@ -139,9 +139,16 @@ Need andmed võimaldaksid luua:
 
 ---
 
-## 🛠️ 5. SQL‑skript (täielik)
+## 🧩 5. Lühike juhatuse kokkuvõte ühes lõigus
+
+Kliendigruppide analüüs näitas, et VIP‑kliendid moodustavad väikese, kuid äärmiselt väärtusliku segmendi, mis toob kõige suurema tulu. Regular segment on lai ja pakub suurt kasvupotentsiaali, samas kui Uus segment vajab aktiivset kaasamist. Soovitame Toomasele luua VIP‑programmi, tugevdada Regular segmenti kordusostu kampaaniatega ning arendada Uus segmenti onboarding‑pakkumistega. Täiendavad demograafilised ja käitumuslikud andmed võimaldaksid segmente veelgi täpsemaks muuta.
+
+---
+
+## 🛠️ 6. SQL‑skriptid (kõik rolli B päringud)
 
 ```sql
+-- 1. Kliendi kogukäibe arvutamine + segmentide määramine (CTE)
 WITH kliendi_kokkuvote AS (
     SELECT
         c.customer_id,
@@ -166,10 +173,40 @@ SELECT
 FROM kliendi_kokkuvote
 ORDER BY kogukäive DESC;
 
----
+-- 2. TOP VIP kliendid (kui eraldi vaja)
+WITH kliendi_kokkuvote AS (
+    SELECT
+        c.customer_id,
+        c.first_name || ' ' || c.last_name AS nimi,
+        c.city,
+        COUNT(o.sale_id) AS tellimuste_arv,
+        SUM(o.total_price) AS kogukäive
+    FROM customers c
+    JOIN sales o ON c.customer_id = o.customer_id
+    GROUP BY c.customer_id, c.first_name, c.last_name, c.city
+)
+SELECT *
+FROM kliendi_kokkuvote
+WHERE SUM(total_price) > 20000
+ORDER BY kogukäive DESC
+LIMIT 10;
 
-
-##🧩 6. Lühike juhatuse kokkuvõte
-
-
-Kliendigruppide analüüs näitas, et VIP‑kliendid moodustavad väikese, kuid äärmiselt väärtusliku segmendi, mis toob kõige suurema tulu. Regular segment on lai ja pakub suurt kasvupotentsiaali, samas kui Uus segment vajab aktiivset kaasamist. Soovitame Toomasele luua VIP‑programmi, tugevdada Regular segmenti kordusostu kampaaniatega ning arendada Uus segmenti onboarding‑pakkumistega. Täiendavad demograafilised ja käitumuslikud andmed võimaldaksid segmente veelgi täpsemaks muuta.
+-- 3. Segmentide jaotuse kokkuvõte
+WITH kliendi_kokkuvote AS (
+    SELECT
+        c.customer_id,
+        SUM(o.total_price) AS kogukäive
+    FROM customers c
+    JOIN sales o ON c.customer_id = o.customer_id
+    GROUP BY c.customer_id
+)
+SELECT
+    CASE
+        WHEN kogukäive > 20000 THEN 'VIP'
+        WHEN kogukäive > 5000 THEN 'Regular'
+        ELSE 'Uus'
+    END AS segment,
+    COUNT(*) AS klientide_arv
+FROM kliendi_kokkuvote
+GROUP BY segment
+ORDER BY klientide_arv DESC;
