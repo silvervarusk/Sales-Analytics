@@ -31,8 +31,11 @@ KOKKULEPPED:
 | 3    | Irina  | Tiiu   | Silver |
 | 4    | Silver | Irina  | Tiiu   |
 | 5    | Tiiu   | Silver | Irina  |
-``
-
+| 6    | Irina  | Tiiu   | Silver |
+| 7    | Silver | Irina  | Tiiu   |
+| 8    | Tiiu   | Silver | Irina  |
+| 9    | Irina  | Tiiu   | Silver |
+| 10   | Silver | Irina  | Tiiu   |
 
 ALLKIRJAD:      
 1. Tiiu Kumar    
