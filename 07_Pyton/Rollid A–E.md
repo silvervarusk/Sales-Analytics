@@ -53,6 +53,8 @@ df = pd.merge(df_sales, df_customers, on='customer_id', how='left')
 | **Frequency** | Ostude arv | `count(sale_id)` klienti kohta |
 | **Monetary** | Kogukulutus | `sum(total_price)` klienti kohta |
 
+![Roll C](./C1.png)
+
 Igale dimensioonile määrati skoor 1–5 (`pd.qcut` kvintiilide alusel), skoorid liideti kokku (`RFM_Score`, vahemik 3–15) ja jaotati viide äriliselt tõlgendatavasse segmenti:
 
 | Segment | RFM_Score |
@@ -63,7 +65,9 @@ Igale dimensioonile määrati skoor 1–5 (`pd.qcut` kvintiilide alusel), skoori
 | At Risk | 4–6 |
 | Lost | < 4 |
 
-**Parandus (Roll E poolt tuvastatud):** veeru nimi ühtlustatud `Segment` → `segment` (väiketäht), et vältida vasturääkivust järgnevates rollides.
+![Roll C](./C2.png)
+
+![Roll C](./C3.png)
 
 ---
 
