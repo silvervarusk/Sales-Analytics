@@ -82,7 +82,7 @@ Keskmine kuukäive (Analytics pane → Average line) lisatud trendigraafikule, e
 
 ## Dashboard'i vaade
 
-![Roll A](./roll_a.png)
+![Roll A](./roll_A.png)
 
 ---
 *Osa DACA (Andmeanalüütiku Karjäärikiirendi) programmi nädala 6 ülesandest "Andmelood ja Dashboard'i Valmistamine".*
