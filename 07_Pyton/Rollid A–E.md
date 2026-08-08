@@ -28,7 +28,7 @@ df = pd.merge(df_sales, df_customers, on='customer_id', how='left')
 
 ---
 
-## Roll B — Andmete puhastamine
+## Roll B — Andmete puhastamine (IRINA)
 
 **Meetod:**
 1. Duplikaatide eemaldamine (`drop_duplicates()`)
@@ -40,7 +40,7 @@ df = pd.merge(df_sales, df_customers, on='customer_id', how='left')
 
 ---
 
-## Roll C — RFM analüüs
+## Roll C — RFM analüüs (IRINA)
 
 **Metoodika:** iga kliendi kohta arvutati kolm dimensiooni võrreldes viitekuupäevaga (2025-02-28):
 
