@@ -36,6 +36,9 @@ df = pd.merge(df_sales, df_customers, on='customer_id', how='left')
 3. Kuupäevade teisendamine `datetime` formaati
 4. Negatiivsete/nulliliste `total_price` väärtuste (outlier'ite) eemaldamine
 
+![Roll B](./B1.png)
+![Roll B](./B2.png)
+
 **Äritõlgendus:** Puhastusetapp on kriitiline, kuna RFM analüüs sõltub täielikult kolmest väärtusest (kuupäev, sagedus, summa) — ükski neist ei tohi sisaldada vigaseid andmeid, vastasel juhul moonduvad kõik järgnevad segmendid.
 
 ---
