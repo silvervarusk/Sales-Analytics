@@ -73,5 +73,7 @@ Tallinna keskmine kuukäive lisatud constant line'ina — näitab visuaalselt di
 - [ ] Annotatsioonid lisatud (min 2)
 - [ ] Andmelugu lõplikult sõnastatud koos kasvunumbriga
 
+![Roll D](./roll_B.png)
+
 ---
 *Osa DACA (Andmeanalüütiku Karjäärikiirendi) programmi nädala 6 ülesandest "Andmelood ja Dashboard'i Valmistamine".*
