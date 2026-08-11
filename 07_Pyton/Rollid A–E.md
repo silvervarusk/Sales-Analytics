@@ -76,8 +76,17 @@ Igale dimensioonile määrati skoor 1–5 (`pd.qcut` kvintiilide alusel), skoori
 Kolm Plotly diagrammi, kõik eestikeelsete telgede ja pealkirjadega:
 
 1. **Kliendisegmentide jaotus** (tulpdiagramm) — segmentide suurus klientide arvus
+
+   <img width="1399" height="757" alt="image" src="https://github.com/user-attachments/assets/4ea28a3c-c954-4dcd-8117-6f4e3c67bce3" />
+
 2. **RFM hajuvusdiagramm** — `recency_days` vs `monetary`, värv = segment, suurus = frequency. Kõige informatiivsem visuaal: näitab ühe pilguga, kus paiknevad väärtuslikud, kuid riskis olevad kliendid
+
+   <img width="1404" height="740" alt="image" src="https://github.com/user-attachments/assets/0d21f405-018a-4f63-ad9f-1218cdc40857" />
+
 3. **TOP 10 VIP Champions** — kõige suurema kogukulutusega kliendid nimeliselt
+
+   <img width="1351" height="730" alt="image" src="https://github.com/user-attachments/assets/6f383ebf-4461-4710-a66e-33af74b085e0" />
+
 
 **Parandus (Roll E poolt tuvastatud):** scatter-diagrammi värvimine parandatud kasutama veergu `segment` (mitte `Segment`), vastavuses Roll C parandusega.
 
