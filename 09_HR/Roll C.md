@@ -5,7 +5,7 @@
 Personalijuhi vaates ei piisa ainult tugevast tehnilisest tasemest. Sama oluline on kandidaadi suhtlemisoskus, koostöövõime ning valmisolek õppida ja kohaneda. Andmeanalüütik töötab igapäevaselt erinevate osapooltega ning peab suutma keerulisi analüüse selgitada arusaadavalt ka mittetehnilistele inimestele.
 
 ### 💬 Kommunikatsioon
-Meie viimase kaheksa nädala kogemus näitas, et tehnilistest oskustest üksi ei piisa. Kõige paremini hakkas asi edenema kui suheldakse aktiivselt, jagasid oma mõtteid ning aitasid vajadusel ka teisi. Personalijuhi vaatest on oluline näha, kuidas inimene töötab meeskonnas ja kuidas ta erinevate olukordadega toime tuleb.
+Meie viimase kaheksa nädala kogemus näitas, et tehnilistest oskustest üksi ei piisa. Kõige paremini hakkas asi edenema kui suheldakse aktiivselt, jagasime oma mõtteid ning aitasime vajadusel ka teisi. Personalijuhi vaatest on oluline näha, kuidas inimene töötab meeskonnas ja kuidas ta erinevate olukordadega toime tuleb.
 Tugev kandidaat oskab selgelt selgitada nii oma tööprotsessi kui ka tulemusi. Projektikirjeldustes Readme.md nädalate kaupa on näha, miks analüüs tehti, milliseid tööriistu kasutati ning millise tulemuseni jõuti.
 
 ### 🧩 Probleemilahendus
