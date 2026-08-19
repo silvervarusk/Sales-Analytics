@@ -37,16 +37,6 @@ Personalijuhi jaoks on tugev kandidaat inimene, kes ühendab tehnilised teadmise
 
 ---
 
-## 👤 Minu panus
-
-Koostasin personalijuhi vaatepunktist hindamiskriteeriumid, mis keskenduvad kommunikatsioonile, probleemilahendusele, meeskonnatööle ja kultuurilisele sobivusele.
-
-## 🤖 AI kasutamine
-
-Kasutasin AI-d mõtete struktureerimiseks ja teksti täiustamiseks. Lõpliku sisu kohandasin vastavalt ülesande eesmärgile ning kontrollisin selle vastavust grupitöö juhendile.
-
-- Ei oska põhjendada oma projektides tehtud valikuid.
-- Väldib vastutust või süüdistab probleemides teisi.
 
 ## Kokkuvõte
 
