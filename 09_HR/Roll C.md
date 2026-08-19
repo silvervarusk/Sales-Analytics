@@ -1,4 +1,5 @@
 # 👥 Roll C – Personalijuhi vaade (People Manager)
+Koostas: Silver Varusk
 
 ## 🎯 Hindamiskriteeriumid
 
