@@ -1,200 +1,309 @@
-# RÜHM 1 – VÄRBAMISJUHENDI PEATÜKK: Kuidas hinnata DA tehnilisi oskusi
+# RÜHM 1 – VÄRBAMISJUHENDI PEATÜKK: Tehniline hindamine ja intervjuu stsenaarium
 
-**Teema:** Tehniline intervjuu disain – SQL ülesanded, Python ülesanded, tööriistade tundmine  
-**UrbanStyle juht:** Toomas Kask (IT Director)  
-**Eesmärk:** Luua standardiseeritud raamistik tehnilise taseme objektiivseks hindamiseks 7 kandidaadile (5 Eestisse, 2 remote Soome/Saksamaa).  
-**Fookus:** SQL, Python, Power BI / Plotly, Git ning dokumentatsioon.
+**Teemad:** 
+1. Kuidas hinnata DA tehnilisi oskusi (SQL, Python, tööriistad)
+2. DA intervjuu stsenaarium (küsimused, hindamiskriteeriumid, ajaplaan)
 
----
+**Meeskond:** Sales Analytics  
+**UrbanStyle juht:** Toomas Kask (IT Director) + juhatus
 
-## 📘 1. ÜLEVAADE (kogu peatüki sissejuhatus)
-
-UrbanStyle vajab analüütikuid, kes suudavad töödelda mitmekanalilisi andmeid (e-pood + füüsilised poed) mahus, mis vastab 150% kasvule 2 aastaga. Tehniline intervjuu peab kontrollima kolme sammast: 
-1) **SQL oskus** (andmete ekstraheerimine ja agregeerimine reaalses ärikontekstis), 
-2) **Python oskus** (andmete puhastamine, analüüs ja automatiseerimine) ning 
-3) **tööriistade tundmine** (visualiseerimine, versioonihaldus, dokumentatsioon). 
-
-See peatükk annab igale intervjueerijale (HR, tehniline juht, personalijuht, tiimijuht) konkreetsed kriteeriumid, kuidas neid aspekte hinnata.
+**Eesmärk:** Luua terviklik ja standardiseeritud tehnilise intervjuu raamistik 7 kandidaadile (5 Eestisse, 2 remote Soome/Saksamaa), mis hõlmab nii tehniliste oskuste hindamist kui ka intervjuu läbiviimise praktilist stsenaariumi.
 
 ---
 
-## 🧩 2. ROLL A – PALKAMISJUHT (HR / Hiring Manager) vaade tehnilisele CV-le ja LinkedInile
+## 1. ÜLEVAADE
 
-**KÜSIMUS:** Mida peab HR otsima kandidaadi CV-st ja LinkedInist, et tuvastada tehniline kompetents (SQL/Python/tööriistad) ENNE intervjuud?
+See peatükk koondab UrbanStyle'i tehnilise värbamisprotsessi kahest olulisest aspektist: 
+1) **Mida hinnata** – tehnilised oskused (SQL, Python, visualiseerimine, versioonihaldus, dokumentatsioon) ja 
+2) **Kuidas hinnata** – intervjuu stsenaarium koos konkreetsete küsimuste, ajakava ja hindamiskriteeriumidega.
+
+Kuna UrbanStyle kasvab kiiresti (150% 2 aastaga) ja värbab nii kohalikke kui ka remote-töötajaid Soomest ja Saksamaalt, on ühtne ja objektiivne hindamisraamistik kriitilise tähtsusega. See peatükk annab igale intervjueerijale (HR, tehniline juht, personalijuht, tiimijuht) konkreetsed tööriistad kandidaatide võrdlemiseks ja parima valiku tegemiseks.
+
+---
+
+## 2. ROLL A – PALKAMISJUHT (HR / Hiring Manager) – Irina
+
+**KÜSIMUS:** Mida peab HR otsima kandidaadi CV-st ja LinkedInist, et tuvastada tehniline kompetents ENNE intervjuud? Kuidas disainida CV-sõelumise etappi?
 
 ### 2.1. CV kriteeriumid (tehniline fookus)
-- **SQL mainimine koos täpsustusega** – ei piisa sõnast "SQL". Kandidaat peab mainima konkreetseid elemente: *JOIN-id, alampäringud (subqueries), aknafunktsioonid (ROW_NUMBER, RANK), CTE-d*. Kui CV-s on kirjas "töötasin andmebaasidega", aga puudub viide päringute optimeerimisele või keerukatele agregeerimistele – see on nõrk signaal.
-- **Python teekide konkreetsus** – otsi sõnu *pandas, numpy, scikit-learn, statsmodels* või *ETL-pipelines*. Kui on ainult *"Python"* ilma teekideta, on tõenäoline, et kandidaat on teinud vaid algkursuse.
-- **Visualiseerimistööriistad** – *Power BI, Tableau, Plotly, Streamlit* peavad olema seostatud konkreetse projektiga (nt *"ehitasin Power BI dashboardi, mis koondas 5 andmeallikat"*).
-- **Git kogemus** – otsi sõnu *version control, pull requests, code reviews, CI/CD*. Kui Git on mainimata, on see kohene punane lipp (eriti remote-töö puhul Soome/Saksamaa).
+
+- **SQL-i konkreetsus** – otsi sõnu: *JOIN, subquery, CTE, window functions (ROW_NUMBER, RANK, LAG), query optimization, indexes*. Kui on vaid "SQL" ilma täpsustuseta – nõrk signaal.
+- **Pythoni teegid** – *pandas, numpy, scikit-learn, statsmodels, matplotlib, seaborn, plotly*. Kui puuduvad teegid, on tõenäoline, et kandidaat on teinud vaid algkursuse.
+- **Visualiseerimistööriistad** – *Power BI, Tableau, Looker, Streamlit, Dash* koos projektikirjeldusega.
+- **Versioonihaldus** – *Git, GitHub, GitLab, branching, pull requests, code reviews*. Kui Git on mainimata – punane lipp.
+- **Pilvetehnoloogiad** (boonusena) – *AWS, GCP, Azure, BigQuery, Snowflake* – eriti oluline remote-töötajatele.
 
 ### 2.2. LinkedIni "pin-worthy" projektid (tehnilisest vaatepunktist)
-- **Repositooriumi lingid** – pinitud postitus peab sisaldama otsest linki GitHubi repositooriumile, kus on näha **README.md koos paigaldusjuhendiga**.
-- **Tehniline sügavus** – postitus peaks kirjeldama lahenduse arhitektuuri: milline andmebaas (PostgreSQL, MySQL, BigQuery), milline Pythoni raamistik (FastAPI, Airflow, Jupyter), milline visualiseerimiskiht.
-- **Probleem-lahendus paar** – näiteks: *"Lahendasin 5 miljoni reaga seotud aeglase päringu, optimeerides indekseid ja kasutades aknafunktsioone"*.
+
+- **Repositooriumi link** – iga pinitud postitus peab sisaldama otsest linki GitHubi repositooriumile, kus on näha **README.md** koos paigaldus- ja kasutusjuhendiga.
+- **Tehniline sügavus** – postitus kirjeldab lahenduse arhitektuuri: andmebaas (PostgreSQL/MySQL/BigQuery), Pythoni raamistik (FastAPI/Airflow/Jupyter), visualiseerimiskiht.
+- **Probleem-lahendus paar** – *"Lahendasin 10 miljoni reaga seotud aeglase päringu, optimeerides indekseid ja kasutades aknafunktsioone, vähendades vastuseaja 45 sekundilt 2 sekundile"*.
 
 ### 2.3. Rohelised lipud (HR tehniline sõel)
-1. **CV-s on eraldi sektsioon "Tehniline stack"**, kus on loetletud täpsed versioonid (nt Python 3.10+, SQL (PostgreSQL), Power BI Desktop) ja kasutustase (nt *"igapäevane arendus"*).
-2. **GitHubi link on CV-s esimesel kolmandikul** ja sinna viib iga LinkedIni projekti kirjeldus.
-3. **Kandidaat on maininud osalemist Open Source projektides või koodiülevaadetes** – see näitab, et ta tunneb kaasaegset tarkvaraarenduse tsüklit.
+
+1. **CV-s on eraldi sektsioon "Tehniline stack"** koos versioonide ja kasutustasemega (nt *"Python 3.10 – igapäevane arendus"*).
+2. **GitHubi link on CV-s esimesel kolmandikul** ja kõik LinkedIni projektid viitavad sinna.
+3. **Kandidaat on maininud osalemist Open Source projektides** või koodiülevaadetes – see näitab kaasaegse tarkvaraarenduse tsükli tundmist.
 
 ### 2.4. Punased lipud (HR hoiatused)
-1. **CV-s on loetletud 15+ tehnoloogiat** (nt Excel, SPSS, R, Tableau, Qlik, Python, Java, C++) – see viitab pindmisele tundmisele, mitte sügavale oskusele. Keskendu 5-6 põhitehnoloogiale.
-2. **LinkedInis puudub igasugune tehniline sisu** (artiklid, projektid, soovitused tehnilistelt juhtidelt) – kandidaat ei ole oma tehnilist kaubamärki ehitanud.
+
+1. **CV-s on loetletud 15+ tehnoloogiat** (Excel, SPSS, R, Tableau, Qlik, Python, Java, C++...) – viitab pindmisele tundmisele. Keskendu 5-6 põhitehnoloogiale.
+2. **LinkedInis puudub igasugune tehniline sisu** (artiklid, projektid, soovitused tehnilistelt juhtidelt) – kandidaat pole oma tehnilist kaubamärki ehitanud.
+
+### 2.5. Mida HR esimesena vaatab (CV-sõelumise ajal – max 30 sekundit)
+
+1. **Kas GitHubi link on olemas ja kas see on töökorras?** (kui link on vigane või puudub – lükka kohe kõrvale).
+2. **Kas viimases töökohas on mainitud SQL-i ja Pythonit koos konkreetsete tulemustega?** (nt *"ehitasin ETL pipeline'i pandasiga, mis vähendas aruandluse aega 3 tunnilt 15 minutile"*).
+3. **Kas hariduse ja kogemuse kombinatsioon on loogiline?** (nt matemaatika/informaatika taust + 2+ aastat kogemust).
 
 ---
 
-## 🛠️ 3. ROLL B – TEHNILINE INTERVJUEERIJA (Technical Interviewer) vaade – intervjuu disain ja koodi hindamine
+## 3. ROLL B – TEHNILINE INTERVJUEERIJA (Technical Interviewer) – Tiiu
 
-See on peatüki TUUM. Siin on konkreetne disain tehniliseks intervjuuks (60–75 min).
+**KÜSIMUS:** Kuidas disainida tehniline intervjuu ja hinnata kandidaadi koodi/GitHubi nii, et see annaks objektiivse pildi tema oskustest?
 
-### 3.1. SQL ülesande disain (20 min live-kood või eelülesanne)
-**Ülesande näidis (UrbanStyle kontekst):**  
-> Sul on tabel `orders` (order_id, customer_id, order_date, total_amount, store_type – 'online' või 'physical') ja `customers` (customer_id, signup_date, country).  
-> **1)** Kirjuta SQL-päring, mis arvutab **iga riigi (Eesti, Soome, Saksamaa) kohta 2025. aasta kliendi esimese ostu keskmise summa**.  
-> **2)** Kirjuta SQL-päring, mis leiab **need kliendid, kes on ostnud vähemalt korra mõlemas kanalis (online ja physical)** ja arvuta nende koguostusumma.  
-> **3)** Lisa optimeerimine: kuidas muudaksid päringut, kui tabelis on 10 miljonit rida?
+### 3.1. Intervjuu stsenaarium – ülesehitus (75 minutit kokku)
 
-**Hindamiskriteeriumid:**
-- **Süntaks ja loogika** – kas ta oskab kasutada `JOIN`, `GROUP BY`, `HAVING` ja alampäringuid.
-- **Aknafunktsioonid** – kui ta kasutab `ROW_NUMBER()` või `LAG()` boonusena, on see roheline lipp.
-- **Optimeerimine** – oskab mainida indekseid (`store_type`, `order_date`), partitsioone või `EXPLAIN` analüüsi.
-- **Punane lipp** – ei oska `LEFT JOIN` vs `INNER JOIN` vahet selgitada; kirjutab päringuid ilma `WHERE` filtrita.
+| Aeg | Tegevus | Eesmärk |
+|-----|---------|---------|
+| 0:00–0:05 | Sissejuhatus + soojendusküsimus | Kandidaadi mugavustunde loomine |
+| 0:05–0:20 | **SQL ülesanne (live-kood)** | Hinnata andmebaasioskust, optimeerimist, loogilist mõtlemist |
+| 0:20–0:40 | **Pythoni ülesanne (live-kood)** | Hinnata andmetöötlusoskust, koodikvaliteeti, probleemilahendust |
+| 0:40–0:55 | **Tööriistade arutelu** (Power BI/Plotly, Git, dokumentatsioon) | Hinnata laiemat tehnilist kirjaoskust ja kogemust |
+| 0:55–1:10 | **Arhitektuuriline küsimus** | Hinnata süsteemset mõtlemist ja otsustusvõimet |
+| 1:10–1:15 | Kandidaadi küsimused + lõpetus | Hinnata huvi ja ettevalmistust |
 
-### 3.2. Python ülesande disain (20 min)
-**Ülesande näidis:**  
-> Sulle antakse CSV-fail (10 000 rida) UrbanStyle müügiandmetega, kus on veerud: `date`, `store`, `category`, `sales`, `cost`.  
-> **1)** Loe fail pandasesse.  
-> **2)** Arvuta iga kategooria marginaal (`(sales - cost) / sales`).  
-> **3)** Leia kuu keskmine marginaal ja salvesta see uude DataFramesse.  
-> **4)** Kirjuta funktsioon, mis võtab sisendiks kuupäeva ja tagastab selle kuu 3 parima marginaaliga kategooria.
+### 3.2. SQL ülesanne (15 min live-kood)
 
-**Hindamiskriteeriumid:**
-- **Loetavus** – muutujanimed arusaadavad (nt `df_sales`), funktsioonid lühikesed ja ühe ülesandega.
-- **Tõhusus** – kasutab vektoriseeritud operatsioone (mitte `for`-tsükleid iga rea peale).
-- **Vea käsitlus** – kas on `try-except` või kontroll puuduvate väärtuste vastu (`pd.isnull()`).
-- **Roheline lipp** – kirjutab dokstringi funktsioonile ja lisab tüüpihinnangud (`def top_categories(df: pd.DataFrame, date: str) -> list`).
-- **Punane lipp** – kirjutab tsükli ridade kaupa; ei oska grupeerimist (`groupby`).
+**Ülesande kirjeldus (UrbanStyle kontekst):**
 
-### 3.3. Tööriistade tundmine (Power BI / Plotly ja Git) – 15 min vestlus või väike praktiline ülesanne
-**Küsimused:**
-- **Visualiseerimine (Power BI / Plotly):** "Kuidas ehitaksid dashboardi, mis näitab reaalajas online-müüki vs füüsilise poe müüki? Milliseid graafikuid kasutaksid ja miks?"  
-- **Git:** "Näita mulle oma GitHubi repo. Miks sa kasutasid just seda branchimise strateegiat? Kuidas sa lahendaksid konflikti, kui sinu `feature` branch on `main`-ist maha jäänud?"
+> Sul on tabel `orders`:
+> - `order_id` (int)
+> - `customer_id` (int)
+> - `order_date` (date)
+> - `total_amount` (decimal)
+> - `store_type` (varchar – 'online' või 'physical')
+> - `country` (varchar – 'EE', 'FI', 'DE')
+> 
+> **1)** Kirjuta SQL-päring, mis arvutab **iga riigi kohta 2025. aasta esimese kvartali keskmise tellimuse summa**.
+> 
+> **2)** Kirjuta SQL-päring, mis leiab **kliendid, kes on ostnud vähemalt korra mõlemas kanalis (online ja physical)** ja arvuta nende koguostusumma.
+> 
+> **3)** Kuidas optimeeriksid neid päringuid, kui tabelis on 50 miljonit rida?
 
 **Hindamiskriteeriumid:**
-- Mõistab **DAX-i** põhimõtteid või Plotly `express` vs `graph_objects` erinevust.
-- Oskab selgitada **merge/rebase** erinevust ja teab, millal kumbagi kasutada.
-- **Roheline lipp** – on ise loonud repositooriumisse `CONTRIBUTING.md` või `.gitignore`.
-- **Punane lipp** – ei tea, mis on pull request; teeb ainult ühe suure commit'i ilma sõnumita.
+| Tase | Oskus |
+|------|-------|
+| **5 (suurepärane)** | Kasutab CTE-d, aknafunktsioone, selgitab indekseid ja partitsioone; kirjutab loetava ja optimeeritud koodi |
+| **4 (hea)** | Kasutab JOIN-e, GROUP BY-d, HAVING-it; mõistab alampäringuid; oskab lisada WHERE-filtri |
+| **3 (rahuldav)** | Kirjutab lihtsa päringu, mis töötab, kuid pole optimeeritud; vajab abi keerukamate konstruktsioonidega |
+| **2 (nõrk)** | Ei oska JOIN-e või GROUP BY-d õigesti kasutada; päring ei tööta |
+| **1 (puudulik)** | Ei oska SQL-i üldse |
+
+### 3.3. Pythoni ülesanne (20 min live-kood)
+
+**Ülesande kirjeldus:**
+
+> Sulle antakse CSV-fail (50 000 rida) UrbanStyle müügiandmetega:
+> - `date`, `store`, `category`, `sales`, `cost`, `units_sold`
+> 
+> **1)** Loe fail pandasesse ja kuva esimesed 5 rida.
+> 
+> **2)** Arvuta iga kategooria marginaal (`(sales - cost) / sales * 100`).
+> 
+> **3)** Leia iga kuu keskmine marginaal ja salvesta see uude DataFramesse.
+> 
+> **4)** Kirjuta funktsioon, mis võtab sisendiks kuupäeva (string) ja tagastab selle kuu 3 parima marginaaliga kategooria koos marginaaliga.
+
+**Hindamiskriteeriumid:**
+| Tase | Oskus |
+|------|-------|
+| **5 (suurepärane)** | Kasutab vektoriseeritud operatsioone, type hints, dokstringe; kirjutab taaskasutatavaid funktsioone; käsitleb vigu (`try-except`) ja puuduvaid väärtusi |
+| **4 (hea)** | Kasutab pandas groupby-d ja agg-funktsioone; kood on loetav; muutujanimed kirjeldavad |
+| **3 (rahuldav)** | Kood töötab, kuid kasutab for-tsükleid; puuduvad kommentaarid; ei käsitle vigu |
+| **2 (nõrk)** | Kood on segane; ei kasuta pandase tõhusalt; tulemus on vale |
+| **1 (puudulik)** | Ei oska Pythonit üldse |
+
+### 3.4. Tööriistade arutelu (15 min)
+
+**Küsimused visualiseerimise kohta (Power BI / Plotly):**
+- *"Kuidas ehitaksid dashboardi, mis näitab reaalajas online-müüki vs füüsilise poe müüki? Milliseid graafikuid kasutaksid ja miks?"*
+- *"Kuidas selgitaksid mitte-tehnilisele juhile, miks interaktiivne dashboard on parem kui staatiline aruanne?"*
+
+**Küsimused Git-i kohta:**
+- *"Näita mulle oma GitHubi repo. Miks sa kasutasid just seda branchimise strateegiat?"*
+- *"Kuidas lahendaksid konflikti, kui sinu feature branch on main-ist maha jäänud?"*
+- *"Mis vahe on merge-l ja rebase-l? Millal kumbagi kasutada?"*
+
+**Küsimused dokumentatsiooni kohta:**
+- *"Mida peaks sisaldama hea README?"*
+- *"Kuidas dokumenteeriksid keerulist SQL-päringut, mida teised analüütikud hakkavad kasutama?"*
+
+**Hindamiskriteeriumid:**
+| Tase | Oskus |
+|------|-------|
+| **5** | Oskab selgitada DAX-i põhimõtteid; teab Plotly express vs graph_objects erinevust; oskab rebase-d ja merge-i; README sisaldab installi, kasutust, näiteid ja andmeallikaid |
+| **4** | Mõistab visualiseerimise põhimõtteid; oskab Git-is põhitoiminguid; README on olemas |
+| **3** | Teab tööriistu, kuid ei oska neid süvitsi selgitada; Git-is teeb ainult commit ja push |
+| **2** | Ei tea, mis on pull request; visualiseerimine piirdub Exceliga |
+
+### 3.5. Arhitektuuriline küsimus (15 min)
+
+**Küsimus:** 
+> *"Kujuta ette, et UrbanStyle'il on andmed kolmes erinevas süsteemis: e-poe andmebaas (PostgreSQL), füüsiliste poodide kassaandmed (CSV-failid) ja turundusandmed (Google Analytics API). Kuidas kavandaksid lahenduse, mis koondab need andmed ühtsesse analüüsiplatvormi?"*
+
+**Hindamiskriteeriumid:**
+| Tase | Oskus |
+|------|-------|
+| **5** | Kirjeldab ETL-pipeline'i (extract, transform, load), mainib Airflow't või Prefect'i, andmeladu (data warehouse), andmemudeli kujundust |
+| **4** | Mainib API-päringuid, pandas CSV lugemist, SQL-i andmete ühendamist |
+| **3** | Pakub lihtsa lahenduse (käsitsi andmete ühendamine), kuid ei arvesta automatiseerimist |
+| **2** | Ei osa andmeallikaid ühendada |
 
 ---
 
-## 🤝 4. ROLL C – PERSONALIJUHT (People Manager) vaade pehmtele oskustele tehnilises kontekstis
+## 4. ROLL C – PERSONALIJUHT (People Manager) – Silver
 
-**KÜSIMUS:** Kuidas hinnata, kas kandidaat suudab tehnilises meeskonnas tõhusalt suhelda ja dokumenteerida?
+**KÜSIMUS:** Kuidas hinnata kandidaadi pehmeid oskusi tehnilises intervjuus? Kuidas näevad pehmed oskused välja koodis ja GitHubis?
 
 ### 4.1. Kommunikatsioon (tehniline selgitamine)
-- Kuidas kandidaat **kaitseb oma tehnilist valikut**? Näiteks: "Miks sa valisid pandas, mitte SQL-i selle andmete puhastamiseks?" – hea kandidaat toob välja pandas *flexibility* ja *data type handling*, mitte ei ütle "lihtsalt harjumus".
-- **Dokumentatsioonioskus** – kas README-s on selgelt kirjas, kuidas keskkonda püstitada (virtuaalkeskkond, requirements.txt), kust andmeid saada ja milline on väljundi struktuur.
 
-### 4.2. Probleemilahendus (loogiline mõtlemine tehnikas)
-- Portfoolios peaks olema näha, et kandidaat on **silunud (debugginud)** keerulist probleemi: nt "tuvastasin, et päring aeglustus indeksi puudumise tõttu ja lisasin indeksi, mis vähendas aega 20 sekundilt 0,5 sekundile".
-- Oskab selgitada **ajalist keerukust** (Big O) oma Pythoni lahendustes.
+- **Kuidas kandidaat kaitseb oma tehnilist valikut?** Näiteks: *"Miks sa valisid pandas, mitte SQL-i selle andmete puhastamiseks?"* – hea kandidaat toob välja pandas flexibility ja data type handling.
+- **Kas ta oskab rääkida MITTE-tehnilisele inimesele?** Proovi: *"Seleta mulle, mis on SQL-i aknafunktsioon, nii et ma saaksin aru kui marketingijuht."*
+- **Dokumentatsioonioskus** – kas README-s on selgelt kirjas, kuidas keskkonda püstitada, kust andmeid saada ja milline on väljundi struktuur?
 
-### 4.3. Meeskonnatöö (tehniline koostöö)
-- Kas kandidaat on teinud **koodiülevaateid**? (GitHubis kommentaarid teiste pull requestidele). See näitab, et ta mõistab meeskonnatöö protsesse.
-- Kas ta on loonud **ühise dokumentatsiooni** (Confluence, Notion) – see on eriti oluline remote-meeskondades (Soome/Saksamaa).
+### 4.2. Probleemilahendus (loogiline mõtlemine)
 
-### 4.4. Kultuuriline sobivus (tehniline paindlikkus)
-- UrbanStyle kasvab kiiresti – tehnoloogia võib muutuda. Hinda, kas kandidaat on õppinud uue tööriista **viimase aasta jooksul** (nt läks üle Tableau'lt Power BI-le).
+- **Kas ta selgitab oma mõttekäiku enne koodi kirjutamist?** (nt *"Ma lähenen nii: kõigepealt puhastan andmed, siis grupeerin, siis visualiseerin"*).
+- **Kuidas ta reageerib, kui seisab silmitsi veaga?** (debugimisoskus – kas ta loeb veateadet, kasutab print/im-ga kontrolli, kontrollib andmetüüpe).
+- **Kas ta toob välja alternatiivsed lahendused?** (nt *"Võiks ka regressiooni kasutada, aga aegridade puhul sobib ARIMA paremini"*).
+
+### 4.3. Meeskonnatöö (koostöö märgid)
+
+- **Kas GitHubis on näha koostööd?** (mitme autori commit-id, pull requestid, kommentaarid teiste koodile).
+- **Kas ta mainib projektides koostööd?** (nt *"töötasin koos turundusmeeskonnaga"*, *"kogusin nõudeid müügiosakonnalt"*).
+- **Kuidas ta suhtub tagasisidesse?** (kas ta on avatud kriitikale ja teeb kohe parandusi).
+
+### 4.4. Kultuuriline sobivus (UrbanStyle kontekst)
+
+UrbanStyle väärtused: **kasv, koostöö, kliendikesksus, andmepõhisus, paindlikkus**.
+
+- **Kiire kasv** – kandidaat on töötanud kiirelt kasvavas keskkonnas (startup, skaleeruv ettevõte).
+- **Andmepõhisus** – ta otsustab andmete põhjal, mitte intuitsiooni järgi.
+- **Paindlikkus** – ta on õppinud viimase aasta jooksul uue tööriista (nt läks üle Tableau'lt Power BI-le).
 
 ### 4.5. Rohelised lipud (People Manager)
-1. Kandidaadi README sisaldab sektsiooni **"Known issues"** – see näitab ausust ja küpsust.
-2. Ta oskab selgitada keerulist tehnilist kontseptsiooni (nt aknafunktsioonid) lihtsas ärikeeles ("järjestame kliendid nende esimese ostu kuupäeva järgi, et näha, kes on uued vs korduvad").
-3. Tal on **vähemalt üks ühine projekt**, kus ta on teinud koostööd 2+ inimesega (näha commit history's).
+
+1. **README-s on sektsioon "Kuidas see projekt aitas äri"** – selge seos äri-eesmärgiga.
+2. **Kandidaat selgitab keerulisi kontseptsioone lihtsalt** (nt *"aknafunktsioon võimaldab arvutada jooksva keskmise ilma andmeid grupeerimata"*).
+3. **Ta on teinud koodiülevaateid või osalenud paaris programmeerimises** (pair programming).
 
 ### 4.6. Punased lipud
-1. Kirjeldab oma koodi ainult sõnadega "see töötab", ei oska selgitada, *miks* see töötab või miks see on hea lahendus.
-2. Puuduvad igasugused kommentaarid koodis ja commit-sõnumid on nagu "update", "fix" – see viitab madalale professionaalsusele.
+
+1. **Kirjeldab oma koodi ainult sõnadega "see töötab"** – ei oska selgitada, miks see on hea lahendus.
+2. **Puuduvad kommentaarid koodis ja commit-sõnumid on "update", "fix"** – viitab madalale professionaalsusele.
 
 ---
 
-## 🚀 5. ROLL D – TIIMIJUHT (Team Lead) vaade iseseisvusele ja arengupotentsiaalile tehnilises meeskonnas
+## 5. ROLL D – TIIMIJUHT (Team Lead) – Irina
 
-**KÜSIMUS:** Kas see kandidaat suudab iseseisvalt omandada uusi tehnilisi oskusi ja aidata kaaslastel kasvada?
+**KÜSIMUS:** Kas kandidaat suudab iseseisvalt omandada uusi tehnilisi oskusi, aidata kaaslastel kasvada ja olla tiimi väärtuslik liige?
 
 ### 5.1. Iseseisvus (tehniline)
-- Kas kandidaat on loonud oma **tehnilise lahenduse nullist** (nt oma ETL pipeline või täieliku dashboardi), ilma et keegi oleks talle iga sammu ette öelnud?
-- Kas ta on ise **valinud tehnoloogiad** projekti jaoks? (nt "Valisin Plotly, sest vajasin interaktiivsust ja seda on lihtne integreerida Pythoni veebirakendusega").
+
+- **Kas kandidaat on loonud lahenduse nullist?** (nt oma ETL-pipeline või täieliku dashboardi).
+- **Kas ta on ise valinud tehnoloogiad?** (nt *"Valisin Plotly, sest vajasin interaktiivsust ja seda on lihtne integreerida Pythoni veebirakendusega"*).
+- **Kuidas ta lahendas takistusi?** (nt *"Otsisin lahendust Stack Overflow'st ja kohandasin selle meie andmetele"*).
 
 ### 5.2. Kommunikatsioon tiimijuhile
-- Kas ta on kirjutanud **tehnilise projekti plaani** (arhitektuuridiagramm, andmemudel)? Kui jah, siis kuidas ta seda selgitab – see näitab strateegilist mõtlemist.
-- Kas ta oskab **hinnata töömahtu**? (nt "Selle SQL-päringu kirjutamine võtab aega 2 tundi, aga optimeerimine veel 1 tund").
 
-### 5.3. Koostöö (tehniline mentorlus)
-- Kas ta on **juhendanud kolleege** tehnilistes küsimustes? (nt Stack Overflow vastused, sisekoolitused).
-- Kas ta on loonud **tehnilise baaskomponendi**, mida teised saavad taaskasutada? (nt ühine Pythoni funktsioonide kogu).
+- **Kas ta on kirjutanud tehnilise projekti plaani?** (arhitektuuridiagramm, andmemudel).
+- **Kas ta oskab hinnata töömahtu?** (nt *"Selle SQL-päringu kirjutamine võtab aega 2 tundi, optimeerimine veel 1 tund"*).
+- **Kas ta toob välja riske?** (nt *"Andmete kvaliteediga võib olla probleeme – peame kontrollima puuduvaid väärtusi"*).
 
-### 5.4. Arengupotentsiaal (tehniline kasv)
-- Vaata commit-ajalugu – kas esimesed projektid on lihtsamad (nt lihtne analüüs) ja hilisemad keerukamad (nt automatiseeritud aruanded API kaudu)?
-- Kas ta on õppinud uut SQL-i dialekti või Pythoni raamistikku? (nt PostgreSQL -> BigQuery).
+### 5.3. Koostöö (mentorlus ja teadmiste jagamine)
+
+- **Kas ta on juhendanud kolleege?** (nt Stack Overflow vastused, sisekoolitused).
+- **Kas ta on loonud tehnilise baaskomponendi, mida teised saavad taaskasutada?** (nt ühine Pythoni funktsioonide kogu).
+- **Kas tema pull requestid sisaldavad konstruktiivset tagasisidet?** (ei ole lihtsalt "LGTM").
+
+### 5.4. Arengupotentsiaal
+
+- **Vaata commit-ajalugu** – kas esimesed projektid on lihtsamad ja hilisemad keerukamad?
+- **Kas ta on õppinud uut tehnoloogiat?** (nt läks PostgreSQL-ilt BigQuery-le).
+- **Kas ta on loonud sisu?** (blogipostitus, töötuba, videoõpetus).
 
 ### 5.5. Rohelised lipud (Team Lead)
-1. Kandidaat on **teinud refaktorimist** (koodi ümberkirjutamist, et see oleks kiirem/lühem) – see näitab, et ta mõtleb kvaliteedile pikemas perspektiivis.
-2. Tal on **oma repo-s `tests/` kaust** (isegi kui lihtsad testid) – see on märk professionaalsest tarkvaraarenduse mõtteviisist.
-3. Ta on avanud **pull requesti mõnele Open Source projektile** – see on kõige kõrgem tase iseseisvusest ja meeskonnatööst.
+
+1. **Repos on tests/ kaust** – professionaalne tarkvaraarenduse mõtteviis.
+2. **Ta on avanud pull requesti mõnele Open Source projektile** – kõrgeim iseseisvuse tase.
+3. **Ta on teinud refaktorimist** – mõtleb kvaliteedile pikemas perspektiivis.
 
 ### 5.6. Punased lipud
-1. Kõik projektid on tehtud samas keskkonnas (nt ainult Jupyter Notebook) ja pole ühtegi `*.py` skripti – see viitab piiratud arendusvõimekusele.
-2. Kandidaat ei saa aru, **miks on vaja virtuaalkeskkonda** (venv) – suur punane lipp kaasaegses andmeanaliüütikas.
+
+1. **Kõik projektid on tehtud ainult Jupyter Notebook'is** – pole ühtegi `.py` skripti.
+2. **Kandidaat ei saa aru, miks on vaja virtuaalkeskkonda (venv)** – suur punane lipp.
 
 ---
 
-## 📊 6. ROLL E – VALIDEERIJA & KVALITEEDIKONTROLL (spetsiifiliselt rühm 1 tehnilisele fookusele)
+## 6. ROLL E – VALIDEERIJA & KVALITEEDIKONTROLL + ÄRISÜNTEES
 
-**Kontrollin, kas kõik rollid (A-D) vastavad teemale "Tehniline intervjuu disain – SQL, Python, tööriistad".**
+**Valideerimisraport**
 
 | Roll | Kontrollitud aspekt | Otsus | Märkus |
 |------|----------------------|-------|--------|
-| A (HR) | Kas CV/LinkedIni kriteeriumid keskenduvad SQL/Python/Git tuvastamisele? | **OK** | Kõik kriteeriumid (aknafunktsioonid, pandas, version control) on tehnilised. |
-| B (Tech) | Kas SQL, Python ja tööriistade ülesanded on konkreetsed ja mõõdetavad? | **OK** | Ülesanded on reaalsed (müügiandmed, optimeerimine). |
-| C (People) | Kas pehmete oskuste hindamine on seotud tehnilise dokumentatsiooni ja koostööga? | **OK** | Fookus README-l, koodiülevaadetel, tehnilisel selgitamisel. |
-| D (Team Lead) | Kas iseseisvus ja kasvupotentsiaal on hinnatud läbi tehniliste verstapostide (testid, pull requestid)? | **OK** | Kõik viited tehnilisele arengule. |
+| A (Irina) | Kas CV/LinkedIni kriteeriumid on tehnilised ja konkreetsed? | **OK** | SQL-i aknafunktsioonid, Pythoni teegid, Git on mainitud |
+| A (Irina) | Kas HR-i esmavaate kriteeriumid on selged? | **OK** | GitHubi link, kvantifitseeritud tulemused, haridus+kogemus |
+| B (Tiiu) | Kas SQL-i, Pythoni ja tööriistade ülesanded on konkreetsed? | **OK** | Reaalsed UrbanStyle andmed, optimeerimisülesanded |
+| B (Tiiu) | Kas intervjuu stsenaarium on praktiline? | **OK** | 75-minutine ajakava iga etapiga |
+| C (Silver) | Kas pehmete oskuste hindamine on seotud tehnilise kontekstiga? | **OK** | Kommunikatsioon koodis, dokumentatsioon, koostöö märgid |
+| C (Silver) | Kas kultuuriline sobivus on hinnatud? | **OK** | Kiire kasv, paindlikkus, andmepõhisus |
+| D (Irina) | Kas iseseisvus ja arengupotentsiaal on hinnatud läbi tehniliste verstapostide? | **OK** | Testid, Open Source, refaktorimine |
 
-**PARANDA ettepanekud (valideerija soovitused):**
-- **Roll B (Tech):** Lisa ajaline soovitus – SQL ülesandeks 20 minutit, Python 20 minutit, tööriistade arutelu 15 minutit, 5 minutit küsimusteks. See on praktiline intervjuu disaini element.
-- **Roll C (People):** Lisa konkreetne näide halvast kommentaarist ("# see arvutab marginaali") ja heast kommentaarist ("# arvutame marginaali [(müük-kulu)/müük], et hinnata toote tasuvust enne hooaja lõppu").
-- **Kõikidele rollidele:** Lisa remote-aspekt – Soome ja Saksamaa kandidaatide puhul hinda inglisekeelset tehnilist sõnavara (nt kas nad teavad termineid nagu "window function", "dataframe", "ETL").
+**PARANDA ettepanekud:**
+- **Roll B (Tiiu):** Lisa SQL-i ülesandesse ka `HAVING` näide – paljud kandidaadid unustavad selle ära.
+- **Roll D (Irina):** LISA konkreetne küsimus remote-töö kohta: *"Kuidas hoiad sidet kaugmeeskonnaga, kui oled Soomes/Saksamaal?"*
+- **Kõik rollid:** LISA punkt "Remote-spetsiifilised oskused" – eriti oluline Soome ja Saksamaa kandidaatidele.
 
-**Ristkontroll:** Kõik rollid räägivad ühtset keelt – SQL optimeerimine, pandas, versioonihaldus. Puudub laialivalgumine üldistesse äriteemadesse või portfoolio esteetikasse (need on teiste rühmade teemad).
+**Ristkontroll:** Kõik rollid on omavahel kooskõlas – HR sõelub tehnilist kompetentsi, tehniline intervjuu seda süvitsi kontrollib, personalijuht hindab suhtlust ja kultuuri, tiimijuht vaatab iseseisvust ja kasvupotentsiaali.
 
 ---
 
-## 📝 7. KOKKUVÕTE – VASTUSED RÜHMA 1 SÜNTEESIKÜSIMUSTELE (tehniline fookus)
+## 7. KOKKUVÕTE – VASTUSED KOLMELE SÜNTEESIKÜSIMUSELE
 
-### 7.1. Mis oli kõige üllatavam – mida tööandjad (Toomas Kask) TEGELIKULT tehniliselt hindavad?
+### 7.1. Mis oli kõige üllatavam – mida tööandjad TEGELIKULT tehniliselt hindavad?
 
-> **Kõige üllatavam oli avastus, et kandidaadid, kes oskavad kirjutada keerukaid SQL-päringuid, kukuvad sageli läbi Pythoni andmepuhastuse ülesannetes, sest neil puudub süstemaatiline arusaam andmestruktuuridest (DataFrame) ja veahaldusest. Samuti üllatas, et 80% kandidaatidest ei oska selgitada, miks nad just konkreetset JOIN-i kasutasid – nad lihtsalt "proovivad, kuni tulemus tuleb".**
+> **Kõige üllatavam oli avastus, et kandidaadid, kes oskavad kirjutada keerukaid SQL-päringuid, kukuvad sageli läbi Pythoni andmepuhastuse ülesannetes, sest neil puudub süstemaatiline arusaam DataFrame'i struktuurist ja veahaldusest. Samuti üllatas, et enamik kandidaate ei oska selgitada, miks nad just konkreetset JOIN-i või visualiseerimisviisi kasutasid – nad lihtsalt "teevad, nagu harjunud".**
 
-### 7.2. Millist soovitust annaksime Toomasele (IT Director) tehnilise intervjuu disaini parandamiseks?
+### 7.2. Millist soovitust annaksime Liisile värbamisprotsessi parandamiseks?
 
-> **Soovitame jagada tehniline intervjuu kaheks eraldi osaks:**
-> 1) **Kodune eelülesanne (3h)** – reaalsed UrbanStyle andmed, kus kandidaat peab koostama SQL-päringud, Pythoni puhastusskripti ja visualiseeringu. See säästab aega.
-> 2) **Elus esitlus (45 min)** – kandidaat selgitab oma lahendust, vastab küsimustele "miks just nii" ja teeb väikse live-muudatuse (nt "lisa filtreering kuu järgi"). See paljastab kohe, kas tegemist on teooria või praktilise oskusega.
+> **Soovitame jagada tehniline hindamine kaheks etapiks:**
+> 1) **Kodune eelülesanne (3–4 tundi)** – reaalsed UrbanStyle andmed, kus kandidaat peab koostama SQL-päringud, Pythoni puhastusskripti ja visualiseeringu. See säästab intervjuuaega.
+> 2) **Intervjuu (75 minutit)** – kandidaat esitleb oma lahendust, vastab küsimustele "miks just nii" ja teeb väikse live-muudatuse (nt "lisa filtreering kuu järgi"). See paljastab kohe, kas tegemist on teooria või praktilise oskusega.
+> 
+> **Lisa igasse vooru konkreetne ärikontekst** – kandidaat peab lahendama UrbanStyle'le tüüpilise probleemi (nt kampaania ROI analüüs, lao täiendamise ennustus).
 
 ### 7.3. Mis info puudub tehnilise hindamise kohta, mida peaksime veel uurima?
 
-> **Puudub süvainfo kandidaadi kogemuse kohta pilvplatvormidel (AWS, GCP, Azure) ja suurandmete tööriistades (Spark, BigQuery). Kuna UrbanStyle kasvab kiiresti, võivad andmemahud peagi nõuda pilvelahendusi. Soovitame lisada ühe lisaküsimuse: "Kuidas töötleksid 100 GB andmeid, kui pandas jääb aeglaseks?" – see eristab tulevikuvalmidust.**
+> **Puudub süvainfo kandidaadi kogemuse kohta pilvplatvormidel (AWS, GCP, Azure) ja suurandmete tööriistades (Spark, BigQuery).** Kuna UrbanStyle kasvab kiiresti, võivad andmemahud peagi nõuda pilvelahendusi. Soovitame lisada ühe lisaküsimuse:
+> *"Kuidas töötleksid 100 GB andmeid, kui pandas jääb aeglaseks?"*
+> See eristab kandidaate, kes on valmis tuleviku väljakutseteks.
 
 ---
 
-## 📚 8. LÕPLIK 3 VÕTMESOOVITUST TOOMASELE (IT Director)
+## 8. 3 VÕTMESOOVITUST TOOMASELE (IT Director) + JUHATUSELE
 
-1. **Loo ühtne "tech task" repo** – laadi sinna näidisandmed ja täpsed juhised. Kõik kandidaadid saavad sama ülesande, mis võimaldab objektiivset võrdlust. Lisa automaatne testimisskript, et kontrollida, kas SQL päringud tagastavad õige tulemuse.
+1. **Loo ühtne "tech task" repo** – laadi sinna näidisandmed ja täpsed juhised. Kõik kandidaadid saavad sama ülesande, mis võimaldab objektiivset võrdlust. Lisa automaatne testimisskript, et kontrollida, kas SQL-päringud tagastavad õige tulemuse.
+
 2. **Kasuta paarishindamist (pair-coding)** – lase kandidaadil kirjutada SQL/Python koos sinu meeskonna vanemanalüütikuga. See annab kohe pildi koostööoskusest ja viisist, kuidas ta probleemile läheneb (kas ta küsib abi, kas ta kommenteerib tegevusi).
-3. **Ära unusta Git-i praktikat** – küsi kindlasti: "Näita mulle oma viimast pull requesti." Kui kandidaat ei tea, mis on pull request, siis ei sobi ta meeskonda, kus kõik teevad koostööd GitHubis.
 
----
+3. **Loo ühtne hindamiskaart (scorecard)** kõigile intervjueerijatele, kus on 5-pallised skaalad:
+   - SQL-i oskus (süntaks, optimeerimine, keerukus)
+   - Pythoni oskus (loetavus, tõhusus, veakäsitlus)
+   - Tööriistade tundmine (visualiseerimine, Git, dokumentatsioon)
+   - Kommunikatsioon (tehniline selgitamine, ärikesksus)
+   - Koostöö ja iseseisvus
+   - Arengupotentsiaal
 
-**Dokumendi lõpp – Rühm 1, tehnilise hindamise peatükk.**  
-*Kontrollitud ja kinnitatud valideerija (Roll E) poolt. Sobib kasutamiseks UrbanStyle tehnilises värbamisvoorus.*
+   See muudab otsuse objektiivsemaks ja võrreldavaks.
+
