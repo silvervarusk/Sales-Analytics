@@ -1,6 +1,19 @@
 # SQL Andmete Puhastamine ja Andmekvaliteedi Kontroll
 
 ## Projekti ülevaade
+## Projekti struktuur
+
+```text
+02_Sustainability_Analysis/
+├── README.md
+├── ROLL A: müügiandmete puhastamine.md
+├── Roll B Kliendiandmete Puhastamine.md
+├── ROLL C: Tooteandmete Puhastamine.md
+├── ROLL D: Ristvalideerimine ja Kvaliteedikontroll.md
+├── ALAÜLESANDE KAART E — Valideerimine.md
+└── week2_team_cleaning_report.md
+```
+
 
 See projekt valmis DACA (Andmeanalüütiku Karjäärikiirendi) programmi raames.
 
