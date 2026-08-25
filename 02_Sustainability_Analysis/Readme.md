@@ -1,141 +1,172 @@
-# SQL Data Cleaning and Data Quality Validation
+# SQL Andmete Puhastamine ja Andmekvaliteedi Kontroll
 
-## Project Overview
+## Projekti ülevaade
 
-This project was completed as part of the DACA (Data Analyst Career Accelerator) program.
+See projekt valmis DACA (Andmeanalüütiku Karjäärikiirendi) programmi raames.
 
-The objective was to improve data quality by identifying and resolving common data issues in a retail database hosted in Supabase.
-
-The project focused on four key areas:
-
-- Sales data cleaning
-- Customer data cleaning
-- Product data cleaning
-- Cross-table validation and data quality checks
+Projekti eesmärk oli parandada andmekvaliteeti ning tuvastada kriitilised probleemid ettevõtte andmebaasis. Töö keskendus müügi-, kliendi- ja tooteandmete puhastamisele ning tabelitevahelisele ristvalideerimisele. Kõik analüüsid viidi läbi turvalistes testkoopiates, et vältida muudatusi originaalandmetes. 【1-c6a604】【2-b0c8b3】
 
 ---
 
-## Tools Used
+## Kasutatud tööriistad
 
 - SQL
 - PostgreSQL / Supabase
 - GitHub
+- Andmekvaliteedi kontrolli tehnikad
+- Andmete puhastamine ja valideerimine
 
 ---
 
-## Dataset
+## Andmebaasi struktuur
 
-The database contained three main business tables:
+Analüüs hõlmas kolme peamist tabelit:
 
-| Table | Description |
-|---------|-------------|
-| sales | Sales transactions |
-| customers | Customer information |
-| products | Product catalog |
+- **sales** – müügitehingud
+- **customers** – kliendiandmed
+- **products** – tooteandmed
+
+Lisaks viidi läbi ristvalideerimine kõigi tabelite vahel. 【1-c6a604】【2-b0c8b3】
 
 ---
 
-## Sales Data Cleaning
+# Müügiandmete puhastamine
 
-### Checks Performed
+## Teostatud kontrollid
 
-- Duplicate invoice detection
-- NULL value validation
-- Future date validation
-- Guest purchase identification
+- Duplikaatsete tellimuste leidmine
+- NULL-väärtuste kontroll
+- Tuleviku kuupäevade kontroll
+- Külalisostude tuvastamine
 
-### Findings
+## Tulemused
 
-| Issue | Count |
-|---------|---------|
-| Duplicate rows | 5116 |
-| Duplicate invoice IDs | 4013 |
+| Probleem | Kogus |
+|-----------|--------:|
+| Duplikaatseid invoice_id väärtusi | 4013 |
+| Duplikaatseid ridu | 5116 |
 | NULL customer_id | 1487 |
 | NULL sale_date | 0 |
 | NULL total_price | 0 |
-| Future dates | 0 |
+| Tuleviku kuupäevi | 0 |
 
-### Business Conclusion
+Kliendiviite puudumine (`customer_id IS NULL`) osutus äriloogika kohaselt külalisostuks ning seda ei käsitletud andmeveana. 【2-b0c8b3】
 
-Duplicate sales records were the most critical issue because they directly impact revenue reporting and business analytics.
+### Peamine järeldus
 
----
-
-## Customer Data Cleaning
-
-### Findings
-
-| Issue | Count |
-|---------|---------|
-| Duplicate emails | 129 |
-| Missing names | 0 |
-| Missing contact information | 380 |
-| City naming inconsistencies | 54 |
-
-### Business Conclusion
-
-Missing contact information presents the highest operational risk because customers cannot be contacted effectively.
+Kõige suurem probleem olid duplikaatsed müügikirjed, mis mõjutavad otseselt müügitulemusi, statistikat ja aruandlust. 【2-b0c8b3】
 
 ---
 
-## Product Data Cleaning
+# Kliendiandmete puhastamine
 
-### Findings
+## Teostatud kontrollid
 
-| Issue | Count |
-|---------|---------|
-| Duplicate product names | 12 |
-| NULL critical fields | 0 |
-| Pricing errors | 0 |
-| Category inconsistencies | 0 |
+- Duplikaatsete e-mailide kontroll
+- Puuduvate nimede kontroll
+- Linnanimede standardiseerimise vajaduse analüüs
+- Kontaktandmete kvaliteedi hindamine
 
-### Business Conclusion
+## Tulemused
 
-Duplicate product names can distort product-level sales and profitability analysis.
+| Probleem | Kogus |
+|-----------|--------:|
+| Duplikaatsed e-mailid | 129 |
+| NULL eesnimi | 0 |
+| NULL perenimi | 0 |
+| Puuduvad kontaktandmed | 380 |
+| Erinevat linnanime väärtust | 54 |
 
----
+Analüüsi käigus standardiseeriti linnanimed ning e-mailid viidi ühtsesse väiketähtedel põhinevasse vormingusse. 【2-b0c8b3】
 
-## Cross-Table Validation
+### Peamine järeldus
 
-### Findings
-
-| Issue | Count |
-|---------|---------|
-| Orphan customers | 0 |
-| Orphan products | 0 |
-| Price mismatches | 664 |
-| Customers with no purchases | 592 |
-| Unsold products | 12 |
-
-### Business Conclusion
-
-The most significant data quality concern was pricing inconsistency between sales transactions and product retail prices.
+Kõige suurem äriline risk on puuduvad kontaktandmed, sest see takistab klientidega suhtlemist ja mõjutab otseselt müügi- ning tugiprotsesse. 【2-b0c8b3】
 
 ---
 
-## Key Recommendations
+# Tooteandmete puhastamine
 
-1. Remove duplicate sales transactions.
-2. Standardize customer contact information.
-3. Enforce unique product identifiers.
-4. Implement automated data quality monitoring.
-5. Validate sales prices against product prices.
+## Teostatud kontrollid
+
+- Duplikaatsete toodete leidmine
+- NULL-väärtuste kontroll
+- Hinnaloogika kontroll
+- Kategooriate järjepidevuse kontroll
+
+## Tulemused
+
+| Probleem | Kogus |
+|-----------|--------:|
+| Duplikaatsed tootenimed | 12 |
+| NULL-väärtused kriitilistes väljades | 0 |
+| Negatiivsed hinnad | 0 |
+| Äärmuslikud hinnad | 0 |
+| Kategooriate ebajärjekindlused | 0 |
+
+Tooteandmed olid üldiselt väga hea kvaliteediga ning ainus märkimisväärne probleem oli duplikaatsete tootenimede olemasolu. 【2-b0c8b3】
+
+### Peamine järeldus
+
+Duplikaatsed tootenimed võivad moonutada müügi-, kasumlikkuse- ja marginaalianalüüse. 【2-b0c8b3】
 
 ---
 
-## Skills Demonstrated
+# Ristvalideerimine ja andmekvaliteedi kontroll
 
-- SQL Data Cleaning
-- Data Quality Assessment
-- Duplicate Detection
-- NULL Value Analysis
-- Data Validation
-- Cross-Table Verification
-- Business Insight Reporting
+## Kontrollitud valdkonnad
+
+- Müük viitab olemasolevatele klientidele
+- Müük viitab olemasolevatele toodetele
+- Müügihinna vastavus toote hinnale
+- Kliendid, kes pole kunagi ostnud
+- Tooted, mida pole kunagi müüdud
+
+## Tulemused
+
+| Probleem | Kogus |
+|-----------|--------:|
+| Orbid kliendid | 0 |
+| Orbid tooted | 0 |
+| Hinna ebakõlad | 664 |
+| Vaimkliendid | 592 |
+| Vaimtooted | 12 |
+
+Kõik kliendi- ja tooteviited olid korrektsed, kuid märkimisväärne probleem ilmnes müügihindade kooskõlas tootehindadega. 【2-b0c8b3】
+
+### Peamine järeldus
+
+664 müügikirjel ei vastanud müügihind toote hinnale, mis muudab marginaalianalüüsi ja müügitulemuste hindamise ebausaldusväärseks. 【2-b0c8b3】
 
 ---
 
-## Repository Structure
+# Soovitused
+
+1. Eemaldada duplikaatsed müügikirjed.
+2. Rakendada automaatne andmekvaliteedi kontroll.
+3. Dokumenteerida külalisostude ärireeglid.
+4. Standardiseerida kontaktandmete sisestamine.
+5. Kasutada toodete analüüsis unikaalseid identifikaatoreid.
+6. Rakendada müügihinna valideerimise reegel:
+   - `total_price = retail_price × quantity`
+7. Luua automaatsed teavitused hinnaloogika vigade tuvastamiseks. 【2-b0c8b3】
+
+---
+
+# Omandatud oskused
+
+- SQL päringud
+- Andmete puhastamine
+- NULL-väärtuste analüüs
+- Duplikaatide tuvastamine
+- Andmekvaliteedi hindamine
+- Ristvalideerimine tabelite vahel
+- Äriliste soovituste koostamine
+- PostgreSQL / Supabase kasutamine
+
+---
+
+# Projekti struktuur
 
 ```text
 portfolio/
@@ -145,6 +176,19 @@ portfolio/
     │   ├── week2_customers_cleaning.sql
     │   ├── week2_products_cleaning.sql
     │   └── week2_cross_validation.sql
+    │
     ├── team/
     │   └── week2_team_cleaning_report.md
+    │
     └── README.md
+```
+
+---
+
+## Autor
+
+**Silver Varusk**
+
+DACA – Andmeanalüütiku Karjäärikiirendi
+
+GitHub Portfolio Project – SQL Andmete Puhastamine ja Andmekvaliteedi Kontroll
