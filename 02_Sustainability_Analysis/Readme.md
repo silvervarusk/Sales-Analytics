@@ -4,7 +4,7 @@
 
 See projekt valmis DACA (Andmeanalüütiku Karjäärikiirendi) programmi raames.
 
-Projekti eesmärk oli parandada andmekvaliteeti ning tuvastada kriitilised probleemid ettevõtte andmebaasis. Töö keskendus müügi-, kliendi- ja tooteandmete puhastamisele ning tabelitevahelisele ristvalideerimisele. Kõik analüüsid viidi läbi turvalistes testkoopiates, et vältida muudatusi originaalandmetes. 【1-c6a604】【2-b0c8b3】
+Projekti eesmärk oli parandada andmekvaliteeti ning tuvastada kriitilised probleemid ettevõtte andmebaasis. Töö keskendus müügi-, kliendi- ja tooteandmete puhastamisele ning tabelitevahelisele ristvalideerimisele. Kõik analüüsid viidi läbi turvalistes testkoopiates, et vältida muudatusi originaalandmetes.
 
 ---
 
@@ -26,7 +26,7 @@ Analüüs hõlmas kolme peamist tabelit:
 - **customers** – kliendiandmed
 - **products** – tooteandmed
 
-Lisaks viidi läbi ristvalideerimine kõigi tabelite vahel. 【1-c6a604】【2-b0c8b3】
+Lisaks viidi läbi ristvalideerimine kõigi tabelite vahel. 
 
 ---
 
@@ -50,11 +50,11 @@ Lisaks viidi läbi ristvalideerimine kõigi tabelite vahel. 【1-c6a604】【2-b
 | NULL total_price | 0 |
 | Tuleviku kuupäevi | 0 |
 
-Kliendiviite puudumine (`customer_id IS NULL`) osutus äriloogika kohaselt külalisostuks ning seda ei käsitletud andmeveana. 【2-b0c8b3】
+Kliendiviite puudumine (`customer_id IS NULL`) osutus äriloogika kohaselt külalisostuks ning seda ei käsitletud andmeveana. 
 
 ### Peamine järeldus
 
-Kõige suurem probleem olid duplikaatsed müügikirjed, mis mõjutavad otseselt müügitulemusi, statistikat ja aruandlust. 【2-b0c8b3】
+Kõige suurem probleem olid duplikaatsed müügikirjed, mis mõjutavad otseselt müügitulemusi, statistikat ja aruandlust. 
 
 ---
 
@@ -77,11 +77,11 @@ Kõige suurem probleem olid duplikaatsed müügikirjed, mis mõjutavad otseselt 
 | Puuduvad kontaktandmed | 380 |
 | Erinevat linnanime väärtust | 54 |
 
-Analüüsi käigus standardiseeriti linnanimed ning e-mailid viidi ühtsesse väiketähtedel põhinevasse vormingusse. 【2-b0c8b3】
+Analüüsi käigus standardiseeriti linnanimed ning e-mailid viidi ühtsesse väiketähtedel põhinevasse vormingusse. 
 
 ### Peamine järeldus
 
-Kõige suurem äriline risk on puuduvad kontaktandmed, sest see takistab klientidega suhtlemist ja mõjutab otseselt müügi- ning tugiprotsesse. 【2-b0c8b3】
+Kõige suurem äriline risk on puuduvad kontaktandmed, sest see takistab klientidega suhtlemist ja mõjutab otseselt müügi- ning tugiprotsesse. 
 
 ---
 
@@ -104,11 +104,11 @@ Kõige suurem äriline risk on puuduvad kontaktandmed, sest see takistab klienti
 | Äärmuslikud hinnad | 0 |
 | Kategooriate ebajärjekindlused | 0 |
 
-Tooteandmed olid üldiselt väga hea kvaliteediga ning ainus märkimisväärne probleem oli duplikaatsete tootenimede olemasolu. 【2-b0c8b3】
+Tooteandmed olid üldiselt väga hea kvaliteediga ning ainus märkimisväärne probleem oli duplikaatsete tootenimede olemasolu.
 
 ### Peamine järeldus
 
-Duplikaatsed tootenimed võivad moonutada müügi-, kasumlikkuse- ja marginaalianalüüse. 【2-b0c8b3】
+Duplikaatsed tootenimed võivad moonutada müügi-, kasumlikkuse- ja marginaalianalüüse. 
 
 ---
 
@@ -132,11 +132,11 @@ Duplikaatsed tootenimed võivad moonutada müügi-, kasumlikkuse- ja marginaalia
 | Vaimkliendid | 592 |
 | Vaimtooted | 12 |
 
-Kõik kliendi- ja tooteviited olid korrektsed, kuid märkimisväärne probleem ilmnes müügihindade kooskõlas tootehindadega. 【2-b0c8b3】
+Kõik kliendi- ja tooteviited olid korrektsed, kuid märkimisväärne probleem ilmnes müügihindade kooskõlas tootehindadega.
 
 ### Peamine järeldus
 
-664 müügikirjel ei vastanud müügihind toote hinnale, mis muudab marginaalianalüüsi ja müügitulemuste hindamise ebausaldusväärseks. 【2-b0c8b3】
+664 müügikirjel ei vastanud müügihind toote hinnale, mis muudab marginaalianalüüsi ja müügitulemuste hindamise ebausaldusväärseks. 
 
 ---
 
@@ -149,7 +149,7 @@ Kõik kliendi- ja tooteviited olid korrektsed, kuid märkimisväärne probleem i
 5. Kasutada toodete analüüsis unikaalseid identifikaatoreid.
 6. Rakendada müügihinna valideerimise reegel:
    - `total_price = retail_price × quantity`
-7. Luua automaatsed teavitused hinnaloogika vigade tuvastamiseks. 【2-b0c8b3】
+7. Luua automaatsed teavitused hinnaloogika vigade tuvastamiseks. 
 
 ---
 
