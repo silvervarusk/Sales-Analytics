@@ -185,9 +185,11 @@ portfolio/
 
 ---
 
-## Autor
+## Autorid
 
-**Silver Varusk**
+**Silver**
+**Irina**
+**Tiiu**
 
 DACA – Andmeanalüütiku Karjäärikiirendi
 
