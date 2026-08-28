@@ -65,7 +65,7 @@ Näiv "müügilangus" aastatel 2025–2026 osutus **andmelüngaks** (9 kuud andm
 ## 📊 Visualiseeringud
 
 ### 1. Müügitrend kuude kaupa (2024–2025)
-![Müügitrend](link_graafikule)
+![Müügitrend](muuk.png)
 
 **So what?**  
 Otsuseid ei tohi teha ainult 2025. aasta graafiku põhjal – enne tuleb andmed korrastada. Fookus peab jääma 2024. aasta tõestatud kasvule.
@@ -73,7 +73,7 @@ Otsuseid ei tohi teha ainult 2025. aasta graafiku põhjal – enne tuleb andmed 
 ---
 
 ### 2. Kategooriate käive
-![Kategooriate käive](link_graafikule)
+![Kategooriate käive](kategooria.png)
 
 **So what?**  
 Juhatus saab selge ülevaate, kuhu suunata laovaru ja turunduseelarve. Aksessuaarid ja lasteriided vajavad optimeerimist.
@@ -81,7 +81,7 @@ Juhatus saab selge ülevaate, kuhu suunata laovaru ja turunduseelarve. Aksessuaa
 ---
 
 ### 3. Kliendisegmendid (RFM)
-![Kliendisegmendid](link_graafikule)
+![Kliendisegmendid](RFM.png)
 
 **So what?**  
 Näha on väike, kuid väga väärtuslik VIP-klientide grupp ja suur At-Risk/Uus segment, kus peitub ettevõtte kiireim kasvupotentsiaal.
