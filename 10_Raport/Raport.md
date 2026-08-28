@@ -134,3 +134,55 @@ AI oli meie tiimi jaoks praktiline tööriist, mitte "maagiline lahendus".
 ---
 
 ## 📁 Repositooriumi struktuur
+
+UrbanStyle_Analytics/
+├── data/
+│ ├── raw/ # algandmed
+│ └── cleaned/ # puhastatud andmed
+├── notebooks/
+│ ├── 01_data_cleaning.ipynb
+│ ├── 02_eda.ipynb
+│ └── 03_rfm_analysis.ipynb
+├── reports/
+│ └── urbanstyle_juhatuse_aruanne.pdf
+├── pipeline/
+│ ├── data_fetcher.py
+│ ├── transform.py
+│ └── main.py
+├── visuals/
+│ └── dashboard.pbix
+└── README.md
+
+
+---
+
+## 👥 Meeskond
+
+- **Irina** – andmete puhastamine, SQL, Python
+- **Silver** – visualiseeringud, Power BI, dashboardid
+- **Tiiu** – RFM-analüüs, kliendisegmenteerimine, esitlus
+
+---
+
+## 📅 Projekti ajatelg
+
+| Nädal | Tegevus |
+|-------|---------|
+| 1–2 | Andmete audit ja puhastamine |
+| 3–4 | JOIN-analüüs ja andmete rikastamine |
+| 5–6 | RFM-segmentatsioon ja kliendianalüüs |
+| 7–8 | Visualiseeringud ja dashboardid |
+| 9–10 | Automatiseerimine ja juhatuse esitlus |
+
+---
+
+## 🏁 Kokkuvõte
+
+UrbanStyle’i projekt andis meile väärtusliku kogemuse töötada reaalsete andmetega alates toorandmetest kuni äriotsusteni. Tuvastasime andmelüngad, puhastasime kvaliteedi, lõime visualiseeringud ja esitasime kolm mõõdetavat soovitust.
+
+> **"Andmed on väärtuslikud alles siis, kui nende põhjal tehakse paremaid otsuseid."**
+
+---
+
+📧 **Kontakt:** urbanstyle.analytics@gmail.com  
+🔗 **GitHub:** https://github.com/urbanstyle-analytics
