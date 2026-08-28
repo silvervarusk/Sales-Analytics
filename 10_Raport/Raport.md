@@ -135,7 +135,7 @@ AI oli meie tiimi jaoks praktiline tööriist, mitte "maagiline lahendus".
 
 ## 📁 Repositooriumi struktuur
 
-![Projekti struktuur](images/struktuur.png)
+![Projekti struktuur](struktuur.png)
 
 
 ---
