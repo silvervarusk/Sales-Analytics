@@ -135,23 +135,23 @@ AI oli meie tiimi jaoks praktiline tööriist, mitte "maagiline lahendus".
 
 ## 📁 Repositooriumi struktuur
 
-UrbanStyle_Analytics/
-├── data/|
-│ ├── raw/ # algandmed|
-│ └── cleaned/ # puhastatud andmed|
-├── notebooks/|
-│ ├── 01_data_cleaning.ipynb|
-│ ├── 02_eda.ipynb|
-│ └── 03_rfm_analysis.ipynb|
-├── reports/|
-│ └── urbanstyle_juhatuse_aruanne.pdf|
-├── pipeline/|
-│ ├── data_fetcher.py|
-│ ├── transform.py|
-│ └── main.py|
-├── visuals/|
-│ └── dashboard.pbix|
-└── README.md|
+|UrbanStyle_Analytics/|
+|├── data/|
+|│ ├── raw/ # algandmed|
+|│ └── cleaned/ # puhastatud andmed|
+|├── notebooks/|
+|│ ├── 01_data_cleaning.ipynb|
+|│ ├── 02_eda.ipynb|
+|│ └── 03_rfm_analysis.ipynb|
+|├── reports/|
+|│ └── urbanstyle_juhatuse_aruanne.pdf|
+|├── pipeline/|
+|│ ├── data_fetcher.py|
+|│ ├── transform.py|
+|│ └── main.py|
+|├── visuals/|
+|│ └── dashboard.pbix|
+|└── README.md|
 
 
 ---
